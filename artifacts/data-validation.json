@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-11-09T09:06:56.739Z",
+  "status": "PASS",
+  "entries": 479,
+  "uniqueIds": 479,
+  "uniqueNames": 479,
+  "categories": 17,
+  "proposedFamilies": 20,
+  "workingDefinitions": 23,
+  "missingDefinitions": 456,
+  "independentlyReviewed": 0,
+  "entrySpecificReferences": 0,
+  "riskEntries": 3,
+  "unresolvedFamilyEntries": 321,
+  "unresolvedFamilyValues": [
+    "dating_relationship",
+    "adult_intimacy",
+    "activity_partnership",
+    "caregiving",
+    "learning_research",
+    "professional_collaboration",
+    "professional_service",
+    "family_kinship",
+    "institutional",
+    "state_conflict"
+  ],
+  "categoryCounts": [
+    {
+      "id": "A01",
+      "count": 36
+    },
+    {
+      "id": "A02",
+      "count": 24
+    },
+    {
+      "id": "A03",
+      "count": 29
+    },
+    {
+      "id": "A04",
+      "count": 32
+    },
+    {
+      "id": "A05",
+      "count": 42
+    },
+    {
+      "id": "A06",
+      "count": 35
+    },
+    {
+      "id": "A07",
+      "count": 27
+    },
+    {
+      "id": "A08",
+      "count": 20
+    },
+    {
+      "id": "A09",
+      "count": 28
+    },
+    {
+      "id": "A10",
+      "count": 31
+    },
+    {
+      "id": "A11",
+      "count": 26
+    },
+    {
+      "id": "A12",
+      "count": 30
+    },
+    {
+      "id": "A13",
+      "count": 20
+    },
+    {
+      "id": "A14",
+      "count": 24
+    },
+    {
+      "id": "A15",
+      "count": 27
+    },
+    {
+      "id": "A16",
+      "count": 20
+    },
+    {
+      "id": "A17",
+      "count": 28
+    }
+  ],
+  "sourceHashes": {
+    "data/raw/dearwithme_relationship_catalog.md": "f100ea31eff6c77ac18c0bc9222cdf1be147784f428cf5c10649bd85f5ad6a6c",
+    "data/raw/dearwithme_relationship_taxonomy.json": "ae0f9d11e68f7fd5447c22c59f4e6b4a41f7b186c5259b3796b96dd1bee3caa8",
+    "data/draft/AllRelationships_479_catalog_v0.2.json": "a2da75dfc5f2e7ba426a781bb91eb81f9d1e9b08830f1c92dfd126c73156c508",
+    "docs/AllRelationships_taxonomy_review_v0.2.md": "f3aedc1683be966ca9960c15f8a7379ac4a9348f58a3139ab6f6f5acdea29cf7"
+  }
+}

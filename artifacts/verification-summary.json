@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-09T09:09:25.204Z",
+  "dataValidation": "PASS",
+  "typecheck": "PASS",
+  "lint": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "build": "PASS",
+  "staticDetailRoutes": 479,
+  "unitTests": {
+    "passed": 7,
+    "failed": 0
+  },
+  "browserTests": {
+    "startTime": "2026-11-09T09:07:10.663Z",
+    "duration": 33298.008,
+    "expected": 19,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "sourceFilesUnmodified": true,
+  "paidRuntimeAPIs": false,
+  "productionDeployed": false,
+  "limitations": [
+    "No independent scholarly review",
+    "456 definitions missing",
+    "321 archetype mappings unresolved",
+    "Emulated viewports, not physical device certification",
+    "No formal assessment algorithm or question bank"
+  ]
+}
