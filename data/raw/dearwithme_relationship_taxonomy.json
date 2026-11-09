@@ -1,0 +1,3509 @@
+{
+  "title": "Dearwithme 人际关系概念清单",
+  "version": "research-draft-2026-11-09",
+  "method": "文献中的标准关系术语 + 中文日常称谓 + 为产品建模细化的关系场景。非权威、非穷尽；类别间存在重叠，不能作为互斥枚举。",
+  "safety": "可撮合仅是概念建议；真实上线需依法评估。成人亲密关系仅面向成年人、知情且持续自愿，不得进行强迫或非法交易撮合。血缘、监护、职业权力关系及非自愿风险关系不作为亲密撮合对象。",
+  "count": 479,
+  "categories": [
+    {
+      "id": "A01",
+      "name": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合",
+      "count": 36
+    },
+    {
+      "id": "A02",
+      "name": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规",
+      "count": 24
+    },
+    {
+      "id": "A03",
+      "name": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "count": 29
+    },
+    {
+      "id": "A04",
+      "name": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合",
+      "count": 32
+    },
+    {
+      "id": "A05",
+      "name": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合",
+      "count": 42
+    },
+    {
+      "id": "A06",
+      "name": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合",
+      "count": 35
+    },
+    {
+      "id": "A07",
+      "name": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合",
+      "count": 27
+    },
+    {
+      "id": "A08",
+      "name": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规",
+      "count": 20
+    },
+    {
+      "id": "A09",
+      "name": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合",
+      "count": 28
+    },
+    {
+      "id": "A10",
+      "name": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合",
+      "count": 31
+    },
+    {
+      "id": "A11",
+      "name": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规",
+      "count": 26
+    },
+    {
+      "id": "A12",
+      "name": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规",
+      "count": 30
+    },
+    {
+      "id": "A13",
+      "name": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合",
+      "count": 20
+    },
+    {
+      "id": "A14",
+      "name": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合",
+      "count": 24
+    },
+    {
+      "id": "A15",
+      "name": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录",
+      "count": 27
+    },
+    {
+      "id": "A16",
+      "name": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录",
+      "count": 20
+    },
+    {
+      "id": "A17",
+      "name": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合",
+      "count": 28
+    }
+  ],
+  "entries": [
+    {
+      "id": "A01-001",
+      "name": "单向好感",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-002",
+      "name": "双向好感",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-003",
+      "name": "暗恋",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-004",
+      "name": "双向暗恋",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-005",
+      "name": "暧昧对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-006",
+      "name": "聊天了解阶段（Talking Stage）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-007",
+      "name": "调情关系（Flirtationship）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-008",
+      "name": "相亲对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-009",
+      "name": "初次约会对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-010",
+      "name": "多次约会对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-011",
+      "name": "普通约会对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-012",
+      "name": "休闲约会（Casual Dating）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-013",
+      "name": "认真约会（Serious Dating）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-014",
+      "name": "非排他约会",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-015",
+      "name": "排他约会",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-016",
+      "name": "未定义的暧昧关系（Situationship）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合",
+      "note": "双方尚未清楚定义关系、责任或排他性。"
+    },
+    {
+      "id": "A01-017",
+      "name": "短期恋情",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-018",
+      "name": "长期恋情",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-019",
+      "name": "异地恋伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-020",
+      "name": "跨国恋伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-021",
+      "name": "周末情侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-022",
+      "name": "同城非同居伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-023",
+      "name": "未婚长期伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-024",
+      "name": "以婚姻为目标的伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-025",
+      "name": "不以婚姻为目标的伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-026",
+      "name": "订婚伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-027",
+      "name": "同居情侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-028",
+      "name": "分居居住伴侣（LAT）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-029",
+      "name": "无性浪漫伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-030",
+      "name": "无浪漫亲密伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-031",
+      "name": "生活伴侣（Life Partner）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-032",
+      "name": "灵魂伴侣（自述标签）",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-033",
+      "name": "计划共同生育的伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-034",
+      "name": "选择不生育的伴侣",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-035",
+      "name": "再婚对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A01-036",
+      "name": "复合意向对象",
+      "category": "恋爱、约会与关系发展",
+      "classification": "建立意向",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A02-001",
+      "name": "一次性约会",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-002",
+      "name": "一次性亲密接触（ONS）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规",
+      "note": "一次性接触事件，不应建模为长期关系；双方均须成年并持续自愿。"
+    },
+    {
+      "id": "A02-003",
+      "name": "短期邂逅（Fling）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-004",
+      "name": "临时亲密约会（Hookup）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-005",
+      "name": "重复性非承诺亲密对象",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-006",
+      "name": "固定性伴侣（炮友）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规",
+      "note": "通常主要围绕性接触，不必然含有FWB中的友谊承诺。"
+    },
+    {
+      "id": "A02-007",
+      "name": "有性关系的朋友（FWB）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规",
+      "note": "具有朋友关系且发生自愿性亲密接触，不自动等于恋爱或排他。"
+    },
+    {
+      "id": "A02-008",
+      "name": "非排他性亲密伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-009",
+      "name": "仅限身体亲密的双方关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-010",
+      "name": "无浪漫承诺的性伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-011",
+      "name": "性与情感分离型伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-012",
+      "name": "约会但不寻求承诺的伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-013",
+      "name": "短期性爱关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-014",
+      "name": "长期无恋爱承诺的性关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-015",
+      "name": "只拥抱陪伴的伙伴（Cuddle Buddy）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-016",
+      "name": "非性亲密陪伴关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-017",
+      "name": "自愿禁欲伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-018",
+      "name": "浪漫但无性关系的伴侣",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-019",
+      "name": "约定边界的亲密探索伙伴",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-020",
+      "name": "成人角色扮演伙伴",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-021",
+      "name": "成人BDSM场景伙伴（Play Partner）",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-022",
+      "name": "成人自愿D/s关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-023",
+      "name": "仅在特定活动中相处的亲密伙伴",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A02-024",
+      "name": "可反复见面的非承诺关系",
+      "category": "成年人之间的短期或非承诺亲密",
+      "classification": "成人亲密",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A03-001",
+      "name": "一对一排他关系（Monogamy）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-002",
+      "name": "开放关系（Open Relationship）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "note": "开放的具体范围需要当事人明确约定；不是默许欺骗。"
+    },
+    {
+      "id": "A03-003",
+      "name": "开放婚姻（Open Marriage）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-004",
+      "name": "有限开放关系（Monogamish）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-005",
+      "name": "共识性非单偶关系（CNM）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "note": "各相关方知情且自愿同意的非排他亲密关系总称。"
+    },
+    {
+      "id": "A03-006",
+      "name": "伦理非单偶关系（ENM）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-007",
+      "name": "多重恋爱关系（Polyamory）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-008",
+      "name": "有主次的多重伴侣关系",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-009",
+      "name": "无主次的多重伴侣关系",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-010",
+      "name": "独立型多重伴侣（Solo Poly）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-011",
+      "name": "封闭式多人伴侣关系（Polyfidelity）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-012",
+      "name": "一方单偶一方多伴侣的共识安排（Mono–Poly）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-013",
+      "name": "关系无政府主义（Relationship Anarchy）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-014",
+      "name": "共享住所的亲密伴侣（Nesting Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "note": "共同居住是生活属性，不必然表示关系主次。"
+    },
+    {
+      "id": "A03-015",
+      "name": "锚定伴侣（Anchor Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-016",
+      "name": "主要伴侣（Primary Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-017",
+      "name": "次要伴侣（Secondary Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-018",
+      "name": "远期不常见面的彗星伴侣（Comet Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-019",
+      "name": "卫星式伴侣（Satellite Partner）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-020",
+      "name": "交换伴侣式非单偶结构（Swinging）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-021",
+      "name": "并行式多伴侣网络（Parallel Poly）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-022",
+      "name": "共桌式多伴侣网络（Kitchen-table Poly）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-023",
+      "name": "多伴侣的伴侣之伴侣（Metamour）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-024",
+      "name": "枢纽伴侣关系（Hinge/Vee）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-025",
+      "name": "三人伴侣（Triad/Throuple）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "note": "多人网络结构，不是单一的二人关系类型。"
+    },
+    {
+      "id": "A03-026",
+      "name": "四人伴侣（Quad）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-027",
+      "name": "多伴侣网络（Polycule）",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性",
+      "note": "关系网络而非一条二人边。"
+    },
+    {
+      "id": "A03-028",
+      "name": "各方知情但不互相交往的多边结构",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A03-029",
+      "name": "约定部分对外关系开放的伴侣",
+      "category": "排他性、多伴侣与关系网络结构",
+      "classification": "关系结构",
+      "proposed_platform_handling": "只作属性"
+    },
+    {
+      "id": "A04-001",
+      "name": "普通朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-002",
+      "name": "新朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-003",
+      "name": "泛泛之交",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-004",
+      "name": "酒肉朋友（俗称）",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-005",
+      "name": "兴趣朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-006",
+      "name": "工作外朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-007",
+      "name": "亲密朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-008",
+      "name": "密友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-009",
+      "name": "挚友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-010",
+      "name": "最好的朋友（Best Friend）",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-011",
+      "name": "知己",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-012",
+      "name": "倾诉对象",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-013",
+      "name": "情绪支持伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-014",
+      "name": "精神伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-015",
+      "name": "柏拉图式朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-016",
+      "name": "柏拉图式长期伴侣（PLP）",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合",
+      "note": "无须浪漫或性吸引，也可长期共同生活或承担责任。"
+    },
+    {
+      "id": "A04-017",
+      "name": "酷儿柏拉图式伴侣（QPR）",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合",
+      "note": "超越通常友谊定义的非传统深度承诺关系，具体边界由双方决定。"
+    },
+    {
+      "id": "A04-018",
+      "name": "非浪漫共生伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-019",
+      "name": "终身朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-020",
+      "name": "从小一起长大的朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-021",
+      "name": "发小",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-022",
+      "name": "笔友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-023",
+      "name": "通信朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-024",
+      "name": "网络知己",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-025",
+      "name": "陪伴型朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-026",
+      "name": "跨代朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-027",
+      "name": "非血缘选择性家人（Chosen Family）",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-028",
+      "name": "结拜兄弟姐妹",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-029",
+      "name": "朋友兼共同生活伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-030",
+      "name": "共同抗压伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-031",
+      "name": "互相监督伙伴",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A04-032",
+      "name": "不以恋爱为目的的亲密朋友",
+      "category": "非浪漫友谊与深度情感伙伴",
+      "classification": "非浪漫",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-001",
+      "name": "饭搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-002",
+      "name": "夜宵搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-003",
+      "name": "早午餐搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-004",
+      "name": "咖啡搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-005",
+      "name": "奶茶搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-006",
+      "name": "烘焙搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-007",
+      "name": "探店搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-008",
+      "name": "电影搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-009",
+      "name": "追剧搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-010",
+      "name": "看展搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-011",
+      "name": "博物馆搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-012",
+      "name": "美术馆搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-013",
+      "name": "音乐会搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-014",
+      "name": "演唱会搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-015",
+      "name": "音乐节搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-016",
+      "name": "剧场搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-017",
+      "name": "戏剧搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-018",
+      "name": "脱口秀搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-019",
+      "name": "书店搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-020",
+      "name": "读书搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-021",
+      "name": "逛街搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-022",
+      "name": "Citywalk搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-023",
+      "name": "公园散步搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-024",
+      "name": "摄影外拍搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-025",
+      "name": "街拍搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-026",
+      "name": "观鸟搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-027",
+      "name": "桌游搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-028",
+      "name": "棋牌搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-029",
+      "name": "剧本杀搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-030",
+      "name": "密室逃脱搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-031",
+      "name": "卡拉OK搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-032",
+      "name": "电竞开黑搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-033",
+      "name": "主机游戏搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-034",
+      "name": "联机游戏搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-035",
+      "name": "二次元同好搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-036",
+      "name": "漫展搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-037",
+      "name": "手工DIY搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-038",
+      "name": "拼单搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-039",
+      "name": "宠物玩耍搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-040",
+      "name": "遛狗搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-041",
+      "name": "旅行搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A05-042",
+      "name": "短途周末游搭子",
+      "category": "休闲、文化与娱乐搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-001",
+      "name": "跑步搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-002",
+      "name": "马拉松训练搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-003",
+      "name": "健身搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-004",
+      "name": "力量训练搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-005",
+      "name": "瑜伽搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-006",
+      "name": "普拉提搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-007",
+      "name": "羽毛球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-008",
+      "name": "乒乓球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-009",
+      "name": "网球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-010",
+      "name": "壁球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-011",
+      "name": "篮球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-012",
+      "name": "足球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-013",
+      "name": "排球搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-014",
+      "name": "飞盘搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-015",
+      "name": "游泳搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-016",
+      "name": "攀岩搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-017",
+      "name": "抱石搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-018",
+      "name": "骑行搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-019",
+      "name": "徒步搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-020",
+      "name": "露营搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-021",
+      "name": "滑雪搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-022",
+      "name": "单板滑雪搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-023",
+      "name": "潜水搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-024",
+      "name": "冲浪搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-025",
+      "name": "桨板搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-026",
+      "name": "皮划艇搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-027",
+      "name": "钓鱼搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-028",
+      "name": "舞蹈练习搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-029",
+      "name": "拳击练习搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-030",
+      "name": "武术练习搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-031",
+      "name": "高尔夫搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-032",
+      "name": "城市探险搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-033",
+      "name": "自然观察搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-034",
+      "name": "户外摄影搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A06-035",
+      "name": "技能互练搭子",
+      "category": "运动、户外和技能活动搭子",
+      "classification": "场景",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-001",
+      "name": "室友",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-002",
+      "name": "合租室友",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-003",
+      "name": "合租发起人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-004",
+      "name": "共同租房伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-005",
+      "name": "共享工作居住伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-006",
+      "name": "长期同住伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-007",
+      "name": "短期同住伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-008",
+      "name": "共居社区伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-009",
+      "name": "共同购房伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-010",
+      "name": "房屋共同所有人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-011",
+      "name": "共同家务分工伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-012",
+      "name": "共同做饭搭子",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-013",
+      "name": "采购与分账伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-014",
+      "name": "拼车同行伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-015",
+      "name": "固定通勤搭子",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-016",
+      "name": "宠物共同照料人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-017",
+      "name": "宠物临时托管互助伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-018",
+      "name": "家庭事务分工伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-019",
+      "name": "共享储物与设备伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-020",
+      "name": "共同养老生活伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-021",
+      "name": "老年互助生活伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-022",
+      "name": "共同生活的柏拉图伴侣",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-023",
+      "name": "无浪漫共同居住者",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-024",
+      "name": "短期旅行分房同住伙伴",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-025",
+      "name": "互为紧急联系人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-026",
+      "name": "长期生活互助联系人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A07-027",
+      "name": "共同照护亲属的成年人",
+      "category": "生活、居住与共同管理",
+      "classification": "共同生活",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A08-001",
+      "name": "非恋爱共同育儿伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规",
+      "note": "通常涉及儿童权益及法律责任；不属于普通约会撮合。"
+    },
+    {
+      "id": "A08-002",
+      "name": "共同抚养人（Co-parent）",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-003",
+      "name": "共同监护责任人",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-004",
+      "name": "隔代育儿协作伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-005",
+      "name": "临时儿童照护互助人",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-006",
+      "name": "孕育计划合作伙伴（涉及专项法律医疗）",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-007",
+      "name": "亲子教育协作伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-008",
+      "name": "共同照护老人伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-009",
+      "name": "非亲属养老互助伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-010",
+      "name": "日常生活照料伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-011",
+      "name": "健康管理互助伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-012",
+      "name": "术后恢复协助人",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-013",
+      "name": "残障生活支持伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-014",
+      "name": "无偿照护志愿伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-015",
+      "name": "互助陪诊伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-016",
+      "name": "日常接送互助伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-017",
+      "name": "远程安全确认伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-018",
+      "name": "共同制定应急预案的伙伴",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A08-019",
+      "name": "医疗决定委托人与受托人（依法律）",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规",
+      "note": "需要依适用法律确定权力边界。"
+    },
+    {
+      "id": "A08-020",
+      "name": "遗嘱执行人与指定人（依法）",
+      "category": "育儿、养老、照护与支持",
+      "classification": "照护与家庭",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A09-001",
+      "name": "同班同学",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-002",
+      "name": "同专业同学",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-003",
+      "name": "校友",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-004",
+      "name": "学习搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-005",
+      "name": "自习搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-006",
+      "name": "备考搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-007",
+      "name": "口语练习搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-008",
+      "name": "语言交换伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-009",
+      "name": "读书讨论伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-010",
+      "name": "刷题搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-011",
+      "name": "编程结对伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-012",
+      "name": "算法练习伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-013",
+      "name": "科研讨论伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-014",
+      "name": "联合研究伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-015",
+      "name": "论文合作者",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-016",
+      "name": "论文互审伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-017",
+      "name": "开源贡献搭子",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-018",
+      "name": "导师与学生",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-019",
+      "name": "学术指导人与被指导人",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-020",
+      "name": "同行评议者与作者",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-021",
+      "name": "技能交换伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-022",
+      "name": "职业发展互助伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-023",
+      "name": "成长监督伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-024",
+      "name": "习惯养成伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-025",
+      "name": "目标执行监督伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-026",
+      "name": "模拟面试伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-027",
+      "name": "知识分享互助伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A09-028",
+      "name": "跨学科合作伙伴",
+      "category": "学习、科研与成长",
+      "classification": "学习成长",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-001",
+      "name": "同事",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-002",
+      "name": "跨部门同事",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-003",
+      "name": "项目合作者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-004",
+      "name": "项目合伙人",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-005",
+      "name": "项目负责人和成员",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-006",
+      "name": "雇主与雇员",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-007",
+      "name": "上司与下属",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-008",
+      "name": "求职者与招聘者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-009",
+      "name": "招聘推荐人与候选人",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-010",
+      "name": "创业合伙人",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-011",
+      "name": "联合创始人",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-012",
+      "name": "企业联合经营者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-013",
+      "name": "产品经理与工程师",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-014",
+      "name": "设计师与开发者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-015",
+      "name": "技术顾问与团队",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-016",
+      "name": "运营与创作者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-017",
+      "name": "供稿人与编辑",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-018",
+      "name": "自由职业者与客户",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-019",
+      "name": "外包方与发包方",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-020",
+      "name": "行业导师与学员",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-021",
+      "name": "职业教练与客户",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-022",
+      "name": "同行交流伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-023",
+      "name": "商务拓展伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-024",
+      "name": "联合营销伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-025",
+      "name": "会议共创伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-026",
+      "name": "社区共同管理员",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-027",
+      "name": "开源项目维护者与贡献者",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-028",
+      "name": "联合专利发明人",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-029",
+      "name": "科研项目负责人和成员",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-030",
+      "name": "实验协作伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A10-031",
+      "name": "结对代码审查伙伴",
+      "category": "职场、创业与工程协作",
+      "classification": "职业协作",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A11-001",
+      "name": "买方与卖方",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-002",
+      "name": "客户与商家",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-003",
+      "name": "委托人与代理人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-004",
+      "name": "业务介绍人与被介绍人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-005",
+      "name": "分销方与供应方",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-006",
+      "name": "批发商与零售商",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-007",
+      "name": "合作供应商关系",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-008",
+      "name": "合资合作伙伴",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-009",
+      "name": "投资人与创业者",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-010",
+      "name": "投资人与基金管理人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-011",
+      "name": "联合投资伙伴",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-012",
+      "name": "资金出借人与借款人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-013",
+      "name": "债权人与债务人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-014",
+      "name": "担保人与被担保人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-015",
+      "name": "房东与租客",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-016",
+      "name": "出租人与承租人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-017",
+      "name": "房产买方与中介",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-018",
+      "name": "版权许可人与被许可人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-019",
+      "name": "品牌授权人与使用方",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-020",
+      "name": "平台商家与消费者",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-021",
+      "name": "资源互换伙伴",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-022",
+      "name": "技能互换伙伴",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-023",
+      "name": "赞助人与受赞助人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-024",
+      "name": "会员与服务提供者",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-025",
+      "name": "共同承担费用的合作伙伴",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A11-026",
+      "name": "共同管理资产的成年人",
+      "category": "商业、资金与资源交换",
+      "classification": "交易与资源",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-001",
+      "name": "医生与患者",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-002",
+      "name": "护士与患者",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-003",
+      "name": "心理咨询师与来访者",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-004",
+      "name": "律师与当事人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-005",
+      "name": "法律顾问与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-006",
+      "name": "会计师与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-007",
+      "name": "财务顾问与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-008",
+      "name": "理财顾问与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-009",
+      "name": "税务顾问与纳税人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-010",
+      "name": "保险经纪人与投保人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-011",
+      "name": "教师与学员",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-012",
+      "name": "家教与学生",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-013",
+      "name": "私人教练与学员",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-014",
+      "name": "营养师与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-015",
+      "name": "康复师与患者",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-016",
+      "name": "照护员与被照护人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-017",
+      "name": "家政服务者与雇主",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-018",
+      "name": "保姆与雇主",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-019",
+      "name": "宠物寄养者与宠物主人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-020",
+      "name": "摄影师与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-021",
+      "name": "设计师与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-022",
+      "name": "翻译与委托人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-023",
+      "name": "司机与乘客",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-024",
+      "name": "导游与旅客",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-025",
+      "name": "咨询师与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-026",
+      "name": "活动策划人与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-027",
+      "name": "助理与委托人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-028",
+      "name": "中介与委托人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-029",
+      "name": "陪诊服务者与客户",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A12-030",
+      "name": "临时任务承接人与发布人",
+      "category": "专业服务与照护服务",
+      "classification": "服务关系",
+      "proposed_platform_handling": "需专项合规"
+    },
+    {
+      "id": "A13-001",
+      "name": "邻居",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-002",
+      "name": "同楼居民",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-003",
+      "name": "社区互助伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-004",
+      "name": "小区志愿者伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-005",
+      "name": "公共议题讨论伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-006",
+      "name": "志愿服务搭子",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-007",
+      "name": "公益项目合作者",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-008",
+      "name": "协会成员",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-009",
+      "name": "社团成员",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-010",
+      "name": "兴趣俱乐部成员",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-011",
+      "name": "共同社区活动组织者",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-012",
+      "name": "宗教团体同伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-013",
+      "name": "校友会活动伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-014",
+      "name": "公共活动筹办搭子",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-015",
+      "name": "公益募捐合作伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-016",
+      "name": "互助社群搭子",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-017",
+      "name": "消费者权益互助伙伴",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-018",
+      "name": "救灾互助志愿者",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-019",
+      "name": "共同倡议者",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A13-020",
+      "name": "社区沟通协调者",
+      "category": "邻里、组织、公共参与",
+      "classification": "社会组织",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-001",
+      "name": "网友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-002",
+      "name": "网络朋友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-003",
+      "name": "网络笔友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-004",
+      "name": "游戏好友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-005",
+      "name": "游戏公会队友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-006",
+      "name": "线上学习伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-007",
+      "name": "远程工作伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-008",
+      "name": "数字游民搭子",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-009",
+      "name": "内容共创伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-010",
+      "name": "播客联合主播",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-011",
+      "name": "直播连麦伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-012",
+      "name": "内容创作者与观众",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-013",
+      "name": "创作者与粉丝",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-014",
+      "name": "订阅者与作者",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-015",
+      "name": "社群群友",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-016",
+      "name": "论坛讨论伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-017",
+      "name": "虚拟世界共同探索伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-018",
+      "name": "线上角色扮演搭子",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-019",
+      "name": "线上共同创作设定伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-020",
+      "name": "远程协作维护人",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-021",
+      "name": "跨国线上交流伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-022",
+      "name": "网络互助伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-023",
+      "name": "线上语言交换伙伴",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A14-024",
+      "name": "长期远程知己",
+      "category": "在线、创作与虚拟环境",
+      "classification": "数字关系",
+      "proposed_platform_handling": "可撮合"
+    },
+    {
+      "id": "A15-001",
+      "name": "父母与子女",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-002",
+      "name": "继父母与继子女",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-003",
+      "name": "养父母与养子女",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-004",
+      "name": "监护人与被监护人",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-005",
+      "name": "祖父母与孙辈",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-006",
+      "name": "外祖父母与外孙辈",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-007",
+      "name": "亲兄弟姐妹",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-008",
+      "name": "同父异母兄弟姐妹",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-009",
+      "name": "同母异父兄弟姐妹",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-010",
+      "name": "堂兄弟姐妹",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-011",
+      "name": "表兄弟姐妹",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-012",
+      "name": "伯叔姑舅姨与侄甥辈",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-013",
+      "name": "岳父母与女婿",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-014",
+      "name": "公婆与儿媳",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-015",
+      "name": "姻亲",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-016",
+      "name": "配偶",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-017",
+      "name": "合法婚姻伴侣",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-018",
+      "name": "民事结合伴侣",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-019",
+      "name": "前配偶",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-020",
+      "name": "离婚后共同育儿人",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-021",
+      "name": "丧偶者与亡配偶（历史）",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-022",
+      "name": "前继亲关系",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-023",
+      "name": "收养关系",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-024",
+      "name": "寄养照护关系",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-025",
+      "name": "家族企业亲属合伙人",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-026",
+      "name": "家庭紧急联系人（已授权）",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A15-027",
+      "name": "家族财富受益人与受托人",
+      "category": "血缘、法律、家庭既有角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-001",
+      "name": "主管与直接下属",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-002",
+      "name": "雇主与实习生",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-003",
+      "name": "教师与在读学生",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-004",
+      "name": "导师与被指导学生",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-005",
+      "name": "考官与考生",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-006",
+      "name": "雇主与劳务提供者",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-007",
+      "name": "监护人与受监护人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-008",
+      "name": "监管者与被监管对象",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-009",
+      "name": "评审人与申请者",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-010",
+      "name": "裁判与运动员",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-011",
+      "name": "仲裁员与仲裁当事人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-012",
+      "name": "调解人与争议当事人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-013",
+      "name": "原告与被告",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-014",
+      "name": "投诉人与被投诉人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-015",
+      "name": "举报人与被举报人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-016",
+      "name": "证人与被指认人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-017",
+      "name": "代理人与被代理人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-018",
+      "name": "律师与代理当事人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-019",
+      "name": "受托人与受益人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A16-020",
+      "name": "机构代表人与被服务人",
+      "category": "权力、法定程序与社会地位角色",
+      "classification": "既有身份",
+      "proposed_platform_handling": "仅记录"
+    },
+    {
+      "id": "A17-001",
+      "name": "陌生人",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-002",
+      "name": "已认识但不联系",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-003",
+      "name": "失联的熟人",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-004",
+      "name": "单方面喜欢",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-005",
+      "name": "被单方面喜欢",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-006",
+      "name": "曾经约会过的人",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-007",
+      "name": "前任恋人",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-008",
+      "name": "前任室友",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-009",
+      "name": "前朋友",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-010",
+      "name": "前同事",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-011",
+      "name": "刚分手的双方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-012",
+      "name": "分手后保持朋友",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-013",
+      "name": "分手后共同财产待清算",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-014",
+      "name": "正在冷静期的伴侣",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-015",
+      "name": "暂停联系的伙伴",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-016",
+      "name": "希望复合的双方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-017",
+      "name": "已明确拒绝关系的一方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-018",
+      "name": "长期断联",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-019",
+      "name": "关系疏远",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-020",
+      "name": "竞争对手",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-021",
+      "name": "商业竞争方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-022",
+      "name": "意见冲突者",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-023",
+      "name": "纠纷双方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-024",
+      "name": "仲裁争议双方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    },
+    {
+      "id": "A17-025",
+      "name": "骚扰者与受害者（仅安全记录）",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合",
+      "note": "非自愿、不可作为撮合目标。"
+    },
+    {
+      "id": "A17-026",
+      "name": "控制与被控制关系（风险标签）",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合",
+      "note": "非自愿、不可作为撮合目标。"
+    },
+    {
+      "id": "A17-027",
+      "name": "欺凌者与被欺凌者（风险标签）",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合",
+      "note": "非自愿、不可作为撮合目标。"
+    },
+    {
+      "id": "A17-028",
+      "name": "存在利益冲突的双方",
+      "category": "关系变化、边界和冲突状态",
+      "classification": "状态",
+      "proposed_platform_handling": "不撮合"
+    }
+  ],
+  "references": [
+    "https://www.ashasexualhealth.org/sex-and-relationships/",
+    "https://www.aromanticism.org/en/attraction-relationship-terms",
+    "https://ppt.on.ca/factsheets/consensual-non-monogamy/",
+    "https://link.springer.com/article/10.1007/s12119-026-10625-3",
+    "https://www.sciencedirect.com/science/article/pii/S0378873321000587",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0378873322000272",
+    "https://qnzs.youth.cn/tsxq/202607/t20260724_16780858.htm",
+    "https://www.apa.org/topics/relationships/"
+  ]
+}
