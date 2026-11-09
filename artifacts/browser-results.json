@@ -196,6 +196,334 @@
   },
   "suites": [
     {
+      "title": "explore.spec.ts",
+      "file": "explore.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "four fictional directions complete with distinct branches and traceable wiki results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3481,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:53:57.634Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3122,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:07.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3061,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:16.495Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "068fad9605609506583e-a5e61e1f49068a0e8e0d",
+          "file": "explore.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "hard unknown, age gate, contradiction, editing, denial and clearing remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1997,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:01.310Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1908,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:10.619Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2197,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:19.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "068fad9605609506583e-6f05e79e6cf54882079c",
+          "file": "explore.spec.ts",
+          "line": 100,
+          "column": 1
+        },
+        {
+          "title": "questionnaire is local, has no answer persistence, works at each viewport and unknown stays unknown",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1493,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:03.321Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:12.538Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1417,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:21.959Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "068fad9605609506583e-8c77fc223a4bbe31c91b",
+          "file": "explore.spec.ts",
+          "line": 166,
+          "column": 1
+        },
+        {
+          "title": "coverage filters and readable evidence distinguish history from new definitions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:04.826Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1347,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:14.418Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            },
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1308,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T15:54:23.386Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "068fad9605609506583e-299bab82c5f5c38dbd51",
+          "file": "explore.spec.ts",
+          "line": 227,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "wiki.spec.ts",
       "file": "wiki.spec.ts",
       "column": 0,
@@ -214,15 +542,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1588,
+                  "duration": 1421,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:10.214Z",
+                  "startTime": "2026-11-09T15:53:57.752Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -247,15 +575,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 10,
+                  "duration": 8,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:10.218Z",
+                  "startTime": "2026-11-09T15:54:13.892Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -290,15 +618,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 11,
+                  "duration": 7,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:23.376Z",
+                  "startTime": "2026-11-09T15:54:24.890Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -334,15 +662,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2429,
+                  "duration": 2382,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:11.828Z",
+                  "startTime": "2026-11-09T15:53:59.199Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -357,15 +685,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2257,
+                  "duration": 2058,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:10.254Z",
+                  "startTime": "2026-11-09T15:54:13.926Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -380,15 +708,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2228,
+                  "duration": 2314,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:23.420Z",
+                  "startTime": "2026-11-09T15:54:24.907Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -414,15 +742,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 840,
+                  "duration": 872,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:14.435Z",
+                  "startTime": "2026-11-09T15:54:01.748Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -437,15 +765,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 880,
+                  "duration": 1014,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:12.701Z",
+                  "startTime": "2026-11-09T15:54:16.145Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -460,15 +788,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 784,
+                  "duration": 1347,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:25.832Z",
+                  "startTime": "2026-11-09T15:54:27.233Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -494,15 +822,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1275,
+                  "duration": 1408,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:15.280Z",
+                  "startTime": "2026-11-09T15:54:02.632Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -517,15 +845,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1360,
+                  "duration": 1628,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:13.588Z",
+                  "startTime": "2026-11-09T15:54:17.170Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -540,15 +868,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1377,
+                  "duration": 1629,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:26.624Z",
+                  "startTime": "2026-11-09T15:54:28.592Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -558,7 +886,7 @@
           ],
           "id": "9ad4b629413dd462dd80-211d5f3f7da8c7c70920",
           "file": "wiki.spec.ts",
-          "line": 95,
+          "line": 96,
           "column": 1
         },
         {
@@ -574,15 +902,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1872,
+                  "duration": 2171,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:16.560Z",
+                  "startTime": "2026-11-09T15:54:04.053Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -597,15 +925,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1916,
+                  "duration": 1952,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:14.958Z",
+                  "startTime": "2026-11-09T15:54:18.809Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -620,15 +948,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1697,
+                  "duration": 1948,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:28.007Z",
+                  "startTime": "2026-11-09T15:54:30.233Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -638,7 +966,7 @@
           ],
           "id": "9ad4b629413dd462dd80-16bac5740a7402f7bb9d",
           "file": "wiki.spec.ts",
-          "line": 131,
+          "line": 132,
           "column": 1
         },
         {
@@ -654,15 +982,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4510,
+                  "duration": 5933,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:18.439Z",
+                  "startTime": "2026-11-09T15:54:06.238Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -677,15 +1005,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4914,
+                  "duration": 5898,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:16.883Z",
+                  "startTime": "2026-11-09T15:54:20.773Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -700,15 +1028,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4179,
+                  "duration": 5598,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:29.715Z",
+                  "startTime": "2026-11-09T15:54:32.192Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -718,7 +1046,7 @@
           ],
           "id": "9ad4b629413dd462dd80-4a49b58d41630b9d71ff",
           "file": "wiki.spec.ts",
-          "line": 156,
+          "line": 157,
           "column": 1
         },
         {
@@ -734,15 +1062,15 @@
               "projectName": "desktop",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 793,
+                  "duration": 797,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:22.956Z",
+                  "startTime": "2026-11-09T15:54:12.185Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -757,15 +1085,15 @@
               "projectName": "tablet",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 3,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 750,
+                  "duration": 773,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:21.803Z",
+                  "startTime": "2026-11-09T15:54:26.684Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -780,15 +1108,15 @@
               "projectName": "mobile",
               "results": [
                 {
-                  "workerIndex": 2,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 607,
+                  "duration": 743,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:18:33.900Z",
+                  "startTime": "2026-11-09T15:54:37.801Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -798,7 +1126,7 @@
           ],
           "id": "9ad4b629413dd462dd80-b1e432dbd7632ac8b00e",
           "file": "wiki.spec.ts",
-          "line": 220,
+          "line": 221,
           "column": 1
         }
       ]
@@ -806,9 +1134,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-09T09:18:01.443Z",
-    "duration": 34135.465,
-    "expected": 19,
+    "startTime": "2026-11-09T15:53:49.814Z",
+    "duration": 49918.57,
+    "expected": 31,
     "skipped": 2,
     "unexpected": 0,
     "flaky": 0

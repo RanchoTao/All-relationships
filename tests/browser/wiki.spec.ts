@@ -88,9 +88,10 @@ test("search, empty state, advanced filters and detail navigation", async ({
   await page
     .getByLabel("资料审核状态", { exact: true })
     .selectOption("working_draft");
-  await expect(page.locator("article.entry-card")).toHaveCount(23);
+  await expect(page.getByRole("status")).toContainText("71");
+  await expect(page.locator("article.entry-card")).toHaveCount(30);
   await page.getByLabel("共同生活", { exact: true }).selectOption("涉及");
-  await expect(page.locator("article.entry-card")).toHaveCount(3);
+  await expect(page.locator("article.entry-card")).toHaveCount(4);
 });
 test("compare tray, limits, missing evidence and risk boundary", async ({
   page,

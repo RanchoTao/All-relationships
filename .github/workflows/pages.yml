@@ -45,6 +45,7 @@ jobs:
             test-results/
             artifacts/browser-*.json
             artifacts/data-validation.json
+            artifacts/knowledge-coverage.json
           retention-days: 14
       - name: Configure Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

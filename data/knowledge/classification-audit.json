@@ -1,0 +1,3359 @@
+{
+  "version": "0.3.0",
+  "asOf": "2026-11-10",
+  "entries": [
+    {
+      "id": "A01-001",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-002",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-003",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-004",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-005",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-006",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-007",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-008",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-009",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-010",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-011",
+      "originalKind": "relationship_variant",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-012",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-013",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-014",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-015",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-016",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-017",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-018",
+      "originalKind": "relationship_archetype",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-019",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-020",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-021",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-022",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-023",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-024",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-025",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-026",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-027",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-028",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-029",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A01-030",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-031",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-032",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-033",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-034",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-035",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A01-036",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-001",
+      "originalKind": "one_time_encounter",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-002",
+      "originalKind": "one_time_encounter",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-003",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-004",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-005",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-006",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-007",
+      "originalKind": "relationship_archetype",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A02-008",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-009",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-010",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-011",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-012",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-013",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-014",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-015",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-016",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A02-017",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-018",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-019",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-020",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-021",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-022",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-023",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A02-024",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-001",
+      "originalKind": "structural_attribute",
+      "proposedKind": "structure",
+      "rationale": "描述联结的许可结构，需与具体关系原型组合。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A03-002",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-003",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-004",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-005",
+      "originalKind": "structural_attribute",
+      "proposedKind": "structure",
+      "rationale": "描述联结的许可结构，需与具体关系原型组合。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A03-006",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-007",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-008",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-009",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-010",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-011",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-012",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-013",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-014",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-015",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-016",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-017",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-018",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-019",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-020",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-021",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-022",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-023",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-024",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-025",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-026",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-027",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-028",
+      "originalKind": "network_structure",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A03-029",
+      "originalKind": "structural_attribute",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-001",
+      "originalKind": "relationship_archetype",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-002",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-003",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-004",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-005",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-006",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-007",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-008",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-009",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-010",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-011",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-012",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-013",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-014",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-015",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-016",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-017",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-018",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-019",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-020",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-021",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-022",
+      "originalKind": "relationship_variant",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-023",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-024",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-025",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-026",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-027",
+      "originalKind": "relationship_variant",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-028",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-029",
+      "originalKind": "composite_relation",
+      "proposedKind": "composite",
+      "rationale": "多个角色同时存在，分别讨论各自边界。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A04-030",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-031",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A04-032",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-001",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-002",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-003",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-004",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-005",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-006",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-007",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-008",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-009",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-010",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-011",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-012",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-013",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-014",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-015",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-016",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-017",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-018",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-019",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-020",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-021",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-022",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-023",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-024",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-025",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-026",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-027",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-028",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-029",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-030",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-031",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-032",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-033",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-034",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-035",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-036",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-037",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-038",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-039",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-040",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A05-041",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A05-042",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-001",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A06-002",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-003",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A06-004",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-005",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-006",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-007",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A06-008",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-009",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-010",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-011",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-012",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-013",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-014",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-015",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-016",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-017",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-018",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-019",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A06-020",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-021",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-022",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-023",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-024",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-025",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-026",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-027",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-028",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-029",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-030",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-031",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-032",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-033",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-034",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A06-035",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-001",
+      "originalKind": "relationship_archetype",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A07-002",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A07-003",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-004",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-005",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-006",
+      "originalKind": "relationship_variant",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A07-007",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-008",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-009",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-010",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-011",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-012",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-013",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-014",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-015",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-016",
+      "originalKind": "relationship_variant",
+      "proposedKind": "role",
+      "rationale": "围绕特定任务的角色，权限不能从名称推定。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A07-017",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-018",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-019",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-020",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-021",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-022",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-023",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-024",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-025",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-026",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A07-027",
+      "originalKind": "relationship_variant",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-001",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A08-002",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A08-003",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-004",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-005",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-006",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-007",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-008",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-009",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-010",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A08-011",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-012",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-013",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-014",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-015",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-016",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-017",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-018",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-019",
+      "originalKind": "legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A08-020",
+      "originalKind": "role_or_arrangement",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-001",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-002",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-003",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-004",
+      "originalKind": "activity_scenario",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-005",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-006",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-007",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-008",
+      "originalKind": "activity_scenario",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-009",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-010",
+      "originalKind": "activity_scenario",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-011",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-012",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-013",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-014",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-015",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "variant",
+      "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-016",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-017",
+      "originalKind": "activity_scenario",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-018",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-019",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-020",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-021",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A09-022",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-023",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-024",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-025",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-026",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-027",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A09-028",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-001",
+      "originalKind": "social_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A10-002",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-003",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A10-004",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-005",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-006",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-007",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-008",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-009",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-010",
+      "originalKind": "relationship_archetype",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A10-011",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-012",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-013",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-014",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-015",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-016",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-017",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-018",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A10-019",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-020",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-021",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-022",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-023",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-024",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-025",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-026",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-027",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-028",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-029",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-030",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A10-031",
+      "originalKind": "role_or_collaboration",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-001",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A11-002",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-003",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-004",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-005",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-006",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-007",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-008",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-009",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-010",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-011",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-012",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-013",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-014",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-015",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-016",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-017",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-018",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-019",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-020",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-021",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-022",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-023",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-024",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-025",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A11-026",
+      "originalKind": "exchange_or_contract_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-001",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-002",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-003",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-004",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-005",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-006",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-007",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-008",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-009",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-010",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-011",
+      "originalKind": "service_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A12-012",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-013",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-014",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-015",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-016",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-017",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-018",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-019",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-020",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-021",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-022",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-023",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-024",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-025",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-026",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-027",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-028",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-029",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A12-030",
+      "originalKind": "service_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-001",
+      "originalKind": "social_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A13-002",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-003",
+      "originalKind": "social_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A13-004",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-005",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-006",
+      "originalKind": "social_role",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A13-007",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-008",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-009",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-010",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-011",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-012",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-013",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-014",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-015",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-016",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-017",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-018",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-019",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A13-020",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-001",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-002",
+      "originalKind": "social_role",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A14-003",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-004",
+      "originalKind": "social_role",
+      "proposedKind": "scenario",
+      "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A14-005",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-006",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-007",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-008",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-009",
+      "originalKind": "social_role",
+      "proposedKind": "archetype",
+      "rationale": "本版以主要互动目的或相互角色作为工作原型；不宣称互斥或学界统一分类。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A14-010",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-011",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-012",
+      "originalKind": "asymmetric_social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-013",
+      "originalKind": "asymmetric_social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-014",
+      "originalKind": "asymmetric_social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-015",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-016",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-017",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-018",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-019",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-020",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-021",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-022",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-023",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A14-024",
+      "originalKind": "social_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-001",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-002",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-003",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-004",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-005",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-006",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-007",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-008",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-009",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-010",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-011",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-012",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-013",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-014",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-015",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-016",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-017",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-018",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-019",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-020",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-021",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-022",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-023",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-024",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-025",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-026",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A15-027",
+      "originalKind": "ascribed_or_legal_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-001",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-002",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-003",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-004",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-005",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-006",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-007",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-008",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-009",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-010",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-011",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-012",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-013",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-014",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-015",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-016",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-017",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-018",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-019",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A16-020",
+      "originalKind": "institutional_role",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-001",
+      "originalKind": "lifecycle_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-002",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-003",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-004",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-005",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-006",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-007",
+      "originalKind": "lifecycle_state",
+      "proposedKind": "lifecycle",
+      "rationale": "描述历史或当前阶段，不是推荐用户建立的关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A17-008",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-009",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-010",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-011",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-012",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-013",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-014",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-015",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": "lifecycle",
+      "rationale": "描述历史或当前阶段，不是推荐用户建立的关系原型。",
+      "status": "editorial_draft_not_independently_reviewed"
+    },
+    {
+      "id": "A17-016",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-017",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-018",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-019",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-020",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-021",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-022",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-023",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-024",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-025",
+      "originalKind": "risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-026",
+      "originalKind": "risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-027",
+      "originalKind": "risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    },
+    {
+      "id": "A17-028",
+      "originalKind": "lifecycle_or_risk_state",
+      "proposedKind": null,
+      "rationale": "沿用历史记录待逐项审查，不把目录类别自动转换为独立原型。",
+      "status": "pending_review"
+    }
+  ]
+}

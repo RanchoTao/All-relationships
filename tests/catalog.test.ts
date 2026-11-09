@@ -1,3 +1,4 @@
+import { definitionFor } from "../src/lib/knowledge";
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
@@ -53,7 +54,7 @@ test("review and participant filters do not invent classifications", () => {
   );
   assert.equal(
     searchEntries({ ...emptyFilters, status: "working_draft" }).length,
-    23,
+    entries.filter((e) => !!definitionFor(e)).length,
   );
   assert.equal(
     searchEntries({
@@ -66,7 +67,7 @@ test("review and participant filters do not invent classifications", () => {
 test("attributes are explicit draft claims, absence is never false", () => {
   assert.deepEqual(annotationErrors(), []);
   assert.equal(attributesFor(entryById["A02-007"]).sexual?.value, "可能涉及");
-  assert.equal(attributesFor(entryById["A04-001"]).romance, undefined);
+  assert.equal(attributesFor(entryById["A04-001"]).sexual, undefined);
   const withValue = searchEntries({
     ...emptyFilters,
     attributes: { cohabitation: "涉及" },
@@ -75,7 +76,11 @@ test("attributes are explicit draft claims, absence is never false", () => {
     ...emptyFilters,
     attributes: { cohabitation: "unknown" },
   });
-  assert.equal(withValue.length + unknown.length, 479);
+  const other = entries.filter((e) => {
+    const v = attributesFor(e).cohabitation?.value;
+    return v && v !== "涉及";
+  });
+  assert.equal(withValue.length + unknown.length + other.length, 479);
   assert.ok(withValue.some((e) => e.id === "A07-001"));
 });
 test("comparison only reports differences when both sides are known", () => {
@@ -112,7 +117,11 @@ test("normalized knowledge claims always resolve their evidence and do not inven
       if (claim)
         assert.ok(claim.evidenceIds.every((id) => evidenceIds.has(id)));
     }
-    assert.deepEqual(knowledge.links, []);
-    assert.deepEqual(knowledge.lifecycle, []);
+    for (const link of knowledge.links) {
+      assert.ok(entryById[link.targetId]);
+      assert.ok(link.evidenceIds.every((id) => evidenceIds.has(id)));
+    }
+    for (const change of knowledge.lifecycle)
+      assert.ok(change.claim.evidenceIds.every((id) => evidenceIds.has(id)));
   }
 });

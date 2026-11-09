@@ -1,3 +1,4 @@
+import { knowledgeById } from "./knowledge";
 import draft from "../../data/draft/AllRelationships_479_catalog_v0.2.json" with { type: "json" };
 import raw from "../../data/raw/dearwithme_relationship_taxonomy.json" with { type: "json" };
 import {
@@ -27,7 +28,7 @@ export const generalReferences = raw.references;
 export const kindLabels: Record<string, string> = {
   relationship_archetype: "关系原型",
   relationship_variant: "关系变体",
-  activity_scenario: "互动场景",
+  activity_scenario: "活动或媒介场景",
   role_or_collaboration: "角色与协作",
   social_role: "社会角色",
   service_role: "服务角色",
@@ -62,7 +63,7 @@ export const attributeLabels: Record<AttributeKey, string> = {
   structure: "关系结构",
 };
 
-// Only literal statements from the existing 23 working definitions are indexed.
+// Legacy annotations cite literal v0.2 statements; authored v0.3 facets are merged separately.
 // These are draft claims, not independently verified facts; absent is not false.
 const annotations: Record<
   string,
@@ -94,12 +95,21 @@ const annotations: Record<
 export function attributesFor(
   entry: Entry,
 ): Partial<Record<AttributeKey, Claim>> {
-  return Object.fromEntries(
+  const legacy = Object.fromEntries(
     Object.entries(annotations[entry.id] ?? {}).map(([key, [value]]) => [
       key,
       { value, evidenceIds: [`${entry.id}:definition`] },
     ]),
   );
+  const authored = Object.fromEntries(
+    Object.entries(knowledgeById[entry.id]?.facets ?? {}).map(
+      ([key, value]) => [
+        key,
+        { value, evidenceIds: [`${entry.id}:knowledge`] },
+      ],
+    ),
+  );
+  return { ...legacy, ...authored };
 }
 export function evidenceFor(entry: Entry): Evidence[] {
   const evidence: Evidence[] = [
@@ -121,9 +131,23 @@ export function evidenceFor(entry: Entry): Evidence[] {
       quote: entry.wiki_definition_zh,
       review: "unreviewed",
     });
+  if (knowledgeById[entry.id])
+    evidence.push({
+      id: `${entry.id}:knowledge`,
+      kind: "working_definition",
+      source: "data/knowledge/cards.json",
+      locator: `${entry.id}.facets / definition`,
+      review: "unreviewed",
+      quote: knowledgeById[entry.id].definition,
+    });
   return evidence;
 }
 export function knowledgeFor(entry: Entry) {
+  const authored = knowledgeById[entry.id];
+  const authoredClaim = (value: string) => ({
+    value,
+    evidenceIds: [`${entry.id}:knowledge`],
+  });
   const classificationId = `${entry.id}:classification`;
   const evidence = [
     ...evidenceFor(entry),
@@ -147,19 +171,31 @@ export function knowledgeFor(entry: Entry) {
         ? [{ value: entry.label_zh, evidenceIds: [classificationId] }]
         : [],
     attributes: attributesFor(entry),
-    fullDefinition: entry.wiki_definition_zh
-      ? {
-          value: entry.wiki_definition_zh,
-          evidenceIds: [`${entry.id}:definition`],
-        }
-      : undefined,
-    roles: [],
-    interactions: [],
-    conflicts: [],
-    boundaries: [],
+    fullDefinition: authored
+      ? authoredClaim(authored.definition)
+      : entry.wiki_definition_zh
+        ? {
+            value: entry.wiki_definition_zh,
+            evidenceIds: [`${entry.id}:definition`],
+          }
+        : undefined,
+    roles: authored?.participants.map(authoredClaim) ?? [],
+    interactions: authored?.interactions.map(authoredClaim) ?? [],
+    conflicts: authored?.conflicts.map(authoredClaim) ?? [],
+    boundaries: authored?.boundaries.map(authoredClaim) ?? [],
     rightsAndResponsibilities: [],
-    lifecycle: [],
-    links: [],
+    lifecycle:
+      authored?.changes.map((value) => ({
+        from: "当前安排",
+        to: "可能变化 · 非预测",
+        claim: authoredClaim(value),
+      })) ?? [],
+    links:
+      authored?.distinctions.map((d) => ({
+        targetId: d.targetId,
+        relation: "related_to",
+        evidenceIds: [`${entry.id}:knowledge`],
+      })) ?? [],
     evidence,
   });
 }

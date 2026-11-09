@@ -1,3 +1,9 @@
+import {
+  definitionFor,
+  contentStatus,
+  knowledgeById,
+  conceptLabels,
+} from "@/lib/knowledge";
 import Link from "next/link";
 import { ArrowUpRight, Plus, Check } from "lucide-react";
 import {
@@ -24,7 +30,9 @@ export function EntryCard({
       <div className="card-top">
         <span>{entry.id.replace("-", " / ")}</span>
         <span className="kind-label">
-          {kindLabels[entry.kind] ?? entry.kind}
+          {knowledgeById[entry.id]
+            ? conceptLabels[knowledgeById[entry.id].concept.kind]
+            : (kindLabels[entry.kind] ?? entry.kind)}
         </span>
       </div>
       <Link
@@ -41,8 +49,8 @@ export function EntryCard({
             {englishName(entry)}
           </span>
         )}
-        <p className={entry.wiki_definition_zh ? "" : "missing-definition"}>
-          {entry.wiki_definition_zh ??
+        <p className={definitionFor(entry) ? "" : "missing-definition"}>
+          {definitionFor(entry) ??
             "定义待完善。此处保留原始名称与初步分类，等待进一步研究与资料核验。"}
         </p>
         <span className="card-read">
@@ -52,9 +60,9 @@ export function EntryCard({
       <div className="card-bottom">
         <div>
           <span
-            className={`status-dot ${entry.wiki_definition_zh ? "has-definition" : ""}`}
+            className={`status-dot ${definitionFor(entry) ? "has-definition" : ""}`}
           />
-          {entry.wiki_definition_zh ? "工作定义 · 未审核" : "待完善 · 未审核"}
+          {contentStatus(entry.id)}
           {attrs.length > 0 && (
             <span className="attribute-hint">
               {attrs.map((a) => a.value).join(" / ")}
