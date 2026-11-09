@@ -3,6 +3,8 @@ import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
 import { entries, displayName } from "../../src/lib/catalog";
 
+const at = (path: string) => `${process.env.PLAYWRIGHT_BASE_PATH ?? ""}${path}`;
+
 test("every original ID has a working detail route", async ({
   request,
 }, info) => {
@@ -14,7 +16,7 @@ test("every original ID has a working detail route", async ({
   for (let start = 0; start < entries.length; start += 12) {
     await Promise.all(
       entries.slice(start, start + 12).map(async (e) => {
-        const response = await request.get(`/relationships/${e.id}`);
+        const response = await request.get(at(`/relationships/${e.id}`));
         expect(response.status(), e.id).toBe(200);
         const html = await response.text();
         expect(html, e.id).toContain(e.id);
@@ -30,7 +32,7 @@ test("every original ID has a working detail route", async ({
 test("all 479 cards are reachable, category filters are faithful", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto(at("/"));
   await expect(page.locator("article.entry-card")).toHaveCount(30);
   while (
     await page.getByRole("button", { name: "继续探索", exact: true }).count()
@@ -61,7 +63,7 @@ test("all 479 cards are reachable, category filters are faithful", async ({
 test("search, empty state, advanced filters and detail navigation", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto(at("/"));
   await page
     .getByRole("searchbox", { name: "搜索关系", exact: true })
     .fill("FWB");
@@ -72,7 +74,7 @@ test("search, empty state, advanced filters and detail navigation", async ({
     page.getByRole("heading", { name: "有性关系的朋友", exact: true }),
   ).toBeVisible();
   await expect(page.locator(".status-badge")).toContainText("未审核");
-  await page.goto("/");
+  await page.goto(at("/"));
   await page
     .getByRole("searchbox", { name: "搜索关系", exact: true })
     .fill("zzzz9999不存在");
@@ -93,7 +95,7 @@ test("search, empty state, advanced filters and detail navigation", async ({
 test("compare tray, limits, missing evidence and risk boundary", async ({
   page,
 }) => {
-  await page.goto("/");
+  await page.goto(at("/"));
   await page
     .getByRole("button", { name: "加入比较：普通朋友", exact: true })
     .click();
@@ -113,6 +115,13 @@ test("compare tray, limits, missing evidence and risk boundary", async ({
     .click();
   await expect(page.getByRole("table")).toContainText("可能涉及");
   await page.getByLabel("左侧关系", { exact: true }).selectOption("A17-025");
+  expect(new URL(page.url()).pathname).toBe(
+    at("/compare") + (process.env.PLAYWRIGHT_BASE_PATH ? "/" : ""),
+  );
+  await page.reload();
+  await expect(page.getByLabel("左侧关系", { exact: true })).toHaveValue(
+    "A17-025",
+  );
   await expect(
     page.getByText(
       "选择中包含风险状态，仅供百科描述与风险研究；不生成协商或撮合模板。",
@@ -120,16 +129,21 @@ test("compare tray, limits, missing evidence and risk boundary", async ({
   ).toBeVisible();
 });
 test("graph is bounded, searchable and links to entries", async ({ page }) => {
-  await page.goto("/graph");
+  await page.goto(at("/graph"));
   await expect(page.locator(".react-flow__node").first()).toBeVisible();
   expect(await page.locator(".react-flow__node").count()).toBeLessThan(65);
   await page.getByRole("searchbox", { name: "图谱搜索" }).fill("三人伴侣");
   await page.getByRole("button", { name: /三人伴侣.*A03-025/ }).click();
   await expect(page.locator(".graph-selection")).toContainText("三人伴侣");
+  expect(new URL(page.url()).pathname).toBe(
+    at("/graph") + (process.env.PLAYWRIGHT_BASE_PATH ? "/" : ""),
+  );
+  await page.reload();
+  await expect(page.locator(".graph-selection")).toContainText("三人伴侣");
   await page.getByRole("button", { name: "居中定位" }).click();
   await page.getByRole("link", { name: "阅读词条 ↗" }).click();
   await expect(page).toHaveURL(/relationships\/A03-025/);
-  await page.goto("/graph");
+  await page.goto(at("/graph"));
   await page.getByRole("button", { name: "20 个拟议原型族" }).click();
   await expect(page.locator(".react-flow__node")).toHaveCount(20);
   await page
@@ -142,12 +156,13 @@ test("graph is bounded, searchable and links to entries", async ({ page }) => {
 test("primary pages have no page overflow, JS errors or axe violations", async ({
   page,
   browser,
+  baseURL,
 }, info) => {
   const errors: string[] = [];
   page.on("pageerror", (e) => errors.push(e.message));
   const externalRequests: string[] = [];
   page.on("request", (request) => {
-    if (!request.url().startsWith("http://127.0.0.1:3100/"))
+    if (!request.url().startsWith(`${baseURL}/`))
       externalRequests.push(request.url());
   });
   fs.mkdirSync("artifacts/screenshots", { recursive: true });
@@ -159,7 +174,7 @@ test("primary pages have no page overflow, JS errors or axe violations", async (
     ["graph", "/graph"],
     ["about", "/about"],
   ]) {
-    await page.goto(url);
+    await page.goto(at(url));
     if (name === "graph")
       await expect(page.locator(".react-flow__node").first()).toBeVisible();
     expect(
@@ -203,13 +218,13 @@ test("primary pages have no page overflow, JS errors or axe violations", async (
   );
 });
 test("404 and reduced motion behave safely", async ({ page }) => {
-  const response = await page.goto("/relationships/INVALID");
+  const response = await page.goto(at("/relationships/INVALID"));
   expect(response?.status()).toBe(404);
   await expect(page.getByRole("link", { name: "返回全部馆藏" })).toBeVisible();
-  await page.goto("/compare?left=constructor&right=__proto__");
+  await page.goto(at("/compare?left=constructor&right=__proto__"));
   await expect(page.getByRole("table")).toContainText("普通朋友");
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto(at("/"));
   expect(
     await page
       .locator(".entry-card")

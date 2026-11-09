@@ -1,5 +1,6 @@
 "use client";
 import dynamic from "next/dynamic";
+import { useSearchParams } from "next/navigation";
 const GraphExplorer = dynamic(
   () => import("./graph-explorer").then((m) => m.GraphExplorer),
   {
@@ -11,6 +12,12 @@ const GraphExplorer = dynamic(
     ),
   },
 );
-export function GraphLoader({ initialEntry }: { initialEntry?: string }) {
-  return <GraphExplorer initialEntry={initialEntry} />;
+export function GraphLoader() {
+  const initialEntry = useSearchParams().get("entry") ?? undefined;
+  return (
+    <GraphExplorer
+      key={initialEntry ?? "overview"}
+      initialEntry={initialEntry}
+    />
+  );
 }

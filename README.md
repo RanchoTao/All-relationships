@@ -84,6 +84,23 @@ Windows 已安装 Microsoft Edge 时，可用 `$env:PLAYWRIGHT_CHANNEL='msedge';
 - [未来关系倾向测试研究](docs/RELATIONSHIP_ASSESSMENT_RESEARCH.md)
 - [Phase 1 交付报告](docs/PHASE1_DELIVERY_REPORT.md)
 
+## GitHub Pages 发布
+
+工作流：`.github/workflows/pages.yml`。推送到 `main` 或手动运行后，先执行数据校验、单元测试、类型检查、Lint、静态导出和三视口浏览器测试，全部通过才发布 Pages。PR 只验证，不发布。
+
+Pages 的发布来源应保持 **GitHub Actions**。网站导出到 `out/`，默认子路径为 `/All-relationships`；比较与图谱的网址参数在浏览器读取，不需要 Node 服务或 API。既有 Pages 域名配置保持不变。
+
+本地复验同一静态产物：
+
+```powershell
+npm run build:pages
+$env:PLAYWRIGHT_CHANNEL='msedge' # 或先安装 Playwright Chromium
+npm run test:pages
+npm run preview:pages
+```
+
+静态预览地址为 `http://127.0.0.1:3101/All-relationships/`。部署到其他仓库路径时，在构建和测试时设置相同的 `NEXT_PUBLIC_BASE_PATH`。普通 `npm run dev` / `npm run build` 仍使用本机根路径。
+
 ## 后续知识研究
 
 1. 校正术语、出处和分类层级；

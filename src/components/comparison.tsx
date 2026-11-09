@@ -1,9 +1,31 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowUpRight, Search } from "lucide-react";
 import { entries, entryById } from "@/lib/catalog";
 import { compareEntries, compareSummary } from "@/lib/compare";
+
+export function ComparisonFromQuery() {
+  const params = useSearchParams();
+  const requestedLeft = params.get("left");
+  const requestedRight = params.get("right");
+  const left =
+    requestedLeft && entryById[requestedLeft] ? requestedLeft : "A04-001";
+  const right =
+    requestedRight && entryById[requestedRight]
+      ? requestedRight
+      : left === "A02-007"
+        ? "A04-001"
+        : "A02-007";
+  return (
+    <Comparison
+      key={`${left}:${right}`}
+      initialLeft={left}
+      initialRight={right}
+    />
+  );
+}
 
 function Picker({
   label,
@@ -72,7 +94,7 @@ export function Comparison({
   function change(l: string, r: string) {
     setLeft(l);
     setRight(r);
-    window.history.replaceState(null, "", `/compare?left=${l}&right=${r}`);
+    window.history.replaceState(null, "", `?left=${l}&right=${r}`);
   }
   const examples = [
     ["普通朋友 / FWB", "A04-001", "A02-007"],

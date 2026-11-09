@@ -3,9 +3,11 @@
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
       "D:\\all-relationships\\node_modules\\@playwright\\test\\cli.js",
-      "test"
+      "test",
+      "--config",
+      "playwright.pages.config.ts"
     ],
-    "configFile": "D:\\all-relationships\\playwright.config.ts",
+    "configFile": "D:\\all-relationships\\playwright.pages.config.ts",
     "rootDir": "D:/all-relationships/tests/browser",
     "failOnFlakyTests": false,
     "forbidOnly": false,
@@ -87,7 +89,7 @@
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
         "timeout": 45000,
         "use": {
-          "baseURL": "http://127.0.0.1:3100",
+          "baseURL": "http://127.0.0.1:3101",
           "channel": "msedge",
           "trace": "retain-on-failure",
           "screenshot": "only-on-failure",
@@ -116,7 +118,7 @@
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
         "timeout": 45000,
         "use": {
-          "baseURL": "http://127.0.0.1:3100",
+          "baseURL": "http://127.0.0.1:3101",
           "channel": "msedge",
           "trace": "retain-on-failure",
           "screenshot": "only-on-failure",
@@ -145,7 +147,7 @@
         "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
         "timeout": 45000,
         "use": {
-          "baseURL": "http://127.0.0.1:3100",
+          "baseURL": "http://127.0.0.1:3101",
           "channel": "msedge",
           "trace": "retain-on-failure",
           "screenshot": "only-on-failure",
@@ -190,12 +192,7 @@
     "updateSourceMethod": "patch",
     "version": "1.65.0",
     "workers": 2,
-    "webServer": {
-      "command": "npm run start -- --hostname 127.0.0.1 --port 3100",
-      "url": "http://127.0.0.1:3100",
-      "reuseExistingServer": true,
-      "timeout": 60000
-    }
+    "webServer": null
   },
   "suites": [
     {
@@ -220,12 +217,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4528,
+                  "duration": 1588,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:16.420Z",
+                  "startTime": "2026-11-09T09:18:10.214Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -240,7 +237,7 @@
                   "description": "Route coverage does not depend on viewport",
                   "location": {
                     "file": "D:\\all-relationships\\tests\\browser\\wiki.spec.ts",
-                    "line": 9,
+                    "line": 11,
                     "column": 8
                   }
                 }
@@ -253,19 +250,19 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 9,
+                  "duration": 10,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:16.416Z",
+                  "startTime": "2026-11-09T09:18:10.218Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "description": "Route coverage does not depend on viewport",
                       "location": {
                         "file": "D:\\all-relationships\\tests\\browser\\wiki.spec.ts",
-                        "line": 9,
+                        "line": 11,
                         "column": 8
                       }
                     }
@@ -283,7 +280,7 @@
                   "description": "Route coverage does not depend on viewport",
                   "location": {
                     "file": "D:\\all-relationships\\tests\\browser\\wiki.spec.ts",
-                    "line": 9,
+                    "line": 11,
                     "column": 8
                   }
                 }
@@ -296,19 +293,19 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 8,
+                  "duration": 11,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:30.657Z",
+                  "startTime": "2026-11-09T09:18:23.376Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "description": "Route coverage does not depend on viewport",
                       "location": {
                         "file": "D:\\all-relationships\\tests\\browser\\wiki.spec.ts",
-                        "line": 9,
+                        "line": 11,
                         "column": 8
                       }
                     }
@@ -321,7 +318,7 @@
           ],
           "id": "9ad4b629413dd462dd80-8d091d020bafc0561e95",
           "file": "wiki.spec.ts",
-          "line": 6,
+          "line": 8,
           "column": 1
         },
         {
@@ -340,12 +337,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2391,
+                  "duration": 2429,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:20.971Z",
+                  "startTime": "2026-11-09T09:18:11.828Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -363,12 +360,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2112,
+                  "duration": 2257,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:16.449Z",
+                  "startTime": "2026-11-09T09:18:10.254Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -386,12 +383,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2184,
+                  "duration": 2228,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:30.690Z",
+                  "startTime": "2026-11-09T09:18:23.420Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -401,7 +398,7 @@
           ],
           "id": "9ad4b629413dd462dd80-d5a34817bc4ba950004c",
           "file": "wiki.spec.ts",
-          "line": 30,
+          "line": 32,
           "column": 1
         },
         {
@@ -420,12 +417,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 852,
+                  "duration": 840,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:23.540Z",
+                  "startTime": "2026-11-09T09:18:14.435Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -443,12 +440,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 864,
+                  "duration": 880,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:18.735Z",
+                  "startTime": "2026-11-09T09:18:12.701Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -466,12 +463,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 792,
+                  "duration": 784,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:33.043Z",
+                  "startTime": "2026-11-09T09:18:25.832Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -481,7 +478,7 @@
           ],
           "id": "9ad4b629413dd462dd80-6fec9bcafdae5536d4e9",
           "file": "wiki.spec.ts",
-          "line": 61,
+          "line": 63,
           "column": 1
         },
         {
@@ -500,12 +497,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1215,
+                  "duration": 1275,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:24.403Z",
+                  "startTime": "2026-11-09T09:18:15.280Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -523,12 +520,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1842,
+                  "duration": 1360,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:19.609Z",
+                  "startTime": "2026-11-09T09:18:13.588Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -546,12 +543,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1931,
+                  "duration": 1377,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:33.845Z",
+                  "startTime": "2026-11-09T09:18:26.624Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -561,7 +558,7 @@
           ],
           "id": "9ad4b629413dd462dd80-211d5f3f7da8c7c70920",
           "file": "wiki.spec.ts",
-          "line": 93,
+          "line": 95,
           "column": 1
         },
         {
@@ -580,12 +577,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1469,
+                  "duration": 1872,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:25.630Z",
+                  "startTime": "2026-11-09T09:18:16.560Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -603,12 +600,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1428,
+                  "duration": 1916,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:21.462Z",
+                  "startTime": "2026-11-09T09:18:14.958Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -626,12 +623,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1378,
+                  "duration": 1697,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:35.790Z",
+                  "startTime": "2026-11-09T09:18:28.007Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -641,7 +638,7 @@
           ],
           "id": "9ad4b629413dd462dd80-16bac5740a7402f7bb9d",
           "file": "wiki.spec.ts",
-          "line": 122,
+          "line": 131,
           "column": 1
         },
         {
@@ -660,12 +657,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5652,
+                  "duration": 4510,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:27.110Z",
+                  "startTime": "2026-11-09T09:18:18.439Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -683,12 +680,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6018,
+                  "duration": 4914,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:22.902Z",
+                  "startTime": "2026-11-09T09:18:16.883Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -706,12 +703,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 5307,
+                  "duration": 4179,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:37.179Z",
+                  "startTime": "2026-11-09T09:18:29.715Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -721,7 +718,7 @@
           ],
           "id": "9ad4b629413dd462dd80-4a49b58d41630b9d71ff",
           "file": "wiki.spec.ts",
-          "line": 142,
+          "line": 156,
           "column": 1
         },
         {
@@ -740,12 +737,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 818,
+                  "duration": 793,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:32.775Z",
+                  "startTime": "2026-11-09T09:18:22.956Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -763,12 +760,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 836,
+                  "duration": 750,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:28.932Z",
+                  "startTime": "2026-11-09T09:18:21.803Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -786,12 +783,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 730,
+                  "duration": 607,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-11-09T09:07:42.498Z",
+                  "startTime": "2026-11-09T09:18:33.900Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -801,7 +798,7 @@
           ],
           "id": "9ad4b629413dd462dd80-b1e432dbd7632ac8b00e",
           "file": "wiki.spec.ts",
-          "line": 205,
+          "line": 220,
           "column": 1
         }
       ]
@@ -809,8 +806,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-09T09:07:10.663Z",
-    "duration": 33298.008,
+    "startTime": "2026-11-09T09:18:01.443Z",
+    "duration": 34135.465,
     "expected": 19,
     "skipped": 2,
     "unexpected": 0,

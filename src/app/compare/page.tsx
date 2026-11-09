@@ -1,19 +1,7 @@
-import { Comparison } from "@/components/comparison";
-import { entryById } from "@/lib/catalog";
+import { Suspense } from "react";
+import { ComparisonFromQuery } from "@/components/comparison";
 export const metadata = { title: "关系比较" };
-export default async function ComparePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ left?: string; right?: string }>;
-}) {
-  const params = await searchParams;
-  const left = params.left && entryById[params.left] ? params.left : "A04-001";
-  const right =
-    params.right && entryById[params.right]
-      ? params.right
-      : left === "A02-007"
-        ? "A04-001"
-        : "A02-007";
+export default function ComparePage() {
   return (
     <div className="page-wrap">
       <span className="eyebrow">SIDE BY SIDE / 关系比较</span>
@@ -21,7 +9,9 @@ export default async function ComparePage({
       <p className="page-intro">
         把两种关系放在一起，阅读已有的定义与属性。对于还不知道的部分，我们保留空白。
       </p>
-      <Comparison initialLeft={left} initialRight={right} />
+      <Suspense fallback={<p role="status">正在读取比较选项…</p>}>
+        <ComparisonFromQuery />
+      </Suspense>
     </div>
   );
 }

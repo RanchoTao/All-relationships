@@ -13,7 +13,10 @@
     "lint": "eslint .",
     "validate:data": "tsx scripts/validate-data.ts",
     "test:unit": "tsx --test tests/catalog.test.ts",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "build:pages": "node scripts/build-pages.mjs",
+    "preview:pages": "node scripts/serve-pages.mjs",
+    "test:pages": "playwright test --config playwright.pages.config.ts"
   },
   "repository": {
     "type": "git",

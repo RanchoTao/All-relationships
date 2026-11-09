@@ -157,7 +157,7 @@ export function GraphExplorer({ initialEntry }: { initialEntry?: string }) {
     );
     setSelected(id);
     setQuery("");
-    window.history.replaceState(null, "", `/graph?entry=${id}`);
+    window.history.replaceState(null, "", `?entry=${id}`);
   }
   const selectedNode = nodes.find((node) => node.id === selected);
   const selectedEntry = entryById[selected];
