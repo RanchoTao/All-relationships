@@ -1,53 +1,79 @@
 "use client";
-import { coverage, knowledgeById } from "@/lib/knowledge";
 import { useDeferredValue, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   ArrowDown,
   ArrowRight,
+  ArrowUpRight,
   Search,
   SlidersHorizontal,
   X,
   GitCompareArrows,
-  Sparkles,
+  Network,
+  Compass,
 } from "lucide-react";
 import {
-  categories,
-  entryById,
-  featuredIds,
-  kindLabels,
-  attributeLabels,
-  statusLabels,
-} from "@/lib/catalog";
-import {
+  createSearch,
   emptyFilters,
-  searchEntries,
-  facetOptions,
+  facetOptionsFor,
   type Filters,
-} from "@/lib/search";
+  type IndexItem,
+} from "@/lib/index-model";
 import type { AttributeKey } from "@/lib/schema";
 import { EntryCard } from "./entry-card";
 
-export function Explorer() {
+type Category = { id: string; name: string; count: number };
+type CoverageStats = {
+  total: number;
+  complete: number;
+  deep: number;
+  reviewed: number;
+};
+
+export function Explorer({
+  items,
+  categories,
+  coverage,
+  kindLabels,
+  statusLabels,
+  attributeLabels,
+}: {
+  items: IndexItem[];
+  categories: Category[];
+  coverage: CoverageStats;
+  kindLabels: Record<string, string>;
+  statusLabels: Record<string, string>;
+  attributeLabels: Record<AttributeKey, string>;
+}) {
+  const search = useMemo(() => createSearch(items), [items]);
+  const facetOptions = useMemo(() => facetOptionsFor(items), [items]);
+  const itemById = useMemo(
+    () => Object.fromEntries(items.map((i) => [i.id, i])),
+    [items],
+  );
+  const counts = useMemo(() => {
+    const c = { deep: 0, basic: 0, pending: 0, unspecified: 0, network: 0 };
+    for (const i of items) {
+      c[i.coverage]++;
+      if (i.participants === "dyadic_or_network_depending_on_context")
+        c.network++;
+      else c.unspecified++;
+    }
+    return c;
+  }, [items]);
   const [filters, setFilters] = useState<Filters>(emptyFilters);
   const [advanced, setAdvanced] = useState(false);
   const [limit, setLimit] = useState(30);
   const [selected, setSelected] = useState<string[]>([]);
   const [notice, setNotice] = useState("");
   const deferredFilters = useDeferredValue(filters);
-  const results = useMemo(() => {
-    const result = searchEntries(deferredFilters);
-    return deferredFilters.query
-      ? result
-      : [...result].sort((a, b) => {
-          const ai = featuredIds.indexOf(a.id),
-            bi = featuredIds.indexOf(b.id);
-          return (
-            (ai < 0 ? (knowledgeById[a.id] ? 100 : 999) : ai) -
-            (bi < 0 ? (knowledgeById[b.id] ? 100 : 999) : bi)
-          );
-        });
-  }, [deferredFilters]);
+  const results = useMemo(
+    () => search(deferredFilters),
+    [search, deferredFilters],
+  );
+  const visible = results.slice(0, limit);
+  const written = visible.filter((e) => e.definition);
+  const pending = visible.filter((e) => !e.definition);
   function update(patch: Partial<Filters>) {
     setFilters((prev) => ({ ...prev, ...patch }));
     setLimit(30);
@@ -116,36 +142,45 @@ export function Explorer() {
           </div>
         </aside>
       </section>
-      <section className="editorial-strip">
-        <Sparkles size={18} />
-        <p>
-          <strong>一座开放的知识馆，一份诚实的草稿。</strong>{" "}
-          {coverage.complete} 张基础字段完整，其中 {coverage.deep}{" "}
-          张深度卡；其余继续建设。独立人工审核 0 张。
-        </p>
-        <Link href="/about">
-          了解编辑原则 <ArrowRight size={15} />
-        </Link>
-      </section>
-      <div className="explore-entry">
-        <div>
+      <nav className="pathways" aria-label="进入方式">
+        <Link href="/explore" className="pathway pathway-primary">
+          <span className="pathway-index">01 / 偏好探索</span>
+          <Compass size={26} strokeWidth={1.4} />
           <strong>测测你想要什么关系</strong>
           <p>
-            从此刻的需求出发。约 6–12
-            题，可跳过、修改与否认结论，仅在本页内存计算。
+            从此刻的需求出发，约 6–12
+            题。可跳过、修改与否认结论，答案只在本页内存计算。
           </p>
-        </div>
-        <Link className="outline-button" href="/explore">
-          开始关系偏好探索 →
+          <span className="pathway-go">
+            开始探索 <ArrowRight size={16} />
+          </span>
         </Link>
-      </div>
+        <Link href="/graph" className="pathway">
+          <span className="pathway-index">02 / 关系图谱</span>
+          <Network size={26} strokeWidth={1.4} />
+          <strong>换个视角，看见结构</strong>
+          <p>按目录与 20 个拟议原型族浏览，定位任意词条。</p>
+          <span className="pathway-go">
+            打开图谱 <ArrowUpRight size={16} />
+          </span>
+        </Link>
+        <Link href="/compare" className="pathway">
+          <span className="pathway-index">03 / 关系比较</span>
+          <GitCompareArrows size={26} strokeWidth={1.4} />
+          <strong>两种关系，差在哪里</strong>
+          <p>只在双方都有记录时比较差异，缺失保持未知。</p>
+          <span className="pathway-go">
+            去比较 <ArrowUpRight size={16} />
+          </span>
+        </Link>
+      </nav>
       <section id="collection" className="collection">
         <div className="section-heading">
           <div>
             <span className="eyebrow">EXPLORE THE COLLECTION</span>
             <h2>每一种关系，都值得被理解。</h2>
           </div>
-          <span className="collection-index">INDEX / 001—479</span>
+          <span className="collection-index">INDEX / 001—{coverage.total}</span>
         </div>
         <div className="search-toolbar">
           <label className="search-field">
@@ -181,7 +216,7 @@ export function Explorer() {
             className={!filters.category ? "active" : ""}
             onClick={() => update({ category: "" })}
           >
-            全部馆藏 <span>479</span>
+            全部馆藏 <span>{coverage.total}</span>
           </button>
           {categories.map((c) => (
             <button
@@ -206,9 +241,11 @@ export function Explorer() {
                   onChange={(e) => update({ coverage: e.target.value })}
                 >
                   <option value="">全部内容</option>
-                  <option value="complete">基础字段完整（60）</option>
-                  <option value="deep">深度卡（20）</option>
-                  <option value="pending">继续建设（419）</option>
+                  <option value="complete">
+                    基础字段完整（{counts.deep + counts.basic}）
+                  </option>
+                  <option value="deep">深度卡（{counts.deep}）</option>
+                  <option value="pending">继续建设（{counts.pending}）</option>
                 </select>
               </label>
               <label>
@@ -250,10 +287,10 @@ export function Explorer() {
                 >
                   <option value="">全部记录</option>
                   <option value="unrestricted_or_unspecified">
-                    未知／未指定（450）
+                    未知／未指定（{counts.unspecified}）
                   </option>
                   <option value="dyadic_or_network_depending_on_context">
-                    双人或网络 · 依情境（29）
+                    双人或网络 · 依情境（{counts.network}）
                   </option>
                 </select>
               </label>
@@ -307,22 +344,47 @@ export function Explorer() {
               </button>
             )}
           </p>
-          <span>
-            多种关系可以同时存在 <span className="dot-separator">·</span> ＋
-            加入比较
+          <span className="draft-note">
+            <span className="badge badge-draft">草稿</span>
+            全部内容为工作定义，独立审核 {coverage.reviewed} 张 ·{" "}
+            <Link href="/about">编辑原则</Link>
           </span>
         </div>
         {results.length ? (
-          <div className="card-grid">
-            {results.slice(0, limit).map((entry) => (
-              <EntryCard
-                key={entry.id}
-                entry={entry}
-                selected={selected.includes(entry.id)}
-                onToggle={toggle}
-              />
-            ))}
-          </div>
+          <>
+            {written.length > 0 && (
+              <div className="card-grid">
+                {written.map((entry) => (
+                  <EntryCard
+                    key={entry.id}
+                    entry={entry}
+                    selected={selected.includes(entry.id)}
+                    onToggle={toggle}
+                  />
+                ))}
+              </div>
+            )}
+            {pending.length > 0 && (
+              <>
+                <div className="pending-heading">
+                  <h3>待建设词条</h3>
+                  <p>
+                    这些名称已收录、可搜索，但还没有工作定义。名称不代表定义，空白不代表不存在。
+                  </p>
+                </div>
+                <div className="card-grid card-grid-compact">
+                  {pending.map((entry) => (
+                    <EntryCard
+                      key={entry.id}
+                      entry={entry}
+                      selected={selected.includes(entry.id)}
+                      onToggle={toggle}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </>
         ) : (
           <div className="empty-state">
             <Search size={30} />
@@ -372,9 +434,9 @@ export function Explorer() {
               <button
                 key={id}
                 onClick={() => toggle(id)}
-                aria-label={`移除比较：${entryById[id].label_zh}`}
+                aria-label={`移除比较：${itemById[id].label}`}
               >
-                {entryById[id].label_zh}
+                {itemById[id].label}
                 <X size={14} />
               </button>
             ))}
