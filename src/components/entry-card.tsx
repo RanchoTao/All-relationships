@@ -1,79 +1,73 @@
-import {
-  definitionFor,
-  contentStatus,
-  knowledgeById,
-  conceptLabels,
-} from "@/lib/knowledge";
 import Link from "next/link";
 import { ArrowUpRight, Plus, Check } from "lucide-react";
-import {
-  attributesFor,
-  categoryById,
-  displayName,
-  englishName,
-  kindLabels,
-} from "@/lib/catalog";
-import type { Entry } from "@/lib/schema";
+import { coverageLabels, type IndexItem } from "@/lib/index-model";
+
+export function CoverageBadge({
+  coverage,
+}: {
+  coverage: IndexItem["coverage"];
+}) {
+  return (
+    <span className={`badge badge-${coverage}`}>
+      {coverageLabels[coverage]}
+    </span>
+  );
+}
+
 export function EntryCard({
   entry,
   selected,
   onToggle,
 }: {
-  entry: Entry;
+  entry: IndexItem;
   selected?: boolean;
   onToggle?: (id: string) => void;
 }) {
-  const tone = Number(entry.category_id.slice(1)) % 5;
-  const attrs = Object.values(attributesFor(entry)).slice(0, 2);
+  const tone = Number(entry.categoryId.slice(1)) % 5;
+  const attrs = Object.values(entry.attrs).slice(0, 2);
+  const isPending = !entry.definition;
   return (
-    <article className={`entry-card tone-${tone}`} data-entry-id={entry.id}>
+    <article
+      className={`entry-card tone-${tone}${isPending ? " is-pending" : ""}${selected ? " is-selected" : ""}`}
+      data-entry-id={entry.id}
+    >
       <div className="card-top">
         <span>{entry.id.replace("-", " / ")}</span>
-        <span className="kind-label">
-          {knowledgeById[entry.id]
-            ? conceptLabels[knowledgeById[entry.id].concept.kind]
-            : (kindLabels[entry.kind] ?? entry.kind)}
-        </span>
+        <span className="kind-label">{entry.kindLabel}</span>
       </div>
       <Link
         className="card-link"
         href={`/relationships/${entry.id}`}
         prefetch={false}
       >
-        <span className="card-category">
-          {categoryById[entry.category_id].name}
-        </span>
-        <h3>{displayName(entry)}</h3>
-        {englishName(entry) && (
+        <span className="card-category">{entry.categoryName}</span>
+        <h3>{entry.name}</h3>
+        {entry.en && (
           <span className="english-name" lang="en">
-            {englishName(entry)}
+            {entry.en}
           </span>
         )}
-        <p className={definitionFor(entry) ? "" : "missing-definition"}>
-          {definitionFor(entry) ??
-            "定义待完善。此处保留原始名称与初步分类，等待进一步研究与资料核验。"}
-        </p>
+        {entry.definition && <p>{entry.definition}</p>}
         <span className="card-read">
-          阅读词条 <ArrowUpRight size={17} />
+          {isPending ? "查看收录信息" : "阅读词条"} <ArrowUpRight size={16} />
         </span>
       </Link>
       <div className="card-bottom">
-        <div>
-          <span
-            className={`status-dot ${definitionFor(entry) ? "has-definition" : ""}`}
-          />
-          {contentStatus(entry.id)}
+        <div className="card-meta">
+          {entry.coverage === "pending" && entry.definition ? (
+            <span className="badge badge-basic">简短定义</span>
+          ) : (
+            <CoverageBadge coverage={entry.coverage} />
+          )}
           {attrs.length > 0 && (
-            <span className="attribute-hint">
-              {attrs.map((a) => a.value).join(" / ")}
-            </span>
+            <span className="attribute-hint">{attrs.join(" / ")}</span>
           )}
         </div>
         {onToggle && (
           <button
             className="compare-add"
             onClick={() => onToggle(entry.id)}
-            aria-label={`${selected ? "移除比较" : "加入比较"}：${entry.label_zh}`}
+            aria-label={`${selected ? "移除比较" : "加入比较"}：${entry.label}`}
             aria-pressed={selected}
           >
             {selected ? <Check size={17} /> : <Plus size={17} />}
