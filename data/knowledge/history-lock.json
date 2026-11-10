@@ -1,0 +1,10 @@
+{
+  "commit": "0c1e4271d91d2d29442c34f2da0acec0ce7d9999",
+  "sha256": {
+    "data/raw/dearwithme_relationship_catalog.md": "a464ebcb7b43fc02d85480df7ff60a73ea155a5924561fa9056bc00f315b0e7a",
+    "data/raw/dearwithme_relationship_taxonomy.json": "72a072d63d431059d7571e0a5528abc40556cbe2809b062c2c4bb6cac07d693d",
+    "data/draft/AllRelationships_479_catalog_v0.2.json": "9f32ca43600cf935aa76d3dd5c83d404451f56d6566a905c91ff1d421a941a27",
+    "docs/AllRelationships_taxonomy_review_v0.2.md": "4c14714df2a16ee7ae376cc8ab2c9b77222e315892d58933b0a7f6c685b20dc9"
+  },
+  "normalization": "UTF-8 with LF line endings (cross-platform checkout)"
+}

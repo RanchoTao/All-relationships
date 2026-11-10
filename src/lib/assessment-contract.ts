@@ -1,4 +1,4 @@
-/** Phase 1 interface only. No item bank, scoring, selection algorithm or collection endpoint. */
+/** Historical Phase 1 research contract. Phase 2 executable rules and types live in assessment.ts; no collection endpoint. */
 export type PreferenceDimension =
   | "purpose"
   | "emotional_closeness"
@@ -36,10 +36,8 @@ export interface PreferenceProfile {
   scientificStatus: "unvalidated_research_prototype";
 }
 export interface AssessmentResearchAdapter {
-  /** Implementation postponed until an item bank and validation plan have been reviewed. */
-  proposeNext(
-    answers: readonly PreferenceAnswer[],
-  ): Promise<{
+  /** Historical async adapter proposal; the v0.1 implementation uses synchronous pure functions. */
+  proposeNext(answers: readonly PreferenceAnswer[]): Promise<{
     itemId: string | null;
     rationale: string;
     stopReason?:

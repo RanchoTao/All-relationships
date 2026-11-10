@@ -1,4 +1,5 @@
 "use client";
+import { coverage, knowledgeById } from "@/lib/knowledge";
 import { useDeferredValue, useMemo, useState } from "react";
 import Link from "next/link";
 import {
@@ -41,7 +42,10 @@ export function Explorer() {
       : [...result].sort((a, b) => {
           const ai = featuredIds.indexOf(a.id),
             bi = featuredIds.indexOf(b.id);
-          return (ai < 0 ? 999 : ai) - (bi < 0 ? 999 : bi);
+          return (
+            (ai < 0 ? (knowledgeById[a.id] ? 100 : 999) : ai) -
+            (bi < 0 ? (knowledgeById[b.id] ? 100 : 999) : bi)
+          );
         });
   }, [deferredFilters]);
   function update(patch: Partial<Filters>) {
@@ -65,6 +69,7 @@ export function Explorer() {
     filters.kind ||
     filters.status ||
     filters.participants ||
+    filters.coverage ||
     Object.values(filters.attributes).some(Boolean),
   );
   return (
@@ -114,13 +119,26 @@ export function Explorer() {
       <section className="editorial-strip">
         <Sparkles size={18} />
         <p>
-          <strong>一座开放的知识馆，一份诚实的草稿。</strong> 23
-          项有工作定义；其余待完善。所有词条尚未经独立审核。
+          <strong>一座开放的知识馆，一份诚实的草稿。</strong>{" "}
+          {coverage.complete} 张基础字段完整，其中 {coverage.deep}{" "}
+          张深度卡；其余继续建设。独立人工审核 0 张。
         </p>
         <Link href="/about">
           了解编辑原则 <ArrowRight size={15} />
         </Link>
       </section>
+      <div className="explore-entry">
+        <div>
+          <strong>测测你想要什么关系</strong>
+          <p>
+            从此刻的需求出发。约 6–12
+            题，可跳过、修改与否认结论，仅在本页内存计算。
+          </p>
+        </div>
+        <Link className="outline-button" href="/explore">
+          开始关系偏好探索 →
+        </Link>
+      </div>
       <section id="collection" className="collection">
         <div className="section-heading">
           <div>
@@ -180,6 +198,19 @@ export function Explorer() {
         {advanced && (
           <div className="filters-panel" id="advanced-filters">
             <div className="filter-grid">
+              <label>
+                内容建设状态
+                <select
+                  aria-label="内容建设状态"
+                  value={filters.coverage}
+                  onChange={(e) => update({ coverage: e.target.value })}
+                >
+                  <option value="">全部内容</option>
+                  <option value="complete">基础字段完整（60）</option>
+                  <option value="deep">深度卡（20）</option>
+                  <option value="pending">继续建设（419）</option>
+                </select>
+              </label>
               <label>
                 概念类型
                 <select

@@ -1,10 +1,10 @@
+import { definitionFor, effectiveKind, contentStatus } from "./knowledge";
 import {
   attributesFor,
   attributeLabels,
   categoryById,
   kindLabels,
   participantLabel,
-  statusLabels,
 } from "./catalog";
 import type { AttributeKey, Entry } from "./schema";
 export interface ComparisonRow {
@@ -17,8 +17,8 @@ export function compareEntries(a: Entry, b: Entry): ComparisonRow[] {
   return [
     {
       label: "一句话工作定义",
-      left: a.wiki_definition_zh,
-      right: b.wiki_definition_zh,
+      left: definitionFor(a),
+      right: definitionFor(b),
       draft: true,
     },
     {
@@ -28,13 +28,13 @@ export function compareEntries(a: Entry, b: Entry): ComparisonRow[] {
     },
     {
       label: "初步概念类型",
-      left: kindLabels[a.kind],
-      right: kindLabels[b.kind],
+      left: kindLabels[effectiveKind(a)],
+      right: kindLabels[effectiveKind(b)],
     },
     {
       label: "定义状态",
-      left: statusLabels[a.definition_status],
-      right: statusLabels[b.definition_status],
+      left: contentStatus(a.id),
+      right: contentStatus(b.id),
     },
     {
       label: "参与人数",

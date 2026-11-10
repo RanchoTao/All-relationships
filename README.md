@@ -1,19 +1,19 @@
 # AllRelationships · 人际关系 Wiki / 关系分类研究
 
-**状态：研究草稿 v0.2（2026-11-09）· 尚未经过独立学术审查**
+**状态：Phase 2 内容草稿 v0.3 / 偏好探索 v0.1（2026-11-10）· 尚未经过独立学术或测评效度验证**
 
 AllRelationships 旨在整理、分类、描述人与人之间的关系，包括亲密关系、友谊、活动伙伴、共同生活、合作、职业、家庭、制度性社会角色与关系状态。它可为将来的 Dearwithme 产品提供**可审计的关系分类、术语与规则结构**，但不等同于婚恋匹配平台。
 
 ## 研究资料
 
-| 文件 | 内容 |
-| --- | --- |
-| [原始完整词条列表](data/raw/dearwithme_relationship_catalog.md) | 17类、479个原始关系名称和情景标签（可读Markdown） |
-| [原始结构化列表](data/raw/dearwithme_relationship_taxonomy.json) | 479项原始数据及来源链接（JSON） |
-| [v0.2 分类审计](docs/AllRelationships_taxonomy_review_v0.2.md) | 关系原型、变体、场景、结构属性、生命周期、风险等分层方法与逐条审核状态 |
-| [v0.2 结构化本体草稿](data/draft/AllRelationships_479_catalog_v0.2.json) | 保留稳定ID的479项种子数据、20个拟议上层原型族及审核元信息 |
+| 文件                                                                     | 内容                                                                   |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| [原始完整词条列表](data/raw/dearwithme_relationship_catalog.md)          | 17类、479个原始关系名称和情景标签（可读Markdown）                      |
+| [原始结构化列表](data/raw/dearwithme_relationship_taxonomy.json)         | 479项原始数据及来源链接（JSON）                                        |
+| [v0.2 分类审计](docs/AllRelationships_taxonomy_review_v0.2.md)           | 关系原型、变体、场景、结构属性、生命周期、风险等分层方法与逐条审核状态 |
+| [v0.2 结构化本体草稿](data/draft/AllRelationships_479_catalog_v0.2.json) | 保留稳定ID的479项种子数据、20个拟议上层原型族及审核元信息              |
 
-**注意：479 = 名称和具体场景的收集量，不代表479种互斥的关系。** 目前仅23条具备示例工作定义，其余定义尚待研究。该词库不是正式心理学量表，也不适合作为用户个体的诊断、事实认证或直接撮合规则。
+**注意：479 = 名称和具体场景的收集量，不代表479种互斥的关系。** Phase 2 新增 60 张基础字段完整的工作定义卡（含 20 张深度卡），其余 419 项继续建设。与旧定义合计 71 项有定义文本，但不能把旧的简短定义计作完整卡。该词库不是正式心理学量表，也不适合作为用户个体的诊断、事实认证或直接撮合规则。
 
 ## 概念分层
 
@@ -39,7 +39,35 @@ Dearwithme：若未来获得开发授权，可基于经审核的关系意向和�
 - 将来如做“关系倾向测试”，初期只能作为**自我探索与偏好澄清工具**；没有心理测量学验证前不能宣称测出“真实人格/真正关系需求”。
 - **仓库当前未授予独立开放许可证**。GitHub Public 并不自动允许商业复用；未来可分别决定网站代码与词库内容的许可证。
 
-## Phase 1 本地 Wiki
+## Phase 2：百科内容与关系偏好探索
+
+- `/explore`：先询问需求，再从 14 题题库按透明分支选择 6–12 题；友谊、活动、研究、学习、居住、社区和成年人恋爱方向。
+- `/explore/method`：完整可读题库、分支顺序、必要条件及排序规则、34 个阅读模板与有效性限制。
+- 60 张新内容卡包含定义、范围、角色、情境、需求、互动、资源属性、边界、误解、冲突、区别、变化及来源；20 张另有扩展阅读与独立虚构情境拆解。
+- 首页保持原视觉，只优先展示完善卡片并增加探索入口和内容覆盖筛选；历史 479 项均可搜索和访问。
+- 原始记录及 v0.2 草稿不变，新增层在 `data/knowledge/`，有历史 SHA-256 校验与逐项分类状态。
+- **60 张全部仍是工作定义，独立人工审核 0 张。** 8 条具体来源登记：7 页读取，1 项仅元数据／摘要；29 张卡关联背景来源，31 张暂无独立外部来源。来源不能为整卡或测试背书。
+- 答案只在页面内存，不默认上传／存储；支持跳过、不确定、不适用、修改、否认和清空。未知必要属性不算通过，结果不足不凑数。不调用收费 API。
+
+交付文档：[覆盖报告](docs/PHASE2_CONTENT_COVERAGE.md)、[内容工作流与分类](docs/PHASE2_EDITORIAL_WORKFLOW.md)、[测评规则与隐私](docs/PHASE2_ASSESSMENT.md)、[题库草案](docs/PHASE2_QUESTION_BANK.md)、[验收结果](docs/PHASE2_DELIVERY_REPORT.md)。
+
+本地推荐复验现有 Pages 产物：
+
+```powershell
+npm ci
+npm run validate:data
+npm run test:unit
+npm run typecheck
+npm run lint
+npm run build:pages
+$env:PLAYWRIGHT_CHANNEL='msedge' # Windows 已有 Edge；否则 npx playwright install chromium
+npm run test:pages
+npm run preview:pages
+```
+
+打开 `http://127.0.0.1:3101/All-relationships/explore/`。无需数据库、环境变量或 API 密钥。PR 保持只验证，不部署；没有重写既有 GitHub Pages 结构。
+
+## Phase 1 基础能力（继续保留）
 
 已加入 Next.js App Router、TypeScript、Tailwind CSS、本地 JSON 和 Zod 的只读网站：
 

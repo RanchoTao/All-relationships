@@ -1,3 +1,4 @@
+import { definitionFor, knowledgeById, effectiveKind } from "./knowledge";
 import Fuse from "fuse.js";
 import { entries, attributesFor, categoryById, kindLabels } from "./catalog";
 import type { AttributeKey, Entry } from "./schema";
@@ -8,6 +9,7 @@ export interface Filters {
   kind: string;
   status: string;
   participants: string;
+  coverage: string;
   attributes: Partial<Record<AttributeKey, string>>;
 }
 export const emptyFilters: Filters = {
@@ -16,13 +18,19 @@ export const emptyFilters: Filters = {
   kind: "",
   status: "",
   participants: "",
+  coverage: "",
   attributes: {},
 };
 const fuse = new Fuse(
   entries.map((e) => ({
     ...e,
+    wiki_definition_zh: definitionFor(e),
+    knowledgeText: [
+      ...(knowledgeById[e.id]?.boundaries ?? []),
+      ...(knowledgeById[e.id]?.needs ?? []),
+    ].join(" "),
     categoryName: categoryById[e.category_id].name,
-    kindName: kindLabels[e.kind],
+    kindName: kindLabels[effectiveKind(e)],
   })),
   {
     keys: [
@@ -30,6 +38,7 @@ const fuse = new Fuse(
       "label_zh",
       "aliases",
       "wiki_definition_zh",
+      "knowledgeText",
       "categoryName",
       "kindName",
     ],
@@ -43,8 +52,16 @@ export function searchEntries(filters: Filters): Entry[] {
   return found.filter(
     (e) =>
       (!filters.category || e.category_id === filters.category) &&
-      (!filters.kind || e.kind === filters.kind) &&
-      (!filters.status || e.definition_status === filters.status) &&
+      (!filters.kind || effectiveKind(e) === filters.kind) &&
+      (!filters.status ||
+        (definitionFor(e) ? "working_draft" : "not_yet_written") ===
+          filters.status) &&
+      (!filters.coverage ||
+        (filters.coverage === "pending"
+          ? !knowledgeById[e.id]
+          : filters.coverage === "complete"
+            ? !!knowledgeById[e.id]
+            : knowledgeById[e.id]?.depth === filters.coverage)) &&
       (!filters.participants || e.participant_count === filters.participants) &&
       Object.entries(filters.attributes).every(
         ([key, value]) =>

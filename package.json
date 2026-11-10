@@ -11,12 +11,13 @@
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "validate:data": "tsx scripts/validate-data.ts",
-    "test:unit": "tsx --test tests/catalog.test.ts",
+    "validate:data": "tsx scripts/validate-data.ts && tsx scripts/validate-knowledge.ts",
+    "test:unit": "tsx --test tests/*.test.ts",
     "test:e2e": "playwright test",
     "build:pages": "node scripts/build-pages.mjs",
     "preview:pages": "node scripts/serve-pages.mjs",
-    "test:pages": "playwright test --config playwright.pages.config.ts"
+    "test:pages": "playwright test --config playwright.pages.config.ts",
+    "validate:knowledge": "tsx scripts/validate-knowledge.ts"
   },
   "repository": {
     "type": "git",

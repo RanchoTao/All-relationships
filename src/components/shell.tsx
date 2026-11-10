@@ -23,6 +23,7 @@ export function Header() {
       <nav aria-label="主导航">
         {[
           { href: "/", text: "探索馆藏", icon: BookOpen },
+          { href: "/explore", text: "偏好探索", icon: MoveUpRight },
           { href: "/graph", text: "关系图谱", icon: Network },
           { href: "/compare", text: "关系比较", icon: GitCompareArrows },
         ].map(({ href, text, icon: Icon }) => (
@@ -61,7 +62,7 @@ export function Footer() {
         >
           GitHub ↗
         </a>
-        <span>研究草稿 v0.2 · 2026</span>
+        <span>内容草稿 v0.3 · 2026</span>
       </div>
     </footer>
   );

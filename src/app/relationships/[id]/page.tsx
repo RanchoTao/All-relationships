@@ -1,3 +1,5 @@
+import { knowledgeById } from "@/lib/knowledge";
+import { KnowledgeDetail } from "@/components/knowledge-detail";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -41,6 +43,8 @@ export default async function Detail({
   const { id } = await params;
   const entry = entryById[id];
   if (!entry) notFound();
+  const card = knowledgeById[id];
+  if (card) return <KnowledgeDetail entry={entry} card={card} />;
   const category = categoryById[entry.category_id];
   const family = prototypeById[entry.archetype_family];
   const attributes = knowledgeFor(entry).attributes;
