@@ -105,10 +105,13 @@ export default async function Detail({
               </>
             ) : (
               <>
-                <p className="definition-quote">定义待完善。</p>
-                <p className="prose" style={{ marginTop: 16 }}>
-                  本词条目前仅收录名称及初步分类。尚无成熟定义、经核验的一句话概述或独立文献证据。
-                </p>
+                <div className="pending-notice">
+                  <span className="badge badge-pending">待建设</span>
+                  <strong>这个词条还没有工作定义。</strong>
+                  <p>
+                    目前只收录了名称与初步分类，尚无成熟定义、经核验的一句话概述或独立文献证据。下面保留原始记录，空白处一律显示未知。
+                  </p>
+                </div>
               </>
             )}
           </section>

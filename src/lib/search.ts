@@ -1,93 +1,12 @@
-import { definitionFor, knowledgeById, effectiveKind } from "./knowledge";
-import Fuse from "fuse.js";
-import { entries, attributesFor, categoryById, kindLabels } from "./catalog";
-import type { AttributeKey, Entry } from "./schema";
+// Full-data wrapper kept for tests and server code; the browser uses index-model directly.
+import { entryById } from "./catalog";
+import { collectionIndex } from "./index-data";
+import { createSearch, facetOptionsFor, type Filters } from "./index-model";
+import type { Entry } from "./schema";
 
-export interface Filters {
-  query: string;
-  category: string;
-  kind: string;
-  status: string;
-  participants: string;
-  coverage: string;
-  attributes: Partial<Record<AttributeKey, string>>;
-}
-export const emptyFilters: Filters = {
-  query: "",
-  category: "",
-  kind: "",
-  status: "",
-  participants: "",
-  coverage: "",
-  attributes: {},
-};
-const fuse = new Fuse(
-  entries.map((e) => ({
-    ...e,
-    wiki_definition_zh: definitionFor(e),
-    knowledgeText: [
-      ...(knowledgeById[e.id]?.boundaries ?? []),
-      ...(knowledgeById[e.id]?.needs ?? []),
-    ].join(" "),
-    categoryName: categoryById[e.category_id].name,
-    kindName: kindLabels[effectiveKind(e)],
-  })),
-  {
-    keys: [
-      "id",
-      "label_zh",
-      "aliases",
-      "wiki_definition_zh",
-      "knowledgeText",
-      "categoryName",
-      "kindName",
-    ],
-    threshold: 0.25,
-    ignoreLocation: true,
-  },
-);
+export { emptyFilters, type Filters } from "./index-model";
+const search = createSearch(collectionIndex());
 export function searchEntries(filters: Filters): Entry[] {
-  const q = filters.query.trim();
-  const found = q ? fuse.search(q).map((result) => result.item) : entries;
-  return found.filter(
-    (e) =>
-      (!filters.category || e.category_id === filters.category) &&
-      (!filters.kind || effectiveKind(e) === filters.kind) &&
-      (!filters.status ||
-        (definitionFor(e) ? "working_draft" : "not_yet_written") ===
-          filters.status) &&
-      (!filters.coverage ||
-        (filters.coverage === "pending"
-          ? !knowledgeById[e.id]
-          : filters.coverage === "complete"
-            ? !!knowledgeById[e.id]
-            : knowledgeById[e.id]?.depth === filters.coverage)) &&
-      (!filters.participants || e.participant_count === filters.participants) &&
-      Object.entries(filters.attributes).every(
-        ([key, value]) =>
-          !value ||
-          (attributesFor(e)[key as AttributeKey]?.value ?? "unknown") === value,
-      ),
-  );
+  return search(filters).map((item) => entryById[item.id]);
 }
-export const facetOptions = Object.fromEntries(
-  Object.keys({
-    purpose: 1,
-    intimacy: 1,
-    duration: 1,
-    cohabitation: 1,
-    resources: 1,
-    romance: 1,
-    sexual: 1,
-    structure: 1,
-  }).map((key) => [
-    key,
-    [
-      ...new Set(
-        entries
-          .map((e) => attributesFor(e)[key as AttributeKey]?.value)
-          .filter((v): v is string => !!v),
-      ),
-    ],
-  ]),
-) as Record<AttributeKey, string[]>;
+export const facetOptions = facetOptionsFor(collectionIndex());
