@@ -26,6 +26,8 @@ type Category = { id: string; name: string; count: number };
 type CoverageStats = {
   total: number;
   complete: number;
+  legacy: number;
+  missing: number;
   deep: number;
   reviewed: number;
 };
@@ -52,7 +54,15 @@ export function Explorer({
     [items],
   );
   const counts = useMemo(() => {
-    const c = { deep: 0, basic: 0, pending: 0, unspecified: 0, network: 0 };
+    const c = {
+      deep: 0,
+      standard: 0,
+      brief: 0,
+      legacy: 0,
+      pending: 0,
+      unspecified: 0,
+      network: 0,
+    };
     for (const i of items) {
       c[i.coverage]++;
       if (i.participants === "dyadic_or_network_depending_on_context")
@@ -242,9 +252,12 @@ export function Explorer({
                 >
                   <option value="">全部内容</option>
                   <option value="complete">
-                    基础字段完整（{counts.deep + counts.basic}）
+                    v0.4 内容完成（{coverage.complete}）
                   </option>
                   <option value="deep">深度卡（{counts.deep}）</option>
+                  <option value="standard">标准卡（{counts.standard}）</option>
+                  <option value="brief">简要卡（{counts.brief}）</option>
+                  <option value="legacy">旧版待重写（{counts.legacy}）</option>
                   <option value="pending">继续建设（{counts.pending}）</option>
                 </select>
               </label>
@@ -346,7 +359,8 @@ export function Explorer({
           </p>
           <span className="draft-note">
             <span className="badge badge-draft">草稿</span>
-            全部内容为工作定义，独立审核 {coverage.reviewed} 张 ·{" "}
+            v0.4 完成 {coverage.complete} 张 · 旧版待重写 {coverage.legacy} 张 ·
+            尚无卡片 {coverage.missing} 项 · 独立审核 {coverage.reviewed} 张 ·{" "}
             <Link href="/about">编辑原则</Link>
           </span>
         </div>

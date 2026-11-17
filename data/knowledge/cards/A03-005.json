@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A03-005",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "structure",
+    "rationale": "描述联结的许可结构，需与具体关系原型组合。"
+  },
+  "definition": "相关成年人知情并自愿允许不止一个浪漫或性联结的结构性工作定义；不是某人的性格标签。",
+  "scope": "结构描述，不能单独替代完整关系安排。",
+  "scenarios": [
+    "参与者明确讨论对外联结与信息边界。"
+  ],
+  "participants": [
+    "受相关约定影响并需要表达同意的参与者。"
+  ],
+  "needs": [
+    "协商多方联结的范围、时间和信息。"
+  ],
+  "interactions": [
+    "参与者明确讨论对外联结与信息边界。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "新增联结、隐私、资源和退出机制。"
+  ],
+  "misconceptions": [
+    "不排他不等于无需同意，也不能把未告知的行为称为共识。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：新增联结、隐私、资源和退出机制。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A03-001",
+      "text": "排他关系和此项在对外联结许可上不同；都需要边界。"
+    }
+  ],
+  "changes": [
+    "各方可重新协商结构或退出，不能保证多方始终意见相同。"
+  ],
+  "facets": {
+    "structure": "共识性非单偶"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

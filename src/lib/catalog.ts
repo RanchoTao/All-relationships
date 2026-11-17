@@ -135,7 +135,7 @@ export function evidenceFor(entry: Entry): Evidence[] {
     evidence.push({
       id: `${entry.id}:knowledge`,
       kind: "working_definition",
-      source: "data/knowledge/cards.json",
+      source: `data/knowledge/cards/${entry.id}.json`,
       locator: `${entry.id}.facets / definition`,
       review: "unreviewed",
       quote: knowledgeById[entry.id].definition,
@@ -181,11 +181,20 @@ export function knowledgeFor(entry: Entry) {
         : undefined,
     roles: authored?.participants.map(authoredClaim) ?? [],
     interactions: authored?.interactions.map(authoredClaim) ?? [],
-    conflicts: authored?.conflicts.map(authoredClaim) ?? [],
+    conflicts:
+      (authored?.schemaVersion === "0.4"
+        ? authored.commonDealbreakers
+        : authored?.conflicts
+      )?.map(authoredClaim) ?? [],
     boundaries: authored?.boundaries.map(authoredClaim) ?? [],
     rightsAndResponsibilities: [],
     lifecycle:
-      authored?.changes.map((value) => ({
+      (authored?.schemaVersion === "0.4"
+        ? Object.values(authored.changes).filter(
+            (value): value is string => value !== null,
+          )
+        : authored?.changes
+      )?.map((value) => ({
         from: "当前安排",
         to: "可能变化 · 非预测",
         claim: authoredClaim(value),

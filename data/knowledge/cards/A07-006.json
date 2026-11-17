@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A07-006",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "以持续共享住所为计划的同住关系，不默认浪漫、婚姻或财产共有。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "成年人希望多年共享住所，但保留各自财务。"
+  ],
+  "participants": [
+    "长期同住者。"
+  ],
+  "needs": [
+    "稳定居住和持续生活协调。"
+  ],
+  "interactions": [
+    "成年人希望多年共享住所，但保留各自财务。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "持续方向明确，具体频率和期限待约定。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "居住或物品使用按具体安排确认，使用权与所有权分开。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "个人空间、费用、照护预期和退出方案。"
+  ],
+  "misconceptions": [
+    "长期不等于永久，也不代表默认承担对方债务或所有生活责任。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：个人空间、费用、照护预期和退出方案。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A07-007",
+      "text": "短期同住更侧重明确临时期限，两者均需边界。"
+    }
+  ],
+  "changes": [
+    "持续计划可调整，也可协商结束同住。"
+  ],
+  "facets": {
+    "purpose": "共同居住",
+    "cohabitation": "涉及",
+    "duration": "持续／长期"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

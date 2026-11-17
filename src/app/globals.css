@@ -2041,6 +2041,17 @@ h3,
 }
 
 /* Status badges: one vocabulary for coverage, used everywhere. */
+.knowledge-scenarios h3,
+.negotiables-list h3 {
+  font: 500 1.05rem/1.6 var(--font-serif);
+  color: var(--green);
+  margin-bottom: 8px;
+}
+.negotiables-list ul {
+  list-style: disc;
+  padding-left: 1.25em;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;

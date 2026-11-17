@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A07-002",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "共同租住住宅的室友关系，居住协作与租赁中的具体权责分别确认。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "两人分租不同房间，共用厨房。"
+  ],
+  "participants": [
+    "共同租住者及另行关联的出租方。"
+  ],
+  "needs": [
+    "空间、账单和日常秩序协调。"
+  ],
+  "interactions": [
+    "两人分租不同房间，共用厨房。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "居住或物品使用按具体安排确认，使用权与所有权分开。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "租赁文件、分账、押金、访客与搬离交接。"
+  ],
+  "misconceptions": [
+    "共同居住不意味着每人有相同合同地位；本卡不判定连带责任。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：租赁文件、分账、押金、访客与搬离交接。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A07-001",
+      "text": "室友涵盖合租之外的同住场景。"
+    }
+  ],
+  "changes": [
+    "续租、换人或搬离时需重新讨论安排。"
+  ],
+  "facets": {
+    "purpose": "共同居住",
+    "cohabitation": "涉及"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

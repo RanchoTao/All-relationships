@@ -17,7 +17,17 @@
     "build:pages": "node scripts/build-pages.mjs",
     "preview:pages": "node scripts/serve-pages.mjs",
     "test:pages": "playwright test --config playwright.pages.config.ts",
-    "validate:knowledge": "tsx scripts/validate-knowledge.ts"
+    "validate:knowledge": "tsx scripts/validate-knowledge.ts",
+    "aggregate:knowledge": "node scripts/aggregate-knowledge.mjs",
+    "predev": "npm run aggregate:knowledge",
+    "prebuild": "npm run aggregate:knowledge",
+    "prebuild:pages": "npm run aggregate:knowledge",
+    "pretypecheck": "npm run aggregate:knowledge",
+    "pretest:unit": "npm run aggregate:knowledge",
+    "pretest:pages": "npm run aggregate:knowledge",
+    "pretest:e2e": "npm run aggregate:knowledge",
+    "prevalidate:data": "npm run aggregate:knowledge",
+    "prevalidate:knowledge": "npm run aggregate:knowledge"
   },
   "repository": {
     "type": "git",

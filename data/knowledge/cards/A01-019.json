@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A01-019",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "伴侣在不同地区生活、需要处理距离影响的浪漫关系。距离是情境属性，不是亲密程度评级。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "在不同城市工作，通过线上交流和探访维持联系。"
+  ],
+  "participants": [
+    "异地生活的伴侣。"
+  ],
+  "needs": [
+    "联络、安排探访与协商未来距离。"
+  ],
+  "interactions": [
+    "在不同城市工作，通过线上交流和探访维持联系。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "时区、费用、联系节奏和是否有迁居意愿。"
+  ],
+  "misconceptions": [
+    "即时回复不能直接证明忠诚；异地也不必然有结束日期。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：时区、费用、联系节奏和是否有迁居意愿。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A01-018",
+      "text": "长期恋情不限定距离；异地可与长期或短期联结叠加。"
+    }
+  ],
+  "changes": [
+    "同城后需要重新协调空间和日常节奏。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

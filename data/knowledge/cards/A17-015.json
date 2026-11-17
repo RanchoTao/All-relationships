@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A17-015",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "lifecycle",
+    "rationale": "描述历史或当前阶段，不是推荐用户建立的关系原型。"
+  },
+  "definition": "当事人当前减少或暂停联系的状态，可以覆盖不同原型。不能从暂停推断内心意图。",
+  "scope": "状态描述，不进入主动关系推荐。",
+  "scenarios": [
+    "一方说明需要暂时不聊天并给出可行的联络边界。"
+  ],
+  "participants": [
+    "原有关系中的参与者。"
+  ],
+  "needs": [
+    "留出空间及处理必要事务。"
+  ],
+  "interactions": [
+    "一方说明需要暂时不聊天并给出可行的联络边界。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "不从状态判断当前情感。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "是否约定复议时间、紧急渠道和暂不联系的范围。"
+  ],
+  "misconceptions": [
+    "暂停不是同意被反复追问，也不是一定会恢复的保证。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：是否约定复议时间、紧急渠道和暂不联系的范围。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A17-019",
+      "text": "疏远描述互动变化，暂停可以有明确表达的边界。"
+    }
+  ],
+  "changes": [
+    "可恢复、延长暂停或结束，均不能替当事人决定。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

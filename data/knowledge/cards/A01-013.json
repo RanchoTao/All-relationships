@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A01-013",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "以探索持续关系为明确方向的约会，不代表双方已承诺一定建立伴侣关系。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "见面前说明希望了解长期价值观。"
+  ],
+  "participants": [
+    "约会参与者。"
+  ],
+  "needs": [
+    "讨论生活方向和相处体验。"
+  ],
+  "interactions": [
+    "见面前说明希望了解长期价值观。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "方向、速度与仍未确定的事项。"
+  ],
+  "misconceptions": [
+    "认真不等于必须尽快承诺或不能拒绝。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：方向、速度与仍未确定的事项。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A01-018",
+      "text": "长期恋情已有持续联结方向，认真约会仍可能处于考察阶段。"
+    }
+  ],
+  "changes": [
+    "可以建立长期联结，也可以发现不合适后停止。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

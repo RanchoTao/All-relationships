@@ -1,67 +1,10 @@
 import { z } from "zod";
+import { KnowledgeCardSchema, type KnowledgeCard } from "./knowledge-schema";
 import data from "../../data/knowledge/cards.json" with { type: "json" };
 import sourceData from "../../data/knowledge/sources.json" with { type: "json" };
+import draft from "../../data/draft/AllRelationships_479_catalog_v0.2.json" with { type: "json" };
 import type { Entry } from "./schema";
-
-const text = z.string().min(8);
-const list = z.array(text).min(1);
-export const KnowledgeCardSchema = z
-  .object({
-    id: z.string().regex(/^A\d{2}-\d{3}$/),
-    version: z.literal("0.3.0"),
-    batch: z.enum(["P2-01", "P2-02"]),
-    depth: z.enum(["deep", "basic"]),
-    concept: z.object({
-      kind: z.enum([
-        "archetype",
-        "variant",
-        "scenario",
-        "structure",
-        "lifecycle",
-        "role",
-        "composite",
-      ]),
-      rationale: text,
-    }),
-    definition: text,
-    scope: text,
-    scenarios: list,
-    participants: z.array(z.string().min(2)).min(1),
-    needs: list,
-    interactions: list,
-    properties: z.object({
-      emotion: text,
-      time: text,
-      economics: text,
-      material: text,
-      autonomy: text,
-    }),
-    boundaries: list,
-    misconceptions: list,
-    conflicts: list,
-    distinctions: z.array(z.object({ targetId: z.string(), text })).min(1),
-    changes: list,
-    facets: z.record(z.string(), z.string()),
-    evidence: z.object({
-      definitionKind: z.literal("working_definition"),
-      editor: z.string(),
-      editedAt: z.string(),
-      sourceIds: z.array(z.string()),
-      independentReview: z.literal("pending"),
-      humanReviewer: z.null(),
-      unverifiedHypotheses: z.array(text),
-      note: text,
-    }),
-    deepDive: z.array(z.object({ title: z.string(), text })),
-  })
-  .superRefine((c, ctx) => {
-    if (c.depth === "deep" && c.deepDive.length < 4)
-      ctx.addIssue({
-        code: "custom",
-        message: "Deep card requires extended sections",
-      });
-  });
-export type KnowledgeCard = z.infer<typeof KnowledgeCardSchema>;
+export { KnowledgeCardSchema, type KnowledgeCard } from "./knowledge-schema";
 export const knowledgeCards = z.array(KnowledgeCardSchema).parse(data.cards);
 export const knowledgeById: Record<string, KnowledgeCard> = Object.assign(
   Object.create(null),
@@ -96,13 +39,29 @@ export function effectiveKind(entry: Entry) {
 }
 export function contentStatus(id: string) {
   const c = knowledgeById[id];
-  return c
-    ? `${c.depth === "deep" ? "深度卡" : "基础卡"} · 工作定义 · 未审核`
-    : "内容建设中 · 未审核";
+  if (!c) return "内容建设中 · 未审核";
+  if (c.schemaVersion === "0.3-legacy") return "旧版卡 · 待重写 · 未审核";
+  const depth = { deep: "深度卡", standard: "标准卡", brief: "简要卡" }[
+    c.depth
+  ];
+  return `${depth} · v0.4 工作定义 · ${c.evidence.independentReview === "reviewed" ? "人工已审核" : "未审核"}`;
 }
+export function coverageFor(id: string) {
+  const c = knowledgeById[id];
+  return !c ? "pending" : c.schemaVersion === "0.3-legacy" ? "legacy" : c.depth;
+}
+export const currentCards = knowledgeCards.filter(
+  (c) => c.schemaVersion === "0.4",
+);
 export const coverage = {
-  total: 479,
-  complete: knowledgeCards.length,
-  deep: knowledgeCards.filter((c) => c.depth === "deep").length,
-  reviewed: 0,
+  total: draft.entries.length,
+  complete: currentCards.length,
+  legacy: knowledgeCards.length - currentCards.length,
+  missing: draft.entries.length - knowledgeCards.length,
+  deep: currentCards.filter((c) => c.depth === "deep").length,
+  standard: currentCards.filter((c) => c.depth === "standard").length,
+  brief: currentCards.filter((c) => c.depth === "brief").length,
+  reviewed: currentCards.filter(
+    (c) => c.evidence.independentReview === "reviewed",
+  ).length,
 };

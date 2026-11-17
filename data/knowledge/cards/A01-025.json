@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A01-025",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "双方当前不把结婚设为目标的伴侣安排，可以同时希望长期相处。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "愿意长期陪伴，但不计划结婚。"
+  ],
+  "participants": [
+    "确认当前方向的伴侣。"
+  ],
+  "needs": [
+    "持续联结与独立讨论生活安排。"
+  ],
+  "interactions": [
+    "愿意长期陪伴，但不计划结婚。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "称谓、共同生活、责任期待和方向改变。"
+  ],
+  "misconceptions": [
+    "不结婚不自动意味着不认真或不需要协商责任。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：称谓、共同生活、责任期待和方向改变。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A01-024",
+      "text": "两者区别在婚姻目标，不在关系价值高低。"
+    }
+  ],
+  "changes": [
+    "任一方目标变化时重新协商，而非假定另一方会改变。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

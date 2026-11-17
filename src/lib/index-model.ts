@@ -4,7 +4,7 @@
 import Fuse from "fuse.js";
 import type { AttributeKey } from "./schema";
 
-export type Coverage = "deep" | "basic" | "pending";
+export type Coverage = "deep" | "standard" | "brief" | "legacy" | "pending";
 
 export interface IndexItem {
   id: string;
@@ -17,6 +17,7 @@ export interface IndexItem {
   kind: string;
   kindLabel: string;
   definition?: string;
+  summary?: string;
   coverage: Coverage;
   participants: string;
   attrs: Partial<Record<AttributeKey, string>>;
@@ -55,7 +56,9 @@ export const facetKeys = [
 
 export const coverageLabels: Record<Coverage, string> = {
   deep: "深度卡",
-  basic: "基础卡",
+  standard: "标准卡",
+  brief: "简要卡",
+  legacy: "待重写",
   pending: "待建设",
 };
 
@@ -66,6 +69,7 @@ export function createSearch(items: IndexItem[]) {
       "label",
       "aliases",
       "definition",
+      "summary",
       "searchText",
       "categoryName",
       "kindLabel",
@@ -87,7 +91,7 @@ export function createSearch(items: IndexItem[]) {
           (filters.coverage === "pending"
             ? e.coverage === "pending"
             : filters.coverage === "complete"
-              ? e.coverage !== "pending"
+              ? e.coverage !== "pending" && e.coverage !== "legacy"
               : e.coverage === filters.coverage)) &&
         (!filters.participants || e.participants === filters.participants) &&
         Object.entries(filters.attributes).every(

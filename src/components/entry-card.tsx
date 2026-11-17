@@ -8,7 +8,9 @@ export function CoverageBadge({
   coverage: IndexItem["coverage"];
 }) {
   return (
-    <span className={`badge badge-${coverage}`}>
+    <span
+      className={`badge badge-${coverage === "legacy" ? "draft" : coverage === "standard" || coverage === "brief" ? "basic" : coverage}`}
+    >
       {coverageLabels[coverage]}
     </span>
   );
@@ -47,7 +49,9 @@ export function EntryCard({
             {entry.en}
           </span>
         )}
-        {entry.definition && <p>{entry.definition}</p>}
+        {(entry.summary ?? entry.definition) && (
+          <p>{entry.summary ?? entry.definition}</p>
+        )}
         <span className="card-read">
           {isPending ? "查看收录信息" : "阅读词条"} <ArrowUpRight size={16} />
         </span>

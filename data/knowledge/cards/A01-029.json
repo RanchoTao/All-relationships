@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A01-029",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "当事人认可浪漫联结，并约定不以性互动作为关系内容的安排。不据此推断任何人的性倾向。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "希望浪漫陪伴，但不希望性接触。"
+  ],
+  "participants": [
+    "共同确认边界的浪漫伴侣。"
+  ],
+  "needs": [
+    "浪漫表达和非性方式的相处。"
+  ],
+  "interactions": [
+    "希望浪漫陪伴，但不希望性接触。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "身体接触的具体许可仍逐项讨论。"
+  ],
+  "misconceptions": [
+    "无性不等于没有亲密，也不是任何一方需要被改变的问题。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：身体接触的具体许可仍逐项讨论。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A02-018",
+      "text": "两个原始标签在本工作定义下近义，保留各自 ID 而不宣称是两种独立原型。"
+    }
+  ],
+  "changes": [
+    "边界只有在自愿讨论后才能调整，沉默不表示改变。"
+  ],
+  "facets": {
+    "romance": "涉及",
+    "sexual": "不纳入此安排"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

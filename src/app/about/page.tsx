@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { generalReferences, prototypes, unlinkedEntries } from "@/lib/catalog";
+import { coverage } from "@/lib/knowledge";
 export const metadata = { title: "编辑原则与来源" };
 export default function About() {
   return (
@@ -18,9 +19,12 @@ export default function About() {
         <section>
           <h2>一份诚实的知识草稿</h2>
           <p>
-            17 个分类、20 个拟议原型族、479 个原始词条完整保留。新增 60
-            张完整基础卡，其中 20 张深度卡；其余 419 张继续建设。全部 479
-            条尚未独立人工审核。分类是编辑工作模型，不是公认学术标准。
+            17 个分类、20 个拟议原型族、{coverage.total} 个原始词条完整保留。
+            v0.4 内容完成 {coverage.complete} 张，其中深度卡 {coverage.deep}{" "}
+            张、标准卡 {coverage.standard} 张、简要卡 {coverage.brief} 张。
+            旧版待重写 {coverage.legacy} 张，不计入完成数量；尚无卡片{" "}
+            {coverage.missing} 项。 独立人工审核 {coverage.reviewed}{" "}
+            张。结构与质量检查通过不等于知识正确性得到验证。
           </p>
         </section>
         <section>
@@ -49,8 +53,7 @@ export default function About() {
         <div className="prose">
           <p>
             {unlinkedEntries.length} 条记录的原型族值尚不能与 20 个拟议原型 ID
-            精确对应。原始值保留，映射等待编辑核对。图谱目前仍展示目录层次；新增
-            60 张卡片有明确的相近概念对比链接，但这些是待独立审核的编辑判断。
+            精确对应。原始值保留，映射等待编辑核对。图谱目前仍展示目录层次；卡片中的相近概念链接是编辑提出的比较，审核状态分别记录。
           </p>
           <p>
             亲密程度、排他性、参与人数等不能从名称猜测。已开放的属性筛选仅摘录明确的工作定义文字；未记录的内容一律为未知。
