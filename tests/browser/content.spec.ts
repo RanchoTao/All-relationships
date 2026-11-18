@@ -48,6 +48,11 @@ test("both detail variants render with accessible scenarios and negotiation list
   await expect(
     page.getByRole("heading", { name: "普通朋友", exact: true }),
   ).toBeVisible();
+  const mainSections = page.locator(".detail-layout > div > section > h2");
+  await expect(mainSections.nth(0)).toHaveText("定义与适用范围");
+  await expect(mainSections.nth(1)).toHaveText("它在生活中的样子 · 虚构情境");
+  await expect(mainSections.nth(2)).toHaveText("通常需要说清的议题");
+  await expect(mainSections.nth(3)).toHaveText("结构性的硬冲突");
   await expect(page.getByRole("heading", { name: /^情境 [123]$/ })).toHaveCount(
     3,
   );
