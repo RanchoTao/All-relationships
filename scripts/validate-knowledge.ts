@@ -13,6 +13,7 @@ import {
   cardQuality,
   bodyCharacters,
   repeatedSentences,
+  nearTemplateReport,
   referenceErrors,
   legacyTransitionErrors,
 } from "../src/lib/knowledge-quality";
@@ -82,6 +83,7 @@ const issues = [
     ? "error"
     : "warning",
 }));
+const nearTemplates = nearTemplateReport(knowledgeCards);
 errors.push(
   ...issues
     .filter((i) => i.severity === "error")
@@ -154,13 +156,18 @@ const report = {
     currentCards.map((c) => [c.id, bodyCharacters(c)]),
   ),
   legacyQualityWarnings: issues.filter((i) => i.severity === "warning").length,
+  nearTemplates,
   blockingErrors: errors,
   contentSourceHash: hash(JSON.stringify(knowledgeCards)),
 };
 fs.mkdirSync("artifacts", { recursive: true });
 fs.writeFileSync(
   "artifacts/knowledge-quality.json",
-  JSON.stringify({ issues, errors }, null, 2) + "\n",
+  JSON.stringify(
+    { issues: [...issues, ...nearTemplates.warnings], nearTemplates, errors },
+    null,
+    2,
+  ) + "\n",
 );
 fs.writeFileSync(
   "artifacts/knowledge-coverage.json",
