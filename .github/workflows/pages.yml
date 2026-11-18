@@ -21,8 +21,11 @@ jobs:
     env:
       NEXT_PUBLIC_BASE_PATH: /All-relationships
       NEXT_TELEMETRY_DISABLED: 1
+      LEGACY_BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before || 'origin/main' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -46,6 +49,8 @@ jobs:
             artifacts/browser-*.json
             artifacts/data-validation.json
             artifacts/knowledge-coverage.json
+            artifacts/knowledge-quality.json
+            artifacts/screenshots/
           retention-days: 14
       - name: Configure Pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A07-016",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "role",
+    "rationale": "围绕特定任务的角色，权限不能从名称推定。"
+  },
+  "definition": "围绕同一宠物的日常照料进行分工的关系，宠物所有权与照料任务不能混同。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "约定喂食、遛宠和临时出行时的安排。"
+  ],
+  "participants": [
+    "宠物照料参与者与需要被考虑的动物。"
+  ],
+  "needs": [
+    "稳定照料、信息交接和实际任务分担。"
+  ],
+  "interactions": [
+    "约定喂食、遛宠和临时出行时的安排。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "居住或物品使用按具体安排确认，使用权与所有权分开。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "费用、接送、医疗授权及无人可照料时的替代安排。"
+  ],
+  "misconceptions": [
+    "偶尔帮忙不等于承诺永久照料，也不自动取得所有权。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：费用、接送、医疗授权及无人可照料时的替代安排。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A07-017",
+      "text": "临时托管互助有较明确的暂时代管情境。"
+    }
+  ],
+  "changes": [
+    "宠物需要或参与者能力改变时调整分工。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

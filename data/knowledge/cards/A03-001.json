@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A03-001",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "structure",
+    "rationale": "描述联结的许可结构，需与具体关系原型组合。"
+  },
+  "definition": "当事人约定相关浪漫或亲密联结仅在双方之间开展的结构。排他范围需要定义，不由标签自动补全。",
+  "scope": "结构描述，不能单独替代完整关系安排。",
+  "scenarios": [
+    "双方分别说明哪些对外互动需要讨论。"
+  ],
+  "participants": [
+    "参与排他约定的双方。"
+  ],
+  "needs": [
+    "明确关系边界和对外互动预期。"
+  ],
+  "interactions": [
+    "双方分别说明哪些对外互动需要讨论。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "浪漫、身体、线上互动和公开程度分别说明。"
+  ],
+  "misconceptions": [
+    "排他不等于监控设备、限制朋友或取消退出权。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：浪漫、身体、线上互动和公开程度分别说明。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A03-005",
+      "text": "共识性非单偶允许经讨论的多方联结，区别在约定范围。"
+    }
+  ],
+  "changes": [
+    "变更需要重新协商，不能单方默认为已开放。"
+  ],
+  "facets": {
+    "structure": "一对一排他"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

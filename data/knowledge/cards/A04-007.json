@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A04-007",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "朋友关系中更重视相互了解、信任及较深生活分享的变体。本馆不设定统一的亲密分数。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "可以谈重要困扰，也尊重对方暂时不想谈。"
+  ],
+  "participants": [
+    "相互认可亲近程度的朋友。"
+  ],
+  "needs": [
+    "深度交谈、关心与协商支持方式。"
+  ],
+  "interactions": [
+    "可以谈重要困扰，也尊重对方暂时不想谈。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "保密、支持能力、联系节奏和独处需要。"
+  ],
+  "misconceptions": [
+    "分享秘密不代表允许转述；亲密不等于唯一朋友。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：保密、支持能力、联系节奏和独处需要。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A04-001",
+      "text": "普通朋友不要求同等深度的披露。"
+    }
+  ],
+  "changes": [
+    "可逐渐亲近或减少披露，不必强行保持原强度。"
+  ],
+  "facets": {
+    "purpose": "深度友谊",
+    "intimacy": "重视较深交流"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "SEP-FRIEND"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

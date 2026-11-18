@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A05-027",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "scenario",
+    "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。"
+  },
+  "definition": "围绕桌面游戏共同参与的活动关系，可限于特定场次。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "约定游戏时长、规则版本和新手说明。"
+  ],
+  "participants": [
+    "玩家及可能的组织者。"
+  ],
+  "needs": [
+    "规则协作、游戏体验和轮次安排。"
+  ],
+  "interactions": [
+    "约定游戏时长、规则版本和新手说明。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "规则争议、费用、竞争强度和结束时间。"
+  ],
+  "misconceptions": [
+    "游戏中的角色和对抗不能直接当作现实人格证据。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：规则争议、费用、竞争强度和结束时间。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A14-004",
+      "text": "游戏好友可在线上相处，桌游搭子强调特定活动场景。"
+    }
+  ],
+  "changes": [
+    "可更换游戏或结束场次，不自动形成长期群体义务。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

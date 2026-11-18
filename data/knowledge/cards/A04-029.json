@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A04-029",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "composite",
+    "rationale": "多个角色同时存在，分别讨论各自边界。"
+  },
+  "definition": "朋友身份与共同生活安排叠加的关系。两种角色同时存在，需要分别处理友谊与居住事务。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "朋友一起住后讨论家务与公共开支。"
+  ],
+  "participants": [
+    "既是朋友又共同生活的人。"
+  ],
+  "needs": [
+    "保持友谊并管理日常空间。"
+  ],
+  "interactions": [
+    "朋友一起住后讨论家务与公共开支。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "私人时间、家务、费用和搬离后如何相处。"
+  ],
+  "misconceptions": [
+    "朋友间的体谅不能代替清楚分工；搬离也不必等于绝交。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：私人时间、家务、费用和搬离后如何相处。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A07-001",
+      "text": "室友不必是朋友；本项要求朋友联结与同住安排并存。"
+    }
+  ],
+  "changes": [
+    "同住结束后友谊可另行继续，不能保证自动恢复。"
+  ],
+  "facets": {
+    "cohabitation": "涉及",
+    "purpose": "友谊与同住"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

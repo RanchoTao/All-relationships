@@ -12,3 +12,6 @@ artifacts/*.log
 artifacts/npm-logs/
 artifacts/npm-cache/
 artifacts/*.tgz
+STATE.md
+data/knowledge/cards.json
+artifacts/knowledge-quality.json

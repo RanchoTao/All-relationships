@@ -12,6 +12,8 @@ import {
   type KnowledgeCard,
 } from "@/lib/knowledge";
 import type { Entry } from "@/lib/schema";
+import type { LegacyCard, V04Card } from "@/lib/knowledge-schema";
+import { dimensions } from "@/lib/assessment";
 const sections = [
   ["scenarios", "典型情境 · 虚构例子"],
   ["participants", "参与者及角色"],
@@ -22,6 +24,99 @@ const sections = [
   ["conflicts", "可讨论的冲突"],
   ["changes", "关系的可能变化"],
 ] as const;
+function LegacySections({ card }: { card: LegacyCard }) {
+  return (
+    <>
+      <p className="risk-note">
+        旧版内容待重写：保留原稿便于查阅，未通过 v0.4
+        内容质量门禁，不计入完成数量。
+      </p>
+      {sections.map(([key, title]) => (
+        <section className="detail-block" key={key}>
+          <h2>{title}</h2>
+          {card[key].map((t, i) => (
+            <p className="prose" key={i}>
+              {t}
+            </p>
+          ))}
+        </section>
+      ))}
+    </>
+  );
+}
+function V04Sections({ card }: { card: V04Card }) {
+  return (
+    <>
+      <section className="detail-block knowledge-scenarios">
+        <h2>它在生活中的样子 · 虚构情境</h2>
+        {card.whatItLooksLike.map((text, i) => (
+          <article className="source-record" key={i}>
+            <h3>情境 {i + 1}</h3>
+            <p className="prose">{text}</p>
+          </article>
+        ))}
+      </section>
+      {(
+        [
+          ["participants", "参与者及角色"],
+          ["needs", "主要需求"],
+          ["interactions", "互动方式"],
+          ["boundaries", "讨论边界"],
+          ["commonDealbreakers", "结构性的硬冲突"],
+          ["misconceptions", "容易产生的误解"],
+        ] as const
+      ).map(([key, title]) => (
+        <section className="detail-block" key={key}>
+          <h2>{title}</h2>
+          {card[key].map((text, i) => (
+            <p className="prose" key={i}>
+              {text}
+            </p>
+          ))}
+        </section>
+      ))}
+      <section className="detail-block">
+        <h2>通常需要说清的议题</h2>
+        {card.negotiables.length ? (
+          <div className="negotiables-list">
+            {card.negotiables.map((item) => (
+              <article className="source-record" key={item.topic}>
+                <h3>{item.topic}</h3>
+                <span className="field-note">
+                  议题维度：{dimensions[item.dimension]}
+                </span>
+                <ul className="prose">
+                  {item.options.map((option) => (
+                    <li key={option}>{option}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <p className="prose">本风险条目不提供关系安排选项。</p>
+        )}
+      </section>
+      <section className="detail-block">
+        <h2>关系如何变化</h2>
+        {(
+          [
+            ["start", "开始"],
+            ["evolve", "演变"],
+            ["end", "结束"],
+          ] as const
+        ).map(([key, title]) =>
+          card.changes[key] ? (
+            <article className="reading-section" key={key}>
+              <h3>{title}</h3>
+              <p className="prose">{card.changes[key]}</p>
+            </article>
+          ) : null,
+        )}
+      </section>
+    </>
+  );
+}
 export function KnowledgeDetail({
   entry,
   card,
@@ -53,20 +148,12 @@ export function KnowledgeDetail({
             <h2>定义与适用范围</h2>
             <p className="definition-quote">{card.definition}</p>
             <p className="prose">{card.scope}</p>
-            <p className="field-note">
-              以下正文为编辑工作定义与讨论提示，未经独立审核。例子不代表普遍行为，关系名称不自动产生法律权利或义务。
-            </p>
           </section>
-          {sections.map(([key, title]) => (
-            <section className="detail-block" key={key}>
-              <h2>{title}</h2>
-              {card[key].map((t, i) => (
-                <p className="prose" key={i}>
-                  {t}
-                </p>
-              ))}
-            </section>
-          ))}
+          {card.schemaVersion === "0.3-legacy" ? (
+            <LegacySections card={card} />
+          ) : (
+            <V04Sections card={card} />
+          )}
           <section className="detail-block">
             <h2>情感、时间与资源</h2>
             <p className="field-note">
@@ -77,7 +164,7 @@ export function KnowledgeDetail({
                     `${attributeLabels[k as keyof typeof attributeLabels]}：${v}`,
                 )
                 .join("；") || "未建立筛选属性"}
-              。这些是编辑定义范围，不是群体统计。
+              。
             </p>
             <dl className="fact-grid">
               {Object.entries({
@@ -95,9 +182,6 @@ export function KnowledgeDetail({
                 </div>
               ))}
             </dl>
-            <p className="field-note">
-              未明确的属性保持未知；不是对所有此类关系的统计概括。
-            </p>
           </section>
           <section className="detail-block">
             <h2>相近关系，有何不同？</h2>
@@ -107,12 +191,50 @@ export function KnowledgeDetail({
                   {entryById[d.targetId].label_zh} ↗
                 </Link>
                 <p>{d.text}</p>
-                <span className="field-note">
-                  编辑提出的概念区分，独立审核待完成。
-                </span>
               </div>
             ))}
           </section>
+          {card.schemaVersion === "0.4" && (
+            <section className="detail-block">
+              <h2>关联阅读</h2>
+              {card.aliasOf && (
+                <p className="prose">
+                  别名对应：
+                  <Link href={`/relationships/${card.aliasOf}`}>
+                    {entryById[card.aliasOf].label_zh}
+                  </Link>
+                </p>
+              )}
+              <p className="prose">
+                相关词条：
+                {card.relatedIds.length
+                  ? card.relatedIds.map((id) => (
+                      <Link
+                        className="text-link"
+                        key={id}
+                        href={`/relationships/${id}`}
+                      >
+                        {entryById[id].label_zh} ↗{" "}
+                      </Link>
+                    ))
+                  : "暂无记录"}
+              </p>
+              <p className="prose">
+                另见：
+                {card.seeAlso.length
+                  ? card.seeAlso.map((id) => (
+                      <Link
+                        className="text-link"
+                        key={id}
+                        href={`/relationships/${id}`}
+                      >
+                        {entryById[id].label_zh} ↗{" "}
+                      </Link>
+                    ))
+                  : "暂无记录"}
+              </p>
+            </section>
+          )}
           {card.deepDive.length > 0 && (
             <section className="detail-block">
               <h2>深入阅读</h2>
@@ -127,9 +249,6 @@ export function KnowledgeDetail({
           <section className="detail-block" id="sources">
             <h2>来源、证据与审核</h2>
             <p className="prose">{card.evidence.note}</p>
-            <p className="field-note">
-              正文身份：工作定义。文献或规范只支持下列登记命题，不验证整张卡片，也不验证偏好测试。
-            </p>
             {card.evidence.sourceIds.length === 0 ? (
               <p className="prose">
                 本卡暂无独立外部来源。定义可追溯到本版编辑记录，等待文献补充与人工复核。
@@ -145,10 +264,13 @@ export function KnowledgeDetail({
                     <p>来源支持范围：{s.claim}</p>
                     <p>限制：{s.limit}</p>
                     <p className="field-note">
-                      {s.version} · {s.locator} · 2026-11-10 查询 ·{" "}
+                      {s.version} · {s.locator} · {s.accessedAt ?? "2026-11-10"}{" "}
+                      查询 ·{" "}
                       {s.access === "abstract_only"
                         ? "仅元数据／摘要"
-                        : "已读取相关页面"}
+                        : s.access === "metadata_only"
+                          ? "仅元数据"
+                          : "已读取相关页面"}
                       ；AI 来源核对，不等于独立人工审核。
                     </p>
                   </article>
@@ -156,12 +278,17 @@ export function KnowledgeDetail({
               })
             )}
             <p className="field-note">
-              未经验证的假设：本版未登记研究假设；推荐模板另存，不能倒推本卡事实。人工审核人：尚无。
+              未验证假设：
+              {card.evidence.unverifiedHypotheses.join("；") || "未登记"}。
+              人工审核人：{card.evidence.humanReviewer ?? "尚无"}。
+              {card.schemaVersion === "0.4" &&
+                card.evidence.independentReview === "reviewed" &&
+                `审核日期：${card.evidence.reviewedAt}；理由：${card.evidence.reviewReason}`}
             </p>
             <div className="source-record">
               <strong>可追溯的编辑记录</strong>
               <p>
-                <code>data/knowledge/cards.json → {entry.id}</code>
+                <code>data/knowledge/cards/{entry.id}.json</code>
               </p>
               <p>
                 {card.version} · {card.batch} · {card.evidence.editedAt} ·{" "}
@@ -188,15 +315,29 @@ export function KnowledgeDetail({
               <dt>稳定 ID</dt>
               <dd>{entry.id}</dd>
               <dt>完整度</dt>
-              <dd>{card.depth === "deep" ? "深度内容" : "基础字段完整"}</dd>
+              <dd>
+                {card.schemaVersion === "0.3-legacy"
+                  ? "旧版待重写"
+                  : {
+                      deep: "深度内容",
+                      standard: "标准内容",
+                      brief: "简要内容",
+                    }[card.depth]}
+              </dd>
               <dt>审核</dt>
-              <dd>未经独立审核</dd>
+              <dd>
+                {card.evidence.independentReview === "reviewed"
+                  ? "已由人工独立审核"
+                  : "未经独立审核"}
+              </dd>
               <dt>分类</dt>
               <dd>{conceptLabels[card.concept.kind]}</dd>
             </dl>
-            <Link className="outline-button" href="/explore">
-              探索我的关系偏好
-            </Link>
+            {!entry.involuntary_or_harm_risk && (
+              <Link className="outline-button" href="/explore">
+                探索我的关系偏好
+              </Link>
+            )}
             <Link className="text-link" href={`/graph?entry=${entry.id}`}>
               在目录图谱中定位 ↗
             </Link>

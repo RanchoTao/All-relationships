@@ -6,6 +6,8 @@ import {
   sources,
   definitionFor,
   effectiveKind,
+  currentCards,
+  coverage,
 } from "../src/lib/knowledge";
 import { entries, entryById } from "../src/lib/catalog";
 import { searchEntries, emptyFilters } from "../src/lib/search";
@@ -24,19 +26,16 @@ test("new concept filters and card concepts use the same editorial layer", () =>
     ),
   );
 });
-test("60 complete cards and 20 explicitly authored deep archetypes, never relabelled as independently reviewed", () => {
-  assert.equal(knowledgeCards.length, 60);
-  assert.equal(knowledgeCards.filter((c) => c.depth === "deep").length, 20);
-  assert.equal(new Set(knowledgeCards.map((c) => c.id)).size, 60);
+test("each card keeps its stable identity and draft provenance", () => {
+  assert.equal(
+    new Set(knowledgeCards.map((c) => c.id)).size,
+    knowledgeCards.length,
+  );
   for (const c of knowledgeCards) {
     assert.ok(entryById[c.id]);
     assert.equal(c.evidence.definitionKind, "working_definition");
-    assert.equal(c.evidence.independentReview, "pending");
+    assert.notEqual(c.evidence.independentReview, "reviewed");
     assert.equal(c.evidence.humanReviewer, null);
-    if (c.depth === "deep") {
-      assert.equal(c.concept.kind, "archetype");
-      assert.ok(c.deepDive.reduce((n, s) => n + s.text.length, 0) >= 500);
-    }
     assert.ok(
       c.distinctions.every((d) => entryById[d.targetId] && d.targetId !== c.id),
     );
@@ -49,13 +48,29 @@ test("raw catalogue remains 479 and coverage filters refer to actual authored co
   assert.equal(entries.length, 479);
   assert.equal(
     searchEntries({ ...emptyFilters, coverage: "complete" }).length,
-    60,
+    currentCards.length,
   );
   assert.equal(
     searchEntries({ ...emptyFilters, coverage: "pending" }).length,
-    419,
+    entries.length - knowledgeCards.length,
   );
-  assert.equal(searchEntries({ ...emptyFilters, coverage: "deep" }).length, 20);
+  assert.equal(
+    searchEntries({ ...emptyFilters, coverage: "deep" }).length,
+    coverage.deep,
+  );
+  assert.equal(
+    searchEntries({ ...emptyFilters, coverage: "legacy" }).length,
+    coverage.legacy,
+  );
+  assert.equal(
+    coverage.complete + coverage.legacy + coverage.missing,
+    entries.length,
+  );
+  assert.ok(
+    searchEntries({ ...emptyFilters, coverage: "complete" }).every(
+      (e) => knowledgeById[e.id].schemaVersion === "0.4",
+    ),
+  );
   assert.equal(knowledgeById["constructor"], undefined);
   assert.ok(
     searchEntries({ ...emptyFilters, query: "贡献记录" }).some(

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A14-004",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "scenario",
+    "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。"
+  },
+  "definition": "在游戏活动中反复互动并认可朋友联结的人际关系。游戏角色与现实身份分开。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "一起组队，允许各自安排不上线的时间。"
+  ],
+  "participants": [
+    "共同游戏的朋友。"
+  ],
+  "needs": [
+    "协作、交流与游戏陪伴。"
+  ],
+  "interactions": [
+    "一起组队，允许各自安排不上线的时间。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "上线时间、竞争强度、付费道具和私人信息。"
+  ],
+  "misconceptions": [
+    "队友义务不等于必须每天上线或消费。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：上线时间、竞争强度、付费道具和私人信息。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A05-027",
+      "text": "桌游搭子可以只有活动合作，不一定认可朋友联结。"
+    }
+  ],
+  "changes": [
+    "换游戏或退游后可保留其他交流，也可自然减少。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

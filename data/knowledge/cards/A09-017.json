@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A09-017",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "scenario",
+    "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。"
+  },
+  "definition": "围绕开放源码项目共同学习或贡献的协作场景。贡献与维护权限分开记录。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "结伴复现一个问题并提交修复建议。"
+  ],
+  "participants": [
+    "贡献者及可能接收贡献的维护者。"
+  ],
+  "needs": [
+    "理解代码、问题复现、评审与贡献。"
+  ],
+  "interactions": [
+    "结伴复现一个问题并提交修复建议。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "许可证、贡献指南、署名、权限和响应期待。"
+  ],
+  "misconceptions": [
+    "公开仓库不自动意味着任意许可；贡献一次不获得管理权。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：许可证、贡献指南、署名、权限和响应期待。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A10-027",
+      "text": "维护者与贡献者强调角色差异，此项强调同伴协作场景。"
+    }
+  ],
+  "changes": [
+    "可继续贡献、成为维护者或停止参与；晋升不能自动推定。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

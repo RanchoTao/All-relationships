@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A02-016",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "以陪伴和非性亲密互动为内容的工作定义，不预设浪漫身份。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "希望一起散步和交谈，明确不需要性互动。"
+  ],
+  "participants": [
+    "自愿参与陪伴的人。"
+  ],
+  "needs": [
+    "陪伴、交流和双方许可的靠近。"
+  ],
+  "interactions": [
+    "希望一起散步和交谈，明确不需要性互动。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "接触边界、时间和对浪漫的不同理解。"
+  ],
+  "misconceptions": [
+    "非性不等于必须接受拥抱；陪伴也不意味着无限情绪劳动。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：接触边界、时间和对浪漫的不同理解。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A01-029",
+      "text": "无性浪漫伴侣明确浪漫联结，此项不预设。"
+    }
+  ],
+  "changes": [
+    "可保持当前安排或重新讨论其他联结。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A09-015",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "围绕共同撰写、修订或发表论文开展合作的关系。作者资格依实际贡献及适用发表规范确认。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "各作者核对自己负责的分析并共同审核稿件。"
+  ],
+  "participants": [
+    "作者及需要单独记录的非作者贡献者。"
+  ],
+  "needs": [
+    "写作、证据复核、版本管理和投稿沟通。"
+  ],
+  "interactions": [
+    "各作者核对自己负责的分析并共同审核稿件。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "贡献、署名顺序、数据权限、最终批准和责任。"
+  ],
+  "misconceptions": [
+    "出资、职位或一次帮助并不能被本站自动转成作者资格。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：贡献、署名顺序、数据权限、最终批准和责任。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A09-014",
+      "text": "联合研究可以无论文；论文合作者聚焦发表产出。"
+    }
+  ],
+  "changes": [
+    "发表后仍可能需澄清或纠正内容，具体责任依实际规范。"
+  ],
+  "facets": {
+    "purpose": "研究协作"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "ICMJE",
+      "CREDIT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

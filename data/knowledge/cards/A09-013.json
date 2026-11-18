@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A09-013",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "scenario",
+    "rationale": "以媒介或活动情境细分，不能计为新的独立关系原型。"
+  },
+  "definition": "围绕研究问题交换观点的协作场景，不要求已经共同开展项目。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "讨论一个方法能否适用于新问题。"
+  ],
+  "participants": [
+    "研究讨论参与者。"
+  ],
+  "needs": [
+    "澄清问题、交换论据和提出反例。"
+  ],
+  "interactions": [
+    "讨论一个方法能否适用于新问题。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "未发表想法、引用、记录分享和是否形成后续贡献。"
+  ],
+  "misconceptions": [
+    "参加讨论不自动形成共同作者资格。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：未发表想法、引用、记录分享和是否形成后续贡献。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A09-014",
+      "text": "联合研究涉及更明确的共同任务和产出安排。"
+    }
+  ],
+  "changes": [
+    "可转入联合研究，也可仅保留讨论。"
+  ],
+  "facets": {
+    "purpose": "研究讨论"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CREDIT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

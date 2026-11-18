@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A17-007",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "lifecycle",
+    "rationale": "描述历史或当前阶段，不是推荐用户建立的关系原型。"
+  },
+  "definition": "曾经具有恋爱联结、当前该恋爱关系已结束的历史角色。本标签不说明结束原因或是否仍联系。",
+  "scope": "状态描述，不进入主动关系推荐。",
+  "scenarios": [
+    "双方已结束恋爱，正在决定是否保留联系。"
+  ],
+  "participants": [
+    "过去的恋爱参与者。"
+  ],
+  "needs": [
+    "如有需要，处理遗留事项和当前联系边界。"
+  ],
+  "interactions": [
+    "双方已结束恋爱，正在决定是否保留联系。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "不从状态判断当前情感。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "是否联系、物品交还、共同事务和隐私。"
+  ],
+  "misconceptions": [
+    "过去同意不意味着现在仍同意；前任不是可默认继续接近的身份。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：是否联系、物品交还、共同事务和隐私。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A17-012",
+      "text": "分手后保持朋友增加新的朋友联结，不是所有前任都会如此。"
+    }
+  ],
+  "changes": [
+    "可不再联系，也可在双方自愿下建立不同关系。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

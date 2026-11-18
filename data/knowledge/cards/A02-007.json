@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A02-007",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "朋友关系与自愿性亲密互动并存的安排；是否浪漫、排他或长期不能仅从 FWB 名称推定。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "朋友讨论是否加入身体亲密，并说明不默认恋爱承诺。"
+  ],
+  "participants": [
+    "确认友谊与身体边界的成年人。"
+  ],
+  "needs": [
+    "友谊互动及明确允许的亲密活动。"
+  ],
+  "interactions": [
+    "朋友讨论是否加入身体亲密，并说明不默认恋爱承诺。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "是否排他、公开范围、停止后的往来与每次同意。"
+  ],
+  "misconceptions": [
+    "友谊不是身体接触的授权；一方改变期待时原标签不能替代协商。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：是否排他、公开范围、停止后的往来与每次同意。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A04-001",
+      "text": "普通朋友定义不包含性互动；FWB 对互动范围有额外约定。"
+    }
+  ],
+  "changes": [
+    "可停止身体互动、继续友谊或结束接触，均不保证结果。"
+  ],
+  "facets": {
+    "sexual": "可能涉及"
+  },
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [
+      "CONSENT"
+    ],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}

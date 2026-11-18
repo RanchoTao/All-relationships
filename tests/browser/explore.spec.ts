@@ -230,7 +230,8 @@ test("coverage filters and readable evidence distinguish history from new defini
   await page.goto(at("/"));
   await page.getByRole("button", { name: "精细筛选" }).click();
   await page.getByLabel("内容建设状态", { exact: true }).selectOption("deep");
-  await expect(page.locator("article.entry-card")).toHaveCount(20);
+  await expect(page.locator("article.entry-card")).toHaveCount(1);
+  await page.getByLabel("内容建设状态", { exact: true }).selectOption("legacy");
   await page
     .getByRole("searchbox", { name: "搜索关系", exact: true })
     .fill("联合研究伙伴");

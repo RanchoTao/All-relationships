@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "0.3-legacy",
+  "id": "A04-012",
+  "version": "0.3.0",
+  "batch": "P2-02",
+  "depth": "basic",
+  "concept": {
+    "kind": "variant",
+    "rationale": "在主要关系上增加方向或互动约定，允许与其他变体叠加。"
+  },
+  "definition": "以倾听与表达困扰为突出互动的关系角色，可以发生在朋友或其他联结中。",
+  "scope": "本馆工作定义；适用于当事人认可的相应互动范围，不替个体贴标签。",
+  "scenarios": [
+    "一方先询问对方是否有精力听自己讲。"
+  ],
+  "participants": [
+    "表达者与倾听者，角色可以互换。"
+  ],
+  "needs": [
+    "倾听、澄清想要建议还是只需陪伴。"
+  ],
+  "interactions": [
+    "一方先询问对方是否有精力听自己讲。可以先沟通期待，再决定是否继续。"
+  ],
+  "properties": {
+    "emotion": "情感强度由当事人表达；定义之外的亲密程度未知。",
+    "time": "由任务或意向确定，不从标签推定每周投入。",
+    "economics": "费用、报酬或互助额度不由名称自动决定。",
+    "material": "是否共享物品、空间或设备未作默认。",
+    "autonomy": "定义不取消任何人的个人边界；变化需明确讨论。"
+  },
+  "boundaries": [
+    "时间、保密以及不能承担的内容。"
+  ],
+  "misconceptions": [
+    "倾诉对象不是自动获得专业训练的咨询师。"
+  ],
+  "conflicts": [
+    "可讨论的分歧：时间、保密以及不能承担的内容。若理解不同，需要先澄清；这里不声称这些冲突普遍发生。"
+  ],
+  "distinctions": [
+    {
+      "targetId": "A04-013",
+      "text": "情绪支持可以包含倾听之外的陪伴和实际帮助。"
+    }
+  ],
+  "changes": [
+    "可调整频次、转向其他支持或停止某类话题。"
+  ],
+  "facets": {},
+  "evidence": {
+    "definitionKind": "working_definition",
+    "editor": "AI-assisted editorial draft",
+    "editedAt": "2026-11-10",
+    "sourceIds": [],
+    "independentReview": "pending",
+    "humanReviewer": null,
+    "unverifiedHypotheses": [],
+    "note": "情境为虚构说明；边界和冲突是编辑讨论提示，不是发生率或因果结论。来源只支持登记的具体命题。"
+  },
+  "deepDive": []
+}
