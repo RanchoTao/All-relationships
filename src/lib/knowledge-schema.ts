@@ -212,6 +212,7 @@ export const V04CardSchema = z
     if (card.depth === "deep" && card.deepDive.length < 2)
       ctx.addIssue({
         code: "custom",
+        path: ["deepDive"],
         message: "Deep card requires at least two extended sections",
       });
   });

@@ -12,11 +12,6 @@ test("v0.4 summary, legacy fallback and coverage stay distinct", async ({
   if (sample.schemaVersion !== "0.4") throw new Error("Missing sample");
   const current = page.locator('[data-entry-id="A04-001"]');
   await expect(current.locator(".card-link p")).toHaveText(sample.summary);
-  const legacy = page.locator('[data-entry-id="A01-018"]');
-  await expect(legacy.locator(".card-link p")).toHaveText(
-    knowledgeById["A01-018"].definition,
-  );
-  await expect(legacy.locator(".badge")).toHaveText("待重写");
   await expect(page.locator(".draft-note")).toContainText(
     `旧版待重写 ${coverage.legacy} 张`,
   );
@@ -24,12 +19,18 @@ test("v0.4 summary, legacy fallback and coverage stay distinct", async ({
   await page
     .getByLabel("内容建设状态", { exact: true })
     .selectOption("complete");
+  await expect(page.getByRole("status")).toContainText(String(coverage.complete) + " 项");
   await expect(page.locator("article.entry-card")).toHaveCount(
-    coverage.complete,
+    Math.min(coverage.complete, 30),
   );
   await page.getByLabel("内容建设状态", { exact: true }).selectOption("legacy");
   await expect(page.getByRole("status")).toContainText(String(coverage.legacy));
   await expect(page.locator('[data-entry-id="A04-001"]')).toHaveCount(0);
+  const legacy = page.locator('[data-entry-id="A01-019"]');
+  await expect(legacy.locator(".card-link p")).toHaveText(
+    knowledgeById["A01-019"].definition,
+  );
+  await expect(legacy.locator(".badge")).toHaveText("待重写");
   await page.goto(at("/about"));
   await expect(
     page.getByText(
@@ -48,6 +49,11 @@ test("both detail variants render with accessible scenarios and negotiation list
   await expect(
     page.getByRole("heading", { name: "普通朋友", exact: true }),
   ).toBeVisible();
+  const mainSections = page.locator(".detail-layout > div > section > h2");
+  await expect(mainSections.nth(0)).toHaveText("定义与适用范围");
+  await expect(mainSections.nth(1)).toHaveText("它在生活中的样子 · 虚构情境");
+  await expect(mainSections.nth(2)).toHaveText("通常需要说清的议题");
+  await expect(mainSections.nth(3)).toHaveText("结构性的硬冲突");
   await expect(page.getByRole("heading", { name: /^情境 [123]$/ })).toHaveCount(
     3,
   );
@@ -73,9 +79,9 @@ test("both detail variants render with accessible scenarios and negotiation list
   await page.screenshot({
     path: `artifacts/screenshots/${info.project.name}-v04-negotiables.png`,
   });
-  for (const route of ["/relationships/A04-001", "/relationships/A01-018"]) {
+  for (const route of ["/relationships/A04-001", "/relationships/A01-019"]) {
     await page.goto(at(route));
-    if (route.endsWith("A01-018")) {
+    if (route.endsWith("A01-019")) {
       await expect(page.locator(".status-badge")).toContainText("待重写");
       await expect(page.getByText(/旧版内容待重写：保留原稿/)).toBeVisible();
       await expect(page.locator(".negotiables-list")).toHaveCount(0);

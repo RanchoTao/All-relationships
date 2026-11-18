@@ -1,6 +1,7 @@
 import { test, expect, type Page } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 import fs from "node:fs";
+import { knowledgeCards } from "../../src/lib/knowledge";
 const at = (path: string) => `${process.env.PLAYWRIGHT_BASE_PATH ?? ""}${path}`;
 async function choose(page: Page, text: string) {
   await page.getByRole("button", { name: text, exact: true }).click();
@@ -230,8 +231,10 @@ test("coverage filters and readable evidence distinguish history from new defini
   await page.goto(at("/"));
   await page.getByRole("button", { name: "精细筛选" }).click();
   await page.getByLabel("内容建设状态", { exact: true }).selectOption("deep");
-  await expect(page.locator("article.entry-card")).toHaveCount(1);
-  await page.getByLabel("内容建设状态", { exact: true }).selectOption("legacy");
+  const deepCount = knowledgeCards.filter(
+    (card) => card.schemaVersion === "0.4" && card.depth === "deep",
+  ).length;
+  await expect(page.getByRole("status")).toContainText(String(deepCount) + " 项");
   await page
     .getByRole("searchbox", { name: "搜索关系", exact: true })
     .fill("联合研究伙伴");
