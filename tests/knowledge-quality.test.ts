@@ -170,6 +170,28 @@ test("schema rejects incomplete prose, unknown dimensions/facets and fake review
     }).success,
   );
 });
+test("v0.4 deep cards require at least two deep-dive sections", () => {
+  const card = demo();
+  const [first, second] = card.deepDive;
+  for (const deepDive of [[], [first]]) {
+    const result = V04CardSchema.safeParse({ ...card, depth: "deep", deepDive });
+    assert.equal(result.success, false, `section count: ${deepDive.length}`);
+    assert.deepEqual(
+      result.error?.issues.map(({ path }) => path),
+      [["deepDive"]],
+    );
+  }
+  assert.ok(
+    V04CardSchema.safeParse({
+      ...card,
+      depth: "deep",
+      deepDive: [first, second],
+    }).success,
+  );
+  assert.ok(
+    V04CardSchema.safeParse({ ...card, depth: "standard", deepDive: [] }).success,
+  );
+});
 test("20-character duplicates fail across fields and inside list items; 19 do not", () => {
   const text = "甲乙丙丁戊己庚辛壬癸子丑寅卯辰巳午未申酉";
   const stub = (a: string, b: string) =>
