@@ -1,0 +1,2077 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Dearwithme 关系罗盘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-blocking: Google Fonts may be unreachable for some visitors; system fonts take over. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;800&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+    /></noscript>
+    <style>
+      /* VOICE  occasion, hushed and a little flirtatious: a late-night conversation, not a test
+   IDEA   a deck of dating-app cards over a star map of every kind of relationship
+   PICTURE the relationship map: 46 relationships placed by their real dimensions; each answer
+          dims the ones that no longer fit and lights the leaders
+   COLOUR wine-black night / blush day ground, rose #ff2e7e leads, coral and violet in the flame
+   TYPE   Noto Serif SC for questions and names, Noto Sans SC for everything else
+   LAYOUT laptop: card deck left, map right, leaders under the map; phone: map band, deck, sticky bar */
+      :root {
+        color-scheme: light dark;
+        --bg: light-dark(#fff4f5, #16060e);
+        --bg2: light-dark(#ffe6ec, #22091a);
+        --ink: light-dark(#2c0b1c, #fdeef3);
+        --mut: light-dark(#86506a, #c49aae);
+        --card: light-dark(#ffffff, #260d1d);
+        --line: light-dark(#f3cfda, #43203a);
+        --rose: light-dark(#e3115f, #ff3d86);
+        --coral: #ff7155;
+        --violet: light-dark(#8a2fd1, #b46bff);
+        --soft: light-dark(#ffe0ea, #3a1430);
+        --dot: light-dark(#d9a9bb, #5e3550);
+        --flame: linear-gradient(135deg, #ff7a59 0%, #ff2e7e 52%, #a23be0 100%);
+        --shadow: light-dark(
+          0 18px 40px -18px rgba(150, 20, 70, 0.35),
+          0 18px 40px -18px rgba(0, 0, 0, 0.7)
+        );
+      }
+      :root[data-theme="light"] {
+        color-scheme: light;
+      }
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+      }
+      * {
+        box-sizing: border-box;
+        min-width: 0;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.55 "Noto Sans SC",
+          "PingFang SC",
+          "Hiragino Sans GB",
+          "Microsoft YaHei",
+          system-ui,
+          sans-serif;
+        overflow-x: clip;
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+      }
+      .serif {
+        font-family: "Noto Serif SC", "Songti SC", "STSong", serif;
+      }
+      .app {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+        background:
+          radial-gradient(
+            1200px 600px at 85% -10%,
+            color-mix(in srgb, var(--rose) 16%, transparent),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at -10% 110%,
+            color-mix(in srgb, var(--violet) 14%, transparent),
+            transparent 60%
+          ),
+          var(--bg);
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px max(4vw, 16px);
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-right: auto;
+      }
+      .brand svg {
+        width: 28px;
+        height: 28px;
+        flex: none;
+      }
+      .brand b {
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      .brand span {
+        color: var(--mut);
+        font-size: 14px;
+      }
+      .count {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        color: var(--mut);
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      .count b {
+        font:
+          800 28px/1 "Noto Serif SC",
+          serif;
+        color: var(--ink);
+        font-variant-numeric: tabular-nums;
+        min-width: 1.4em;
+        text-align: right;
+      }
+      .btn {
+        border: 0;
+        border-radius: 999px;
+        padding: 11px 20px;
+        min-height: 44px;
+        font-weight: 700;
+        background: var(--flame);
+        color: #fff;
+        box-shadow: 0 10px 24px -12px #ff2e7e;
+        transition:
+          transform 0.15s,
+          box-shadow 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px -12px #ff2e7e;
+      }
+      .btn:active {
+        transform: scale(0.97);
+      }
+      .ghost {
+        border: 1px solid var(--line);
+        background: transparent;
+        border-radius: 999px;
+        padding: 10px 16px;
+        min-height: 44px;
+        font-weight: 500;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+      }
+      .ghost:hover {
+        background: var(--soft);
+        border-color: transparent;
+      }
+      :focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--rose) 70%, transparent);
+        outline-offset: 2px;
+      }
+      main {
+        display: grid;
+        grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
+        gap: clamp(20px, 3vw, 44px);
+        padding: clamp(20px, 3vw, 36px) max(4vw, 16px);
+        align-items: start;
+        max-width: 1400px;
+        width: 100%;
+        margin: 0 auto;
+      }
+      /* deck */
+      .deck {
+        position: relative;
+        display: grid;
+      }
+      .deck > .ghostcard {
+        grid-area: 1/1;
+        border-radius: 28px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        transform-origin: 50% 100%;
+      }
+      .trail {
+        grid-area: 2/1;
+        margin-top: 44px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .trail span {
+        font-size: 14px;
+        color: var(--mut);
+        margin-right: 4px;
+      }
+      .trail button {
+        border: 1px solid var(--line);
+        background: transparent;
+        border-radius: 99px;
+        padding: 6px 12px;
+        font-size: 14px;
+        min-height: 36px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: background 0.2s;
+      }
+      .trail button:hover {
+        background: var(--soft);
+      }
+      .deck > .g1 {
+        transform: translateY(14px) scale(0.95);
+        opacity: 0.7;
+      }
+      .deck > .g2 {
+        transform: translateY(28px) scale(0.9);
+        opacity: 0.4;
+      }
+      .q {
+        grid-area: 1/1;
+        position: relative;
+        border-radius: 28px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        padding: 26px 24px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition:
+          transform 0.42s cubic-bezier(0.2, 0.8, 0.2, 1),
+          opacity 0.42s;
+      }
+      .q::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto;
+        height: 5px;
+        border-radius: 28px 28px 0 0;
+        background: var(--flame);
+        opacity: 0.9;
+      }
+      .q.out {
+        transform: translateX(70%) rotate(9deg);
+        opacity: 0;
+      }
+      .q.back {
+        transform: translateX(-70%) rotate(-9deg);
+        opacity: 0;
+      }
+      .q.in {
+        transform: translateY(18px) scale(0.96);
+        opacity: 0;
+        transition: none;
+      }
+      .qmeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--mut);
+        font-size: 14px;
+      }
+      .qmeta button {
+        border: 0;
+        background: none;
+        padding: 8px 4px;
+        color: var(--mut);
+        min-height: 36px;
+      }
+      .qmeta button:hover {
+        color: var(--ink);
+      }
+      .q h2 {
+        margin: 0;
+        font:
+          800 clamp(24px, 2.6vw, 30px)/1.2 "Noto Serif SC",
+          serif;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+      .hint {
+        margin: -8px 0 0;
+        color: var(--mut);
+        font-size: 14px;
+      }
+      .opts {
+        display: grid;
+        gap: 10px;
+      }
+      .opt {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-align: left;
+        border: 1.5px solid var(--line);
+        background: transparent;
+        border-radius: 16px;
+        padding: 12px 14px;
+        min-height: 52px;
+        font-size: 16px;
+        transition:
+          border-color 0.18s,
+          background 0.18s,
+          transform 0.12s;
+      }
+      .opt:hover {
+        border-color: color-mix(in srgb, var(--rose) 55%, var(--line));
+        background: color-mix(in srgb, var(--soft) 55%, transparent);
+      }
+      .opt:active {
+        transform: scale(0.985);
+      }
+      .opt .k {
+        flex: none;
+        width: 26px;
+        height: 26px;
+        border-radius: 9px;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        font-weight: 700;
+        background: var(--soft);
+        color: var(--rose);
+      }
+      .opt[aria-pressed="true"] {
+        border-color: var(--rose);
+        background: color-mix(in srgb, var(--rose) 12%, transparent);
+      }
+      .opt[aria-pressed="true"] .k {
+        background: var(--rose);
+        color: #fff;
+      }
+      .opts.grid2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .qfoot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .skip {
+        border: 0;
+        background: none;
+        color: var(--mut);
+        padding: 10px 2px;
+        min-height: 44px;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: var(--line);
+      }
+      .skip:hover {
+        color: var(--ink);
+      }
+      .adult {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--mut);
+        cursor: pointer;
+        user-select: none;
+      }
+      .adult input {
+        appearance: none;
+        width: 42px;
+        height: 24px;
+        border-radius: 99px;
+        background: var(--line);
+        position: relative;
+        transition: background 0.2s;
+        flex: none;
+        margin: 0;
+      }
+      .adult input::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #fff;
+        transition: transform 0.2s;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+      }
+      .adult input:checked {
+        background: var(--rose);
+      }
+      .adult input:checked::after {
+        transform: translateX(18px);
+      }
+      .ready {
+        border-radius: 16px;
+        padding: 12px 14px;
+        background: color-mix(in srgb, var(--rose) 10%, transparent);
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .ready b {
+        color: var(--rose);
+      }
+      /* map */
+      .side {
+        display: grid;
+        gap: 18px;
+        position: sticky;
+        top: 20px;
+      }
+      .map {
+        position: relative;
+        aspect-ratio: 16/10;
+        border-radius: 28px;
+        border: 1px solid var(--line);
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 30% 18%,
+            color-mix(in srgb, var(--rose) 13%, transparent),
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 75% 80%,
+            color-mix(in srgb, var(--violet) 12%, transparent),
+            transparent 50%
+          ),
+          var(--bg2);
+      }
+      .map::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          color-mix(in srgb, var(--ink) 9%, transparent) 1px,
+          transparent 1.2px
+        );
+        background-size: 22px 22px;
+        opacity: 0.6;
+      }
+      .ax {
+        position: absolute;
+        font-size: 13px;
+        color: var(--mut);
+        pointer-events: none;
+        z-index: 2;
+        background: color-mix(in srgb, var(--bg2) 80%, transparent);
+        padding: 1px 6px;
+        border-radius: 6px;
+      }
+      .ax.t {
+        top: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .ax.b {
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .ax.l {
+        left: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .ax.r {
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .dot {
+        position: absolute;
+        left: calc(5% + var(--x) * 90%);
+        top: calc(7% + var(--y) * 86%);
+        transform: translate(-50%, -50%);
+        border: 0;
+        padding: 0;
+        background: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        z-index: 1;
+        min-height: 24px;
+      }
+      .dot i {
+        display: block;
+        width: calc(7px + var(--s) * 24px);
+        height: calc(7px + var(--s) * 24px);
+        border-radius: 50%;
+        background: var(--dot);
+        transition:
+          width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+          height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+          background 0.4s,
+          opacity 0.4s,
+          box-shadow 0.4s;
+        flex: none;
+      }
+      .dot span {
+        will-change: opacity;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(var(--lx, -50%), var(--ly, 14px));
+        white-space: nowrap;
+        font-size: 13px;
+        line-height: 1.3;
+        padding: 1px 6px;
+        border-radius: 6px;
+        background: color-mix(in srgb, var(--bg2) 82%, transparent);
+        opacity: 0;
+        transition: opacity 0.35s;
+        pointer-events: none;
+      }
+      .dot.alive i {
+        background: color-mix(in srgb, var(--rose) 55%, var(--dot));
+      }
+      .dot.alive.lab span {
+        opacity: 0.85;
+      }
+      .dot[hidden] {
+        display: none;
+      }
+      .dot.lead {
+        z-index: 3;
+      }
+      .dot.lead i {
+        background: var(--flame);
+        box-shadow:
+          0 0 0 6px color-mix(in srgb, var(--rose) 16%, transparent),
+          0 8px 22px -6px #ff2e7e;
+      }
+      .dot.lead.lab span {
+        opacity: 1;
+        font-weight: 700;
+      }
+      .dot.gone i {
+        opacity: 0.28;
+      }
+      .dot:hover span,
+      .dot:focus-visible span {
+        opacity: 1;
+        z-index: 4;
+      }
+      .dot:hover {
+        z-index: 5;
+      }
+      .leaders {
+        display: grid;
+        gap: 8px;
+      }
+      .leaders h3 {
+        margin: 0 0 2px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--mut);
+      }
+      .lrow {
+        display: grid;
+        grid-template-columns: 12em minmax(0, 1fr) 3.2em;
+        align-items: center;
+        gap: 12px;
+        border: 0;
+        background: none;
+        padding: 4px 0;
+        text-align: left;
+        min-height: 36px;
+      }
+      .lrow b {
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .leaders p {
+        margin: 0;
+        color: var(--mut);
+        font-size: 14px;
+      }
+      .bar {
+        height: 10px;
+        border-radius: 99px;
+        background: var(--soft);
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        border-radius: 99px;
+        background: var(--flame);
+        width: var(--w);
+        transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      .lrow em {
+        font-style: normal;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+        color: var(--mut);
+        font-size: 14px;
+      }
+      /* results */
+      .results {
+        display: none;
+      }
+      .app.res main {
+        display: none;
+      }
+      .app.res .results {
+        display: grid;
+        grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+        gap: clamp(20px, 3vw, 48px);
+        padding: clamp(20px, 3vw, 36px) max(4vw, 16px);
+        max-width: 1300px;
+        width: 100%;
+        margin: 0 auto;
+        align-items: start;
+      }
+      .rhead h1 {
+        margin: 0 0 8px;
+        font:
+          800 clamp(28px, 3.4vw, 44px)/1.08 "Noto Serif SC",
+          serif;
+        letter-spacing: -0.02em;
+        text-wrap: balance;
+      }
+      .rhead p {
+        margin: 0;
+        color: var(--mut);
+        max-width: 34em;
+      }
+      .stack {
+        position: relative;
+        display: grid;
+        margin-top: 22px;
+        touch-action: pan-y;
+      }
+      .rc {
+        grid-area: 1/1;
+        border-radius: 30px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        transition:
+          transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+          opacity 0.45s;
+        user-select: none;
+        will-change: transform;
+      }
+      .rc.under {
+        transform: translateY(16px) scale(0.95);
+        opacity: 0.65;
+        pointer-events: none;
+      }
+      .rc.under2 {
+        transform: translateY(30px) scale(0.9);
+        opacity: 0.35;
+        pointer-events: none;
+      }
+      .rc.drag {
+        transition: none;
+        cursor: grabbing;
+      }
+      .rc.like {
+        transform: translateX(120%) rotate(16deg);
+        opacity: 0;
+      }
+      .rc.nope {
+        transform: translateX(-120%) rotate(-16deg);
+        opacity: 0;
+      }
+      .rtop {
+        position: relative;
+        padding: 18px 22px 20px;
+        background: var(--flame);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .rmeta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+      .rmeta .pct {
+        font:
+          800 15px/1 "Noto Sans SC",
+          sans-serif;
+        background: rgba(255, 255, 255, 0.22);
+        padding: 7px 11px;
+        border-radius: 99px;
+        font-variant-numeric: tabular-nums;
+      }
+      .rtop h2 {
+        margin: 0;
+        font:
+          800 clamp(28px, 3vw, 36px)/1.1 "Noto Serif SC",
+          serif;
+        letter-spacing: -0.02em;
+      }
+      .rtop p {
+        margin: 0;
+        font-size: 15px;
+        opacity: 0.95;
+      }
+      .stamp {
+        position: absolute;
+        top: 58px;
+        font:
+          800 22px/1 "Noto Serif SC",
+          serif;
+        padding: 6px 12px;
+        border: 3px solid #fff;
+        border-radius: 10px;
+        opacity: 0;
+        transform: rotate(-10deg);
+      }
+      .stamp.y {
+        left: 20px;
+      }
+      .stamp.n {
+        right: 20px;
+        transform: rotate(10deg);
+      }
+      .rbody {
+        padding: 18px 22px 22px;
+        display: grid;
+        gap: 14px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .tag {
+        font-size: 13px;
+        padding: 4px 10px;
+        border-radius: 99px;
+        background: var(--soft);
+        color: var(--ink);
+      }
+      .tag.warn {
+        background: color-mix(in srgb, var(--coral) 20%, transparent);
+      }
+      .why {
+        display: grid;
+        gap: 6px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+      }
+      .why li {
+        display: grid;
+        grid-template-columns: 20px minmax(0, 1fr);
+        gap: 8px;
+        align-items: start;
+      }
+      .why svg {
+        width: 16px;
+        height: 16px;
+        margin-top: 3px;
+      }
+      .why .ok {
+        color: var(--rose);
+      }
+      .why .no {
+        color: var(--mut);
+      }
+      .refine {
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+        display: grid;
+        gap: 8px;
+      }
+      .refine h4 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .refine h4 span {
+        font-weight: 400;
+        font-size: 13px;
+        color: var(--mut);
+        margin-left: 6px;
+      }
+      .refine .rg {
+        margin: 4px 0 0;
+        font-size: 13px;
+        color: var(--mut);
+      }
+      .rbox {
+        display: grid;
+        gap: 4px;
+        max-height: 230px;
+        overflow: auto;
+        padding-right: 4px;
+        overscroll-behavior: contain;
+      }
+      .rchips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .rchip {
+        border: 1px solid var(--line);
+        background: transparent;
+        border-radius: 99px;
+        padding: 6px 12px;
+        font-size: 14px;
+        min-height: 36px;
+        transition:
+          background 0.15s,
+          border-color 0.15s,
+          color 0.15s;
+      }
+      .rchip:hover {
+        border-color: color-mix(in srgb, var(--rose) 55%, var(--line));
+      }
+      .rchip[aria-pressed="true"] {
+        background: var(--rose);
+        border-color: var(--rose);
+        color: #fff;
+      }
+      .rother {
+        display: flex;
+        gap: 8px;
+      }
+      .rother input {
+        flex: 1;
+        min-width: 0;
+        font: inherit;
+        font-size: 16px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 8px 12px;
+        background: transparent;
+        color: var(--ink);
+        min-height: 40px;
+      }
+      .rother button {
+        border: 1px solid var(--line);
+        background: var(--soft);
+        border-radius: 12px;
+        padding: 8px 14px;
+        min-height: 40px;
+      }
+      .alias {
+        font-size: 14px;
+        color: var(--mut);
+        margin: 0;
+      }
+      .wiki {
+        font-size: 14px;
+        margin: 0;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: var(--bg2);
+        color: var(--ink);
+      }
+      .wiki small {
+        display: block;
+        color: var(--mut);
+        margin-top: 6px;
+        font-size: 13px;
+      }
+      .acts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        margin-top: 22px;
+      }
+      .round {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 1px solid var(--line);
+        background: var(--card);
+        display: grid;
+        place-items: center;
+        box-shadow: var(--shadow);
+        transition: transform 0.15s;
+      }
+      .round:hover {
+        transform: scale(1.07);
+      }
+      .round:active {
+        transform: scale(0.94);
+      }
+      .round svg {
+        width: 28px;
+        height: 28px;
+      }
+      .round.small {
+        width: 46px;
+        height: 46px;
+      }
+      .round.small svg {
+        width: 20px;
+        height: 20px;
+      }
+      .round.yes {
+        background: var(--flame);
+        border: 0;
+        color: #fff;
+      }
+      .round.no {
+        color: var(--mut);
+      }
+      .mine {
+        display: grid;
+        gap: 18px;
+      }
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 20px;
+        background: color-mix(in srgb, var(--card) 70%, transparent);
+      }
+      .panel h3 {
+        margin: 0 0 10px;
+        font:
+          800 20px/1.2 "Noto Serif SC",
+          serif;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .chip {
+        border: 1px solid var(--line);
+        background: var(--card);
+        border-radius: 99px;
+        padding: 8px 14px;
+        font-size: 15px;
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        min-height: 40px;
+      }
+      .chip.on {
+        background: var(--flame);
+        color: #fff;
+        border: 0;
+      }
+      .chip small {
+        opacity: 0.8;
+      }
+      .empty {
+        color: var(--mut);
+        font-size: 14px;
+        margin: 0;
+      }
+      .rowbtns {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 14px;
+      }
+      .fine {
+        font-size: 13px;
+        color: var(--mut);
+        margin: 0;
+      }
+      .ans {
+        display: grid;
+        gap: 2px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .ans li {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        padding: 9px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+      }
+      .ans li:last-child {
+        border: 0;
+      }
+      .ans span {
+        color: var(--mut);
+      }
+      .ans b {
+        font-weight: 500;
+        display: block;
+        color: var(--ink);
+      }
+      .ans button {
+        border: 0;
+        background: none;
+        color: var(--rose);
+        font-size: 14px;
+        padding: 8px 4px;
+        min-height: 40px;
+      }
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: calc(24px + env(safe-area-inset-bottom));
+        transform: translate(-50%, 20px);
+        background: var(--ink);
+        color: var(--bg);
+        padding: 10px 16px;
+        border-radius: 99px;
+        font-size: 14px;
+        opacity: 0;
+        transition: 0.3s;
+        pointer-events: none;
+        z-index: 20;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+      .mbar {
+        display: none;
+      }
+      @media (max-width: 900px) {
+        main {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 16px;
+          padding-top: 14px;
+        }
+        .side {
+          position: static;
+          order: -1;
+          gap: 10px;
+        }
+        .map {
+          aspect-ratio: auto;
+          height: min(34vh, 300px);
+          border-radius: 22px;
+        }
+        .leaders {
+          display: none;
+        }
+        .app.res .results {
+          grid-template-columns: minmax(0, 1fr);
+        }
+        .count {
+          display: none;
+        }
+        header .btn {
+          display: none;
+        }
+        .mbar {
+          display: flex;
+          position: sticky;
+          bottom: 0;
+          z-index: 10;
+          gap: 12px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+          background: color-mix(in srgb, var(--bg) 88%, transparent);
+          backdrop-filter: blur(12px);
+          border-top: 1px solid var(--line);
+        }
+        .mbar .btn {
+          white-space: nowrap;
+          flex: none;
+        }
+        .mbar .lead {
+          font-size: 14px;
+          color: var(--mut);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .mbar .lead b {
+          color: var(--ink);
+        }
+        .app.res .mbar {
+          display: none;
+        }
+      }
+      @media (max-width: 600px) {
+        .brand span {
+          display: none;
+        }
+        .q {
+          padding: 22px 18px 16px;
+          border-radius: 24px;
+        }
+        .opts.grid2 {
+          gap: 8px;
+        }
+        .opts.grid2 .opt {
+          padding: 10px 12px;
+          font-size: 15px;
+          min-height: 48px;
+          justify-content: center;
+          text-align: center;
+        }
+        .opts.grid2 .opt .k {
+          display: none;
+        }
+        .map {
+          height: min(26vh, 220px);
+        }
+        .dot span {
+          font-size: 12px;
+        }
+        .ax {
+          font-size: 12px;
+        }
+        .rtop {
+          min-height: 130px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header>
+        <div class="brand">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="fl" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff7a59" />
+                <stop offset=".55" stop-color="#ff2e7e" />
+                <stop offset="1" stop-color="#a23be0" />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#fl)"
+              d="M16 2c1.2 4.6 7.5 7.4 7.5 15.2A7.5 7.5 0 0 1 16 29c-4.3 0-8-3.3-8-8.2 0-3.4 1.9-5.6 3.4-7.2.4 2.2 1.5 3.6 2.9 4.2C13.5 12.3 14.6 6.4 16 2Z"
+            />
+            <circle cx="16" cy="21.5" r="3" fill="#fff" opacity=".85" />
+          </svg>
+          <b class="serif">dearwithme</b><span>关系罗盘 · <a href="../" style="color:inherit">AllRelationships 百科</a></span>
+        </div>
+        <div class="count" aria-live="polite">还剩 <b id="left">46</b> 种可能</div>
+        <button class="btn" id="toRes">看我的结果</button>
+      </header>
+      <main>
+        <section class="deck" id="deck" aria-label="问卷">
+          <div class="ghostcard g2"></div>
+          <div class="ghostcard g1"></div>
+          <article class="q" id="q" aria-live="polite"></article>
+          <div class="trail" id="trail"></div>
+        </section>
+        <aside class="side">
+          <div
+            class="map"
+            id="map"
+            role="img"
+            aria-label="关系地图：每个点是一种关系，答题后不符合的会变暗"
+          >
+            <span class="ax t">更心动、更亲密</span><span class="ax b">更务实、更讲约定</span>
+            <span class="ax l">松一点</span><span class="ax r">近一点</span>
+          </div>
+          <div class="leaders" id="leaders"></div>
+        </aside>
+      </main>
+      <section class="results" id="results" aria-label="结果"></section>
+      <div class="mbar">
+        <div class="lead" id="mlead"></div>
+        <button class="btn" id="toRes2">看结果</button>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script>
+      // Relationship compass inference engine. Shared by the page (inlined) and sim.js (node).
+// Model: each card is a region (a [lo,hi] range per dimension + domains). The person is a
+// probability distribution over cards; every answer multiplies each card's weight by how
+// well the answer fits its region. "说不清" changes nothing. The next question is the one
+// with the largest expected information gain, so people who know what they want finish
+// sooner and nobody is forced down a fixed tree.
+const CompassEngine = (() => {
+  // Likelihood by distance (in steps) between the answer and a card's range.
+  const FIT = [1, 0.35, 0.1, 0.03, 0.01];
+  const DOMAIN_MISS = 0.04;
+  // Occam factor: an answer inside a narrow range is stronger evidence than the same answer
+  // inside a wide one (a card that allows everything explains nothing).
+  const OCCAM = 0.5;
+
+  const QUESTIONS = [
+    {
+      id: "domain",
+      multi: true,
+      title: "你想找的人，主要和你一起做什么？",
+      hint: "可以多选。只选最主要的一两项，结果会更准。",
+      options: [
+        ["love", "谈恋爱、找伴侣"],
+        ["friend", "交朋友、有人懂我"],
+        ["fun", "吃喝玩乐、运动"],
+        ["grow", "学习、互相督促"],
+        ["work", "做项目、创业"],
+        ["research", "一起做研究"],
+        ["home", "一起住、分担生活"],
+        ["care", "互相照应、托底"],
+        ["community", "参与社区和公益"],
+        ["online", "线上就好"],
+        ["intimacy", "身体亲密，不谈恋爱", "adult"],
+      ],
+    },
+    {
+      id: "R",
+      title: "你希望这段关系里有心动吗？",
+      options: [
+        [[0], "完全不要，纯粹别的关系"],
+        [[1], "现在不要，但不排斥以后发展"],
+        [[2], "有点心动就好，不必定义"],
+        [[3, 4], "就是想谈恋爱"],
+      ],
+    },
+    {
+      id: "E",
+      title: "你希望对方在你心里占多重的位置？",
+      options: [
+        [[0], "能把事情做好就行"],
+        [[1], "轻松愉快，不用走心"],
+        [[2], "会互相关心近况"],
+        [[3], "很亲近，能说心里话"],
+        [[4], "最重要的人之一"],
+      ],
+    },
+    {
+      id: "C",
+      title: "你希望这段关系持续多久？",
+      options: [
+        [[0], "一次就好"],
+        [[1], "先试几周，合适再说"],
+        [[2], "有个期限，或做完一件事"],
+        [[3], "长期，不设终点"],
+        [[4], "一辈子，愿意给正式承诺"],
+      ],
+    },
+    {
+      id: "X",
+      title: "如果对方同时也和别人保持同样的关系，你会？",
+      options: [
+        [[0], "本来就不冲突，无所谓"],
+        [[1], "可以接受"],
+        [[2], "早期可以，之后再说"],
+        [[3, 4], "希望彼此只有对方"],
+      ],
+    },
+    {
+      id: "T",
+      title: "理想情况下，你们多久相处一次？",
+      hint: "线上线下都算。",
+      options: [
+        [[0], "偶尔，或只有一次"],
+        [[1], "每月一两次"],
+        [[2], "每周一次左右"],
+        [[3], "每周好几次"],
+        [[4], "几乎每天"],
+      ],
+    },
+    {
+      id: "L",
+      title: "你希望对方进入你的日常到什么程度？",
+      options: [
+        [[0], "只在固定的场合见"],
+        [[1], "偶尔认识彼此的朋友"],
+        [[2], "分享一部分日常"],
+        [[3], "深度参与彼此的生活"],
+        [[4], "住在一起，共同生活"],
+      ],
+    },
+    {
+      id: "M",
+      title: "钱的方面，你们会怎么处理？",
+      options: [
+        [[0], "基本不涉及钱"],
+        [[1], "各付各的，或 AA"],
+        [[2], "为共同的事一起出钱"],
+        [[3], "有不少共同开支"],
+        [[4], "共同财务，一起置业"],
+      ],
+    },
+    {
+      id: "F",
+      title: "你希望这段关系有多明确的约定？",
+      options: [
+        [[0], "不想定义，顺其自然"],
+        [[1], "心照不宣就好"],
+        [[2], "聊清楚彼此的期待"],
+        [[3], "说好规则和边界"],
+        [[4], "签协议，或者领证"],
+      ],
+    },
+    {
+      id: "D",
+      title: "你们主要怎么相处？",
+      options: [
+        [[0], "完全在线上"],
+        [[1], "主要线上，偶尔见面"],
+        [[2], "线上线下都行"],
+        [[3], "主要见面"],
+        [[4], "必须同城、经常见面"],
+      ],
+    },
+    {
+      id: "P",
+      adult: true,
+      title: "身体上的亲近，你的期待是？",
+      hint: "只在你确认已满 18 岁后出现。",
+      options: [
+        [[0], "不需要"],
+        [[1], "拥抱、牵手这类就好"],
+        [[1, 2, 3], "看相处，再商量"],
+        [[3], "性亲密是关系的一部分"],
+        [[4], "主要就是身体上的关系"],
+      ],
+    },
+  ];
+  const DIM_INDEX = { E: 0, R: 1, P: 2, C: 3, X: 4, T: 5, L: 6, M: 7, F: 8, D: 9 };
+  const byId = Object.fromEntries(QUESTIONS.map((q) => [q.id, q]));
+
+  function distDim(values, range) {
+    let best = 9;
+    for (const v of values) best = Math.min(best, Math.max(range[0] - v, v - range[1], 0));
+    return best;
+  }
+  function fitDim(values, range) {
+    let best = 9;
+    for (const v of values) best = Math.min(best, Math.max(range[0] - v, v - range[1], 0));
+    return FIT[Math.min(best, FIT.length - 1)] / (range[1] - range[0] + 1) ** OCCAM;
+  }
+  // Likelihood of one answer (option index, or array of indexes for the domain question).
+  function likelihood(q, answer, card) {
+    if (q.id === "domain") {
+      const picked = answer.map((i) => q.options[i][0]);
+      return picked.some((d) => card.domains.includes(d)) ? 1 : DOMAIN_MISS;
+    }
+    return fitDim(q.options[answer][0], card.ranges[DIM_INDEX[q.id]]);
+  }
+  function eligible(cards, adult) {
+    return cards.filter((c) => adult || !c.adult);
+  }
+  // answers: { [questionId]: optionIndex | optionIndex[] | "skip" }
+  // rejected: Set of card keys the person said "不是" to.
+  function posterior(cards, answers, rejected = new Set()) {
+    const w = cards.map((c) => {
+      if (rejected.has(c.key)) return 0;
+      let p = 1;
+      for (const [id, a] of Object.entries(answers)) {
+        if (a === "skip" || a == null || (Array.isArray(a) && !a.length)) continue;
+        p *= likelihood(byId[id], a, c);
+      }
+      return p;
+    });
+    const s = w.reduce((x, y) => x + y, 0) || 1;
+    return cards.map((c, i) => ({ card: c, p: w[i] / s })).sort((a, b) => b.p - a.p);
+  }
+  const H = (ps) => -ps.reduce((h, p) => (p > 0 ? h + p * Math.log2(p) : h), 0);
+  // Cards still plausible: within a factor of the leader (and above a floor).
+  function plausible(post) {
+    const top = post[0]?.p ?? 0;
+    return post.filter((x) => x.p > 0 && x.p >= top * 0.2 && x.p >= 0.004);
+  }
+  function available(answers, adult) {
+    return QUESTIONS.filter((q) => !(q.id in answers) && (adult || !q.adult));
+  }
+  // Expected information gain of asking q, given the current posterior.
+  function gain(q, post) {
+    if (q.id === "domain") return Infinity; // always the opening question
+    const h0 = H(post.map((x) => x.p));
+    let exp = 0,
+      total = 0;
+    const outcomes = q.options.map((_, oi) => {
+      const ws = post.map((x) => x.p * likelihood(q, oi, x.card));
+      const m = ws.reduce((a, b) => a + b, 0);
+      total += m;
+      return { m, ws };
+    });
+    for (const o of outcomes) {
+      if (!o.m) continue;
+      exp += (o.m / total) * H(o.ws.map((w) => w / o.m));
+    }
+    return h0 - exp;
+  }
+  function next(cards, answers, adult, rejected) {
+    const post = posterior(cards, answers, rejected);
+    let best = null,
+      bg = -1;
+    for (const q of available(answers, adult)) {
+      const g = gain(q, post);
+      if (g > bg) {
+        bg = g;
+        best = q;
+      }
+    }
+    return { question: best, gain: bg, post };
+  }
+  // "Clear enough": the leader dominates, or no remaining question is worth much.
+  function settled(post, bestGain) {
+    return (post[0]?.p ?? 0) >= 0.55 || bestGain < 0.12;
+  }
+  // Per-dimension explanation of how a card fits the answers given so far.
+  function explain(card, answers) {
+    const out = [];
+    for (const [id, a] of Object.entries(answers)) {
+      if (a === "skip" || id === "domain") continue;
+      const q = byId[id];
+      const d = distDim(q.options[a][0], card.ranges[DIM_INDEX[q.id]]);
+      out.push({ id, question: q.title, answer: q.options[a][1], dist: d });
+    }
+    return out.sort((x, y) => x.dist - y.dist);
+  }
+  return {
+    QUESTIONS,
+    byId,
+    posterior,
+    plausible,
+    next,
+    settled,
+    explain,
+    eligible,
+    likelihood,
+    gain,
+  };
+})();
+if (typeof module !== "undefined") module.exports = CompassEngine;
+
+    </script>
+    <script>
+      const DATA={"version":"1.0.0","source":"AllRelationships catalog v0.2 (479 entries) + data/knowledge cards","dims":["E","R","P","C","X","T","L","M","F","D"],"domains":{"love":"恋爱与伴侣","intimacy":"成年人亲密","friend":"友情与陪伴","fun":"一起玩","grow":"学习成长","research":"研究","work":"工作创业","home":"共同生活","online":"线上","community":"社区公益","care":"互相照应"},"cards":[{"key":"dating","name":"约会了解期","domains":["love"],"ranges":[[1,2],[1,3],[0,1],[1,2],[0,2],[1,3],[0,1],[1,1],[0,2],[2,4]],"gist":"有意用约会认识彼此，还在看要不要往恋爱走。","status":"match","adult":false,"note":"","members":[{"id":"A01-006","label":"聊天了解阶段（Talking Stage）"},{"id":"A01-011","label":"普通约会对象"},{"id":"A01-009","label":"初次约会对象"},{"id":"A01-010","label":"多次约会对象"}],"wiki":{"id":"A01-011","summary":"一场场约着见面，是给相互了解留出的时间。","definition":"普通约会对象指双方有意识地用约会来认识彼此的人。双方已同意某次相处，但对是否建立恋爱关系仍有选择。这个称呼不说明约会持续多久，也不回答能否同时约见他人。"},"xy":[0.307,0.296],"refine":null},{"key":"blind-date","name":"相亲","domains":["love"],"ranges":[[1,2],[1,3],[0,1],[2,3],[2,3],[1,2],[0,1],[1,1],[2,3],[3,4]],"gist":"经介绍、带着长期方向见面，双方都清楚是在相互考察。","status":"match","adult":false,"note":"","members":[{"id":"A01-008","label":"相亲对象"}],"wiki":null,"xy":[0.424,0.327],"refine":null},{"key":"casual","name":"休闲约会","domains":["love"],"ranges":[[1,2],[2,3],[1,3],[0,1],[0,1],[1,2],[0,1],[1,1],[0,1],[3,4]],"gist":"享受约会和心动，不急着确定关系，也不要求只见彼此。","status":"match","adult":false,"note":"","members":[{"id":"A01-012","label":"休闲约会（Casual Dating）"},{"id":"A01-014","label":"非排他约会"},{"id":"A02-012","label":"约会但不寻求承诺的伴侣"}],"wiki":{"id":"A01-012","summary":"在不承诺长远发展的前提下，享受相约和相处。","definition":"休闲约会指成年人见面了解或享受相处，但没有把建立长期伴侣关系作为眼下约会的前提。两人仍可形成具体的联系安排。见面的频率、与他人约会的范围和身体接触，需要各自确认。"},"xy":[0.251,0.105],"refine":null},{"key":"situationship","name":"暧昧未定义","domains":["love"],"ranges":[[2,3],[2,3],[1,3],[1,2],[0,2],[1,3],[0,2],[0,1],[0,0],[2,4]],"gist":"像恋人又没说破，彼此在意，但关系没有名字和规则。","status":"match","adult":false,"note":"","members":[{"id":"A01-007","label":"调情关系（Flirtationship）"},{"id":"A01-016","label":"未定义的暧昧关系（Situationship）"}],"wiki":null,"xy":[0.384,0.129],"refine":null},{"key":"exclusive","name":"认真专一约会","domains":["love"],"ranges":[[2,3],[3,4],[1,3],[2,3],[3,4],[2,3],[1,2],[1,1],[2,3],[3,4]],"gist":"认真地只和彼此约会，准备好往长期关系发展。","status":"match","adult":false,"note":"","members":[{"id":"A01-013","label":"认真约会（Serious Dating）"},{"id":"A01-015","label":"排他约会"}],"wiki":{"id":"A01-013","summary":"把能否长期走在一起，当成约会中需要了解的一件事。","definition":"认真约会指成年参与者将发展持续关系作为相处时要检视的方向。能否成为伴侣仍是问题，方向相近也不保证双方最终同意。排他、同住或婚姻需要额外说明。"},"xy":[0.627,0.158],"refine":null},{"key":"short-romance","name":"短期恋情","domains":["love"],"ranges":[[2,3],[3,4],[1,3],[1,1],[2,4],[2,4],[1,2],[1,1],[1,2],[3,4]],"gist":"投入地谈一段恋爱，但双方都知道它有期限。","status":"match","adult":false,"note":"","members":[{"id":"A01-017","label":"短期恋情"}],"wiki":null,"xy":[0.574,0.089],"refine":null},{"key":"long-term","name":"长期恋爱","domains":["love"],"ranges":[[3,4],[3,4],[1,4],[3,3],[3,4],[2,4],[2,3],[1,2],[2,3],[2,4]],"gist":"稳定、专一、不设终点的恋爱，各自有住处。","status":"match","adult":false,"note":"","members":[{"id":"A01-018","label":"长期恋情"},{"id":"A01-022","label":"同城非同居伴侣"},{"id":"A01-023","label":"未婚长期伴侣"}],"wiki":{"id":"A01-018","summary":"愿与同一个人持续过浪漫伴侣生活，并把未来作为共同议题。","definition":"长期恋情是成年人互相认可并有意延续的浪漫伴侣关系。长期说的是对未来的共同取向，仍由两人持续作出决定。住址、婚姻计划、生育意向及经济安排都需要分别了解。"},"xy":[0.756,0.224],"refine":null},{"key":"long-distance","name":"异地恋","domains":["love"],"ranges":[[3,4],[3,4],[1,4],[3,3],[3,4],[2,4],[1,2],[1,2],[2,3],[0,1]],"gist":"身处两地，主要靠线上维系，定期见面的长期恋爱。","status":"match","adult":false,"note":"","members":[{"id":"A01-019","label":"异地恋伴侣"},{"id":"A01-020","label":"跨国恋伴侣"}],"wiki":{"id":"A01-019","summary":null,"definition":"伴侣在不同地区生活、需要处理距离影响的浪漫关系。距离是情境属性，不是亲密程度评级。"},"xy":[0.702,0.163],"refine":null},{"key":"weekend","name":"周末情侣","domains":["love"],"ranges":[[2,3],[3,3],[1,3],[2,3],[2,4],[2,2],[1,1],[1,1],[2,3],[3,3]],"gist":"工作日各忙各的，固定在周末相处的恋人。","status":"match","adult":false,"note":"","members":[{"id":"A01-021","label":"周末情侣"}],"wiki":null,"xy":[0.556,0.181],"refine":null},{"key":"lat","name":"分开居住的长期伴侣","domains":["love"],"ranges":[[3,4],[3,4],[1,4],[3,4],[2,4],[2,3],[1,2],[1,2],[3,3],[2,3]],"gist":"认定彼此、长期在一起，但刻意保留各自的家和生活节奏（LAT）。","status":"match","adult":false,"note":"","members":[{"id":"A01-028","label":"分居居住伴侣（LAT）"}],"wiki":{"id":"A01-028","summary":null,"definition":"伴侣保持关系，同时分别保有住所的生活安排；它描述居住选择，不说明疏远程度。"},"xy":[0.679,0.235],"refine":null},{"key":"cohabiting","name":"同居情侣","domains":["love","home"],"ranges":[[3,4],[3,4],[1,4],[3,3],[3,4],[4,4],[4,4],[2,3],[2,3],[4,4]],"gist":"住在一起、共同安排日常的恋人，暂未以结婚为前提。","status":"match","adult":false,"note":"","members":[{"id":"A01-027","label":"同居情侣"}],"wiki":null,"xy":[0.85,0.357],"refine":null},{"key":"marriage","name":"以结婚为目标的伴侣","domains":["love","home"],"ranges":[[3,4],[3,4],[1,4],[4,4],[4,4],[3,4],[3,4],[3,4],[4,4],[3,4]],"gist":"冲着婚姻去的关系：准备领证、共同生活，可能一起养育孩子。","status":"match","adult":false,"note":"是否生育是要和对方商量的条款，不是另一种关系。","members":[{"id":"A01-024","label":"以婚姻为目标的伴侣"},{"id":"A01-035","label":"再婚对象"},{"id":"A01-033","label":"计划共同生育的伴侣"}],"wiki":{"id":"A01-024","summary":"双方把是否结婚作为关系中明说的长期议题。","definition":"以婚姻为目标的伴侣是已经认可伴侣关系、愿把婚姻列作共同方向的成年人。目标需要彼此确认，结婚日期与准备事项则可以未定。它与订婚、既有婚姻身份、是否同住或生育分别描述。"},"xy":[0.925,0.458],"refine":null},{"key":"life-partner","name":"不以结婚为目标的终身伴侣","domains":["love","home"],"ranges":[[4,4],[2,4],[1,4],[4,4],[2,4],[3,4],[3,4],[2,4],[2,3],[3,4]],"gist":"把对方当作一辈子的伴侣，但不以领证为目标。","status":"match","adult":false,"note":"","members":[{"id":"A01-031","label":"生活伴侣（Life Partner）"},{"id":"A01-025","label":"不以婚姻为目标的伴侣"},{"id":"A01-034","label":"选择不生育的伴侣"},{"id":"A01-032","label":"灵魂伴侣（自述标签）"}],"wiki":{"id":"A01-025","summary":null,"definition":"双方当前不把结婚设为目标的伴侣安排，可以同时希望长期相处。"},"xy":[0.834,0.436],"refine":null},{"key":"ace-romance","name":"无性浪漫伴侣","domains":["love"],"ranges":[[3,4],[3,4],[0,1],[2,4],[2,4],[2,4],[1,4],[1,3],[2,3],[1,4]],"gist":"有恋爱和承诺，但不包含性；身体亲近的程度由双方约定。","status":"match","adult":false,"note":"","members":[{"id":"A01-029","label":"无性浪漫伴侣"},{"id":"A02-018","label":"浪漫但无性关系的伴侣"},{"id":"A02-017","label":"自愿禁欲伴侣"}],"wiki":{"id":"A01-029","summary":null,"definition":"当事人认可浪漫联结，并约定不以性互动作为关系内容的安排。不据此推断任何人的性倾向。"},"xy":[0.683,0.383],"refine":null},{"key":"one-time","name":"一次性亲密","domains":["intimacy"],"ranges":[[0,1],[0,1],[3,4],[0,0],[0,0],[0,0],[0,0],[0,1],[0,1],[4,4]],"gist":"成年人之间一次性的身体亲密，事前讲清楚，事后没有延续的义务。","status":"learn","adult":true,"note":"","members":[{"id":"A02-001","label":"一次性约会"},{"id":"A02-002","label":"一次性亲密接触（ONS）"},{"id":"A02-004","label":"临时亲密约会（Hookup）"}],"wiki":null,"xy":[0.125,0.07],"refine":null},{"key":"fling","name":"短期邂逅","domains":["intimacy","love"],"ranges":[[1,2],[1,2],[3,3],[1,1],[0,2],[1,3],[0,1],[0,1],[0,1],[3,4]],"gist":"带一点心动和身体亲密的短暂关系，彼此都知道很快会结束。","status":"learn","adult":true,"note":"","members":[{"id":"A02-003","label":"短期邂逅（Fling）"},{"id":"A02-013","label":"短期性爱关系"}],"wiki":null,"xy":[0.323,0.085],"refine":null},{"key":"fwb","name":"非承诺的固定亲密关系","domains":["intimacy"],"ranges":[[1,2],[0,1],[3,4],[1,3],[0,2],[1,2],[0,1],[0,1],[1,3],[3,4]],"gist":"固定、可反复见面的身体亲密，不谈恋爱也不要求专一（如 FWB）。","status":"learn","adult":true,"note":"","members":[{"id":"A02-005","label":"重复性非承诺亲密对象"},{"id":"A02-006","label":"固定性伴侣（炮友）"},{"id":"A02-007","label":"有性关系的朋友（FWB）"},{"id":"A02-008","label":"非排他性亲密伴侣"},{"id":"A02-009","label":"仅限身体亲密的双方关系"},{"id":"A02-010","label":"无浪漫承诺的性伴侣"},{"id":"A02-011","label":"性与情感分离型伴侣"},{"id":"A02-014","label":"长期无恋爱承诺的性关系"},{"id":"A02-024","label":"可反复见面的非承诺关系"}],"wiki":{"id":"A02-007","summary":"成年人保有友谊，同时在明确同意时有性亲密。","definition":"有性关系的朋友指彼此认可为朋友、同时在自愿同意下有性互动的成年人。朋友的称谓不表示已经成为恋爱伴侣，性互动也不说明是否排他。两层关系可以分别变化或结束。"},"xy":[0.327,0.223],"refine":null},{"key":"cuddle","name":"非性的亲密陪伴","domains":["intimacy"],"ranges":[[1,3],[0,1],[1,2],[1,3],[0,2],[1,2],[0,1],[0,1],[2,3],[3,4]],"gist":"拥抱、依偎这类不涉及性的身体陪伴，边界事先说清楚。","status":"learn","adult":true,"note":"","members":[{"id":"A02-015","label":"只拥抱陪伴的伙伴（Cuddle Buddy）"},{"id":"A02-016","label":"非性亲密陪伴关系"}],"wiki":{"id":"A02-016","summary":null,"definition":"以陪伴和非性亲密互动为内容的工作定义，不预设浪漫身份。"},"xy":[0.32,0.378],"refine":null},{"key":"friend","name":"新朋友 / 普通朋友","domains":["friend","fun"],"ranges":[[1,2],[0,0],[0,0],[1,3],[0,0],[0,2],[0,1],[0,1],[0,1],[2,4]],"gist":"聊得来、偶尔约着见面的朋友，不必很亲近。","status":"match","adult":false,"note":"","members":[{"id":"A04-001","label":"普通朋友"},{"id":"A04-002","label":"新朋友"},{"id":"A04-003","label":"泛泛之交"},{"id":"A04-004","label":"酒肉朋友（俗称）"},{"id":"A04-005","label":"兴趣朋友"},{"id":"A04-006","label":"工作外朋友"},{"id":"A04-026","label":"跨代朋友"}],"wiki":{"id":"A04-001","summary":"愿意继续走进彼此生活，同时为距离与照顾留出商量余地的友谊。","definition":"本馆把普通朋友理解为双方认可、愿意延续交往，并对对方境况有所关心的个人联结。它可以包含聊天、共同活动和力所能及的帮助，但不以高度私密的披露或固定见面次数为必要条件。友谊能够与同事、邻居或室友身份并存，浪漫意向也不是判断这份联结是否成立的前提。"},"xy":[0.092,0.506],"refine":null},{"key":"close-friend","name":"密友 / 知己","domains":["friend"],"ranges":[[3,4],[0,0],[0,1],[3,3],[0,1],[1,3],[1,2],[0,1],[0,2],[1,4]],"gist":"能说心里话、长期互相在场的朋友。","status":"match","adult":false,"note":"","members":[{"id":"A04-007","label":"亲密朋友"},{"id":"A04-008","label":"密友"},{"id":"A04-009","label":"挚友"},{"id":"A04-010","label":"最好的朋友（Best Friend）"},{"id":"A04-011","label":"知己"},{"id":"A04-019","label":"终身朋友"},{"id":"A04-020","label":"从小一起长大的朋友"},{"id":"A04-021","label":"发小"},{"id":"A04-032","label":"不以恋爱为目的的亲密朋友"}],"wiki":{"id":"A04-007","summary":"彼此能谈重要的生活经历，也愿意认真对待对方的处境。","definition":"亲密朋友是在友谊中愿意信任并较深入了解彼此的人。相处中有人留意对方没有讲完的担忧，也有人愿意拿出时间回应人生中的重要时刻。亲密可以通过多种方式积累，无法从认识的年份或知道秘密的数量直接推得。"},"xy":[0.376,0.502],"refine":null},{"key":"support","name":"倾诉与情绪支持伙伴","domains":["friend"],"ranges":[[2,3],[0,0],[0,0],[1,3],[0,0],[1,3],[0,1],[0,0],[1,2],[0,3]],"gist":"在难熬的时候互相听、互相接住，关系围绕情绪支持。","status":"match","adult":false,"note":"","members":[{"id":"A04-012","label":"倾诉对象"},{"id":"A04-013","label":"情绪支持伙伴"},{"id":"A04-014","label":"精神伙伴"},{"id":"A04-025","label":"陪伴型朋友"},{"id":"A04-030","label":"共同抗压伙伴"}],"wiki":{"id":"A04-012","summary":null,"definition":"以倾听与表达困扰为突出互动的关系角色，可以发生在朋友或其他联结中。"},"xy":[0.239,0.403],"refine":null},{"key":"penpal","name":"笔友 / 网络知己","domains":["friend","online"],"ranges":[[2,3],[0,0],[0,0],[2,3],[0,0],[1,2],[0,0],[0,0],[0,1],[0,1]],"gist":"主要靠文字往来、未必见面，却能深聊的朋友。","status":"match","adult":false,"note":"","members":[{"id":"A04-022","label":"笔友"},{"id":"A04-023","label":"通信朋友"},{"id":"A04-024","label":"网络知己"},{"id":"A14-003","label":"网络笔友"},{"id":"A14-024","label":"长期远程知己"},{"id":"A14-021","label":"跨国线上交流伙伴"}],"wiki":{"id":"A04-022","summary":null,"definition":"主要通过书信或较长文字往来维持的朋友关系场景。媒介不自动决定亲密程度。"},"xy":[0.172,0.351],"refine":null},{"key":"platonic-partner","name":"柏拉图式长期伴侣","domains":["friend","home"],"ranges":[[4,4],[0,1],[0,2],[3,4],[1,3],[2,4],[2,4],[1,3],[2,3],[2,4]],"gist":"不谈恋爱，却以伴侣的分量彼此承诺、共同规划生活（PLP、QPR）。","status":"match","adult":false,"note":"","members":[{"id":"A04-015","label":"柏拉图式朋友"},{"id":"A04-016","label":"柏拉图式长期伴侣（PLP）"},{"id":"A04-017","label":"酷儿柏拉图式伴侣（QPR）"},{"id":"A04-018","label":"非浪漫共生伙伴"},{"id":"A01-030","label":"无浪漫亲密伴侣"},{"id":"A07-022","label":"共同生活的柏拉图伴侣"}],"wiki":{"id":"A04-016","summary":"明确想把彼此纳入长期生活计划，但不把这份联结称为恋爱。","definition":"柏拉图式长期伴侣指当事人认可的长期伙伴联结，其安排不以浪漫关系为前提。参与者可以为日常照应、共同居住或晚年计划作约定，也可以只在某些重要选择中长期相互考虑。各组织和社群对这一称呼的用法不同，本馆不据此替本人认定身份。"},"xy":[0.603,0.627],"refine":null},{"key":"chosen-family","name":"选择的家人","domains":["friend","care"],"ranges":[[3,4],[0,0],[0,0],[4,4],[0,0],[1,3],[1,3],[1,2],[2,3],[2,4]],"gist":"没有血缘或婚姻，但像家人一样长期互相托底，比如互为紧急联系人。","status":"match","adult":false,"note":"","members":[{"id":"A04-027","label":"非血缘选择性家人（Chosen Family）"},{"id":"A04-028","label":"结拜兄弟姐妹"},{"id":"A07-025","label":"互为紧急联系人"},{"id":"A07-026","label":"长期生活互助联系人"}],"wiki":{"id":"A04-027","summary":"一些人并非因血缘认识，却逐渐互认彼此为家人。","definition":"选择性家人是非血缘成员自愿认可的一种家人式归属。可以是一对人，也可以是有人加入、有人退出的小网络；每位成员与其他人的亲近程度未必相同。称谓说明关系认同，本身无法确定个人在外部机构中的权限。"},"xy":[0.407,0.74],"refine":null},{"key":"accountability","name":"互相督促伙伴","domains":["grow"],"ranges":[[1,2],[0,0],[0,0],[1,2],[0,0],[2,4],[0,1],[0,0],[2,3],[0,2]],"gist":"约好目标、按时打卡，互相盯进度；也包括一起开着视频各自干活。","status":"match","adult":false,"note":"","members":[{"id":"A04-031","label":"互相监督伙伴"},{"id":"A09-023","label":"成长监督伙伴"},{"id":"A09-024","label":"习惯养成伙伴"},{"id":"A09-025","label":"目标执行监督伙伴"},{"id":"A14-007","label":"远程工作伙伴"},{"id":"A14-008","label":"数字游民搭子"}],"wiki":null,"xy":[0.109,0.639],"refine":null},{"key":"one-off-buddy","name":"临时搭子","domains":["fun"],"ranges":[[0,1],[0,0],[0,0],[0,1],[0,0],[0,1],[0,0],[1,1],[0,1],[3,4]],"gist":"为了一件事临时凑在一起，比如拼单、凑人数，结束就散。","status":"match","adult":false,"note":"","members":[{"id":"A05-038","label":"拼单搭子"}],"wiki":null,"xy":[0.056,0.338],"refine":null},{"key":"buddy","name":"固定活动搭子","domains":["fun"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,1],[1,3],[0,1],[1,1],[1,2],[3,4]],"gist":"固定一起做同一件事的人：吃饭、看展、打球、跑步、开黑……","status":"match","adult":false,"note":"","members":[{"id":"A05-001","label":"饭搭子"},{"id":"A05-002","label":"夜宵搭子"},{"id":"A05-003","label":"早午餐搭子"},{"id":"A05-004","label":"咖啡搭子"},{"id":"A05-005","label":"奶茶搭子"},{"id":"A05-006","label":"烘焙搭子"},{"id":"A05-007","label":"探店搭子"},{"id":"A05-008","label":"电影搭子"},{"id":"A05-009","label":"追剧搭子"},{"id":"A05-010","label":"看展搭子"},{"id":"A05-011","label":"博物馆搭子"},{"id":"A05-012","label":"美术馆搭子"},{"id":"A05-013","label":"音乐会搭子"},{"id":"A05-014","label":"演唱会搭子"},{"id":"A05-015","label":"音乐节搭子"},{"id":"A05-016","label":"剧场搭子"},{"id":"A05-017","label":"戏剧搭子"},{"id":"A05-018","label":"脱口秀搭子"},{"id":"A05-019","label":"书店搭子"},{"id":"A05-020","label":"读书搭子"},{"id":"A05-021","label":"逛街搭子"},{"id":"A05-022","label":"Citywalk搭子"},{"id":"A05-023","label":"公园散步搭子"},{"id":"A05-024","label":"摄影外拍搭子"},{"id":"A05-025","label":"街拍搭子"},{"id":"A05-026","label":"观鸟搭子"},{"id":"A05-027","label":"桌游搭子"},{"id":"A05-028","label":"棋牌搭子"},{"id":"A05-029","label":"剧本杀搭子"},{"id":"A05-030","label":"密室逃脱搭子"},{"id":"A05-031","label":"卡拉OK搭子"},{"id":"A05-032","label":"电竞开黑搭子"},{"id":"A05-033","label":"主机游戏搭子"},{"id":"A05-034","label":"联机游戏搭子"},{"id":"A05-035","label":"二次元同好搭子"},{"id":"A05-036","label":"漫展搭子"},{"id":"A05-037","label":"手工DIY搭子"},{"id":"A05-039","label":"宠物玩耍搭子"},{"id":"A05-040","label":"遛狗搭子"},{"id":"A06-001","label":"跑步搭子"},{"id":"A06-002","label":"马拉松训练搭子"},{"id":"A06-003","label":"健身搭子"},{"id":"A06-004","label":"力量训练搭子"},{"id":"A06-005","label":"瑜伽搭子"},{"id":"A06-006","label":"普拉提搭子"},{"id":"A06-007","label":"羽毛球搭子"},{"id":"A06-008","label":"乒乓球搭子"},{"id":"A06-009","label":"网球搭子"},{"id":"A06-010","label":"壁球搭子"},{"id":"A06-011","label":"篮球搭子"},{"id":"A06-012","label":"足球搭子"},{"id":"A06-013","label":"排球搭子"},{"id":"A06-014","label":"飞盘搭子"},{"id":"A06-015","label":"游泳搭子"},{"id":"A06-016","label":"攀岩搭子"},{"id":"A06-017","label":"抱石搭子"},{"id":"A06-018","label":"骑行搭子"},{"id":"A06-019","label":"徒步搭子"},{"id":"A06-020","label":"露营搭子"},{"id":"A06-021","label":"滑雪搭子"},{"id":"A06-022","label":"单板滑雪搭子"},{"id":"A06-023","label":"潜水搭子"},{"id":"A06-024","label":"冲浪搭子"},{"id":"A06-025","label":"桨板搭子"},{"id":"A06-026","label":"皮划艇搭子"},{"id":"A06-027","label":"钓鱼搭子"},{"id":"A06-028","label":"舞蹈练习搭子"},{"id":"A06-029","label":"拳击练习搭子"},{"id":"A06-030","label":"武术练习搭子"},{"id":"A06-031","label":"高尔夫搭子"},{"id":"A06-032","label":"城市探险搭子"},{"id":"A06-033","label":"自然观察搭子"},{"id":"A06-034","label":"户外摄影搭子"},{"id":"A06-035","label":"技能互练搭子"}],"wiki":{"id":"A05-001","summary":null,"definition":"围绕一起吃饭组织的活动伙伴场景，不以深交、浪漫或固定消费水平为前提。"},"xy":[0.27,0.542],"refine":{"title":"具体想一起做什么？","groups":[["吃喝",["吃饭","夜宵","早午餐","咖啡","奶茶","烘焙","探店"]],["看演出和展览",["电影","追剧","看展","博物馆","美术馆","音乐会","演唱会","音乐节","话剧","脱口秀"]],["城市与阅读",["书店","读书","逛街","Citywalk","散步","摄影","观鸟"]],["游戏与手作",["桌游","棋牌","剧本杀","密室逃脱","K歌","电竞开黑","主机游戏","二次元","漫展","手工"]],["运动",["跑步","马拉松","健身","瑜伽","普拉提","羽毛球","乒乓球","网球","篮球","足球","排球","飞盘","游泳","攀岩","骑行","舞蹈","拳击","武术","高尔夫"]],["户外",["徒步","露营","滑雪","潜水","冲浪","桨板","皮划艇","钓鱼","城市探险","自然观察"]],["宠物",["遛狗","带宠物玩"]]]}},{"key":"travel-buddy","name":"旅行搭子","domains":["fun","home"],"ranges":[[1,2],[0,0],[0,0],[1,2],[0,0],[0,1],[2,3],[1,2],[2,3],[4,4]],"gist":"一起出行、旅途中同吃同住、分摊费用，回来各自生活。","status":"match","adult":false,"note":"","members":[{"id":"A05-041","label":"旅行搭子"},{"id":"A05-042","label":"短途周末游搭子"},{"id":"A07-024","label":"短期旅行分房同住伙伴"}],"wiki":{"id":"A05-041","summary":null,"definition":"为共同出行而协调行程的人际关系。共同旅行不要求共同房间、亲密或全程一致行动。"},"xy":[0.187,0.666],"refine":null},{"key":"study","name":"学习互助伙伴","domains":["grow"],"ranges":[[1,2],[0,0],[0,0],[1,2],[0,0],[1,4],[0,1],[0,1],[1,2],[0,4]],"gist":"一起学、互相讲题，或交换语言和技能。","status":"match","adult":false,"note":"","members":[{"id":"A09-004","label":"学习搭子"},{"id":"A09-005","label":"自习搭子"},{"id":"A09-006","label":"备考搭子"},{"id":"A09-007","label":"口语练习搭子"},{"id":"A09-008","label":"语言交换伙伴"},{"id":"A09-009","label":"读书讨论伙伴"},{"id":"A09-010","label":"刷题搭子"},{"id":"A09-011","label":"编程结对伙伴"},{"id":"A09-012","label":"算法练习伙伴"},{"id":"A09-021","label":"技能交换伙伴"},{"id":"A09-027","label":"知识分享互助伙伴"},{"id":"A14-006","label":"线上学习伙伴"},{"id":"A14-023","label":"线上语言交换伙伴"}],"wiki":{"id":"A09-004","summary":"各自学习，也愿意为共同的练习和进度交流腾出时间。","definition":"学习搭子是为了推进学习而保持往来的伙伴，双方可以一起练习，也可以各学各的、约定交换进度。它由实际协作维系，不以同班、同专业或水平相当为前提。互相支持的范围可以很小，参与者各自决定学习目标并对自己的表现负责。"},"xy":[0.231,0.477],"refine":{"title":"想一起学什么？","groups":[["",["备考","自习陪伴","刷题","口语练习","语言交换","编程","算法","读书讨论","技能交换","线上共学"]]]}},{"key":"mentor","name":"导师与学员","domains":["grow","work"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,0],[1,2],[0,0],[0,2],[2,3],[1,3]],"gist":"一方带、一方学的长期指导关系，权力不对等需要明确边界。","status":"match","adult":false,"note":"","members":[{"id":"A09-018","label":"导师与学生"},{"id":"A09-019","label":"学术指导人与被指导人"},{"id":"A10-020","label":"行业导师与学员"},{"id":"A10-021","label":"职业教练与客户"}],"wiki":{"id":"A09-018","summary":"一方提供学习或专业指导，另一方在反馈中发展自己的判断。","definition":"导师与学生是围绕学习或专业成长建立的指导关系，指导者提供经验、反馈或进入实践的机会。学习者应有逐步作判断和独立完成任务的空间。导师也可能参与评价、决定项目机会或推荐人选，这些权力的来源、限度与核查途径需要单独辨认。"},"xy":[0.165,0.59],"refine":null},{"key":"research","name":"科研合作者","domains":["research"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,1],[2,3],[0,1],[2,2],[3,3],[1,3]],"gist":"一起提出问题、做实验、写论文，署名和分工要讲清楚。","status":"match","adult":false,"note":"","members":[{"id":"A09-013","label":"科研讨论伙伴"},{"id":"A09-014","label":"联合研究伙伴"},{"id":"A09-015","label":"论文合作者"},{"id":"A09-016","label":"论文互审伙伴"},{"id":"A09-017","label":"开源贡献搭子"},{"id":"A09-020","label":"同行评议者与作者"},{"id":"A09-028","label":"跨学科合作伙伴"},{"id":"A10-028","label":"联合专利发明人"},{"id":"A10-029","label":"科研项目负责人和成员"},{"id":"A10-030","label":"实验协作伙伴"}],"wiki":{"id":"A09-013","summary":null,"definition":"围绕研究问题交换观点的协作场景，不要求已经共同开展项目。"},"xy":[0.347,0.696],"refine":{"title":"哪个领域，怎么合作？","groups":[["领域",["数学","计算机与AI","物理","化学","生命科学与医学","工程","经济与金融","社会科学","人文"]],["方式",["讨论想法","合写论文","互相审稿","一起做实验","开源项目","跨学科合作"]]]}},{"key":"project","name":"项目合作者","domains":["work"],"ranges":[[1,2],[0,0],[0,0],[2,2],[0,1],[2,3],[0,1],[2,2],[3,3],[1,4]],"gist":"为一个有期限的项目合作，交付和报酬事先约定。","status":"match","adult":false,"note":"","members":[{"id":"A10-003","label":"项目合作者"},{"id":"A10-005","label":"项目负责人和成员"},{"id":"A10-013","label":"产品经理与工程师"},{"id":"A10-014","label":"设计师与开发者"},{"id":"A10-015","label":"技术顾问与团队"},{"id":"A10-016","label":"运营与创作者"},{"id":"A10-017","label":"供稿人与编辑"},{"id":"A10-018","label":"自由职业者与客户"},{"id":"A10-019","label":"外包方与发包方"},{"id":"A10-025","label":"会议共创伙伴"},{"id":"A10-027","label":"开源项目维护者与贡献者"},{"id":"A10-031","label":"结对代码审查伙伴"},{"id":"A14-020","label":"远程协作维护人"}],"wiki":{"id":"A10-003","summary":"围绕一项有边界的成果分工，完成后可以各自离开。","definition":"项目合作者因一个明确的项目目标而协同投入任务、时间或资源。重点是各自的产出如何接起来，以及谁能接受成果和调整范围。项目可以短到一次活动，也可以持续多个阶段，不必共同经营一项事业。"},"xy":[0.36,0.575],"refine":{"title":"你需要什么样的合作者？","groups":[["",["产品","设计","前端","后端","算法","运营","内容创作","写作编辑","技术顾问","代码审查","开源维护"]]]}},{"key":"cofounder","name":"创业合伙人","domains":["work"],"ranges":[[2,3],[0,0],[0,0],[3,4],[3,4],[3,4],[2,3],[3,4],[4,4],[2,4]],"gist":"长期押上时间和钱一起创业，股权和退出写进协议。","status":"match","adult":false,"note":"","members":[{"id":"A10-004","label":"项目合伙人"},{"id":"A10-010","label":"创业合伙人"},{"id":"A10-011","label":"联合创始人"},{"id":"A10-012","label":"企业联合经营者"}],"wiki":{"id":"A10-010","summary":"共同承接一项事业的投入与走向，而非只交付一期工作。","definition":"创业合伙人共同创办或经营一项事业，分别投入工作、资金或其他资源，并参与延续事业的重要决定。与临时项目相比，这种安排要反复回答是否继续投入、由谁承接经营上的责任，以及退出后如何维持运作。日常称呼本身不确定任何组织身份、份额或产权。"},"xy":[0.649,0.798],"refine":null},{"key":"network","name":"同行交流伙伴","domains":["work","grow"],"ranges":[[1,1],[0,0],[0,0],[2,3],[0,0],[0,1],[0,0],[0,1],[0,1],[1,3]],"gist":"同行之间偶尔交流、互相引荐、模拟面试。","status":"match","adult":false,"note":"","members":[{"id":"A10-022","label":"同行交流伙伴"},{"id":"A10-023","label":"商务拓展伙伴"},{"id":"A10-024","label":"联合营销伙伴"},{"id":"A09-022","label":"职业发展互助伙伴"},{"id":"A09-026","label":"模拟面试伙伴"}],"wiki":null,"xy":[0.05,0.438],"refine":null},{"key":"co-creator","name":"内容共创伙伴","domains":["online","work"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,1],[2,3],[0,1],[2,2],[2,3],[0,2]],"gist":"一起做播客、视频、直播或共同创作设定。","status":"match","adult":false,"note":"","members":[{"id":"A14-009","label":"内容共创伙伴"},{"id":"A14-010","label":"播客联合主播"},{"id":"A14-011","label":"直播连麦伙伴"},{"id":"A14-019","label":"线上共同创作设定伙伴"}],"wiki":{"id":"A14-009","summary":"共同影响作品的内容，从构思、制作或编辑中形成创作伙伴关系。","definition":"内容共创伙伴共同参与某个作品的形成，对它讲什么、如何组织或怎样呈现有实际贡献。有人提出主题，有人负责采访、设计、剪辑或校对，分工可以不同。共享项目名称或发布账号，不会自动说明所有伙伴对每一项决定拥有相同的发言权。"},"xy":[0.262,0.692],"refine":null},{"key":"roommate","name":"室友 / 合租伙伴","domains":["home"],"ranges":[[0,2],[0,0],[0,0],[2,3],[0,0],[3,4],[3,4],[2,3],[3,3],[4,4]],"gist":"合住一套房，分摊房租、家务和公共开销，各过各的生活。","status":"match","adult":false,"note":"","members":[{"id":"A07-001","label":"室友"},{"id":"A07-002","label":"合租室友"},{"id":"A07-003","label":"合租发起人"},{"id":"A07-004","label":"共同租房伙伴"},{"id":"A07-005","label":"共享工作居住伙伴"},{"id":"A07-007","label":"短期同住伙伴"},{"id":"A07-011","label":"共同家务分工伙伴"},{"id":"A07-013","label":"采购与分账伙伴"},{"id":"A07-019","label":"共享储物与设备伙伴"}],"wiki":{"id":"A07-001","summary":"使用同一处住宅，也就需要划清谁怎样使用共同空间。","definition":"室友是共同使用一个住所的居住者。他们可能各有房间，也可能共用一间房；住宅里的设施、声音和出入常需要协调。这个名称不要求共同签租约，也不说明彼此是否有友谊、亲属或伴侣关系。"},"xy":[0.43,0.836],"refine":null},{"key":"housemate","name":"长期同住伙伴","domains":["home","friend"],"ranges":[[2,3],[0,0],[0,0],[3,4],[0,1],[4,4],[4,4],[3,3],[3,3],[4,4]],"gist":"不谈恋爱，但把一起住当成长期生活方式的人。","status":"match","adult":false,"note":"","members":[{"id":"A07-006","label":"长期同住伙伴"},{"id":"A07-008","label":"共居社区伙伴"},{"id":"A07-023","label":"无浪漫共同居住者"},{"id":"A04-029","label":"朋友兼共同生活伙伴"}],"wiki":{"id":"A07-006","summary":null,"definition":"以持续共享住所为计划的同住关系，不默认浪漫、婚姻或财产共有。"},"xy":[0.638,0.922],"refine":null},{"key":"co-owner","name":"共同置业伙伴","domains":["home"],"ranges":[[1,3],[0,0],[0,0],[4,4],[0,2],[1,3],[2,4],[4,4],[4,4],[2,4]],"gist":"一起买房或共同持有资产，靠合同约定份额和退出。","status":"match","adult":false,"note":"","members":[{"id":"A07-009","label":"共同购房伙伴"},{"id":"A07-010","label":"房屋共同所有人"},{"id":"A11-026","label":"共同管理资产的成年人"}],"wiki":null,"xy":[0.493,0.877],"refine":null},{"key":"commute","name":"通勤拼车搭子","domains":["home","fun"],"ranges":[[0,1],[0,0],[0,0],[1,3],[0,0],[3,4],[1,1],[1,1],[1,2],[4,4]],"gist":"顺路一起通勤或拼车，分摊费用。","status":"match","adult":false,"note":"","members":[{"id":"A07-014","label":"拼车同行伙伴"},{"id":"A07-015","label":"固定通勤搭子"}],"wiki":null,"xy":[0.306,0.475],"refine":null},{"key":"elder-coliving","name":"养老互助伙伴","domains":["home","care"],"ranges":[[2,3],[0,0],[0,0],[4,4],[0,0],[3,4],[3,4],[2,3],[3,4],[4,4]],"gist":"老了以后一起住或就近互相照应，财务和医疗决定提前约定。","status":"match","adult":false,"note":"","members":[{"id":"A07-020","label":"共同养老生活伙伴"},{"id":"A07-021","label":"老年互助生活伙伴"},{"id":"A08-009","label":"非亲属养老互助伙伴"}],"wiki":null,"xy":[0.51,0.95],"refine":null},{"key":"mutual-care","name":"互助照护伙伴","domains":["care"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,0],[1,2],[1,2],[0,1],[2,3],[3,4]],"gist":"陪诊、接送、术后照顾、远程报平安，按约定互相帮一把。","status":"match","adult":false,"note":"","members":[{"id":"A08-005","label":"临时儿童照护互助人"},{"id":"A08-008","label":"共同照护老人伙伴"},{"id":"A08-010","label":"日常生活照料伙伴"},{"id":"A08-011","label":"健康管理互助伙伴"},{"id":"A08-012","label":"术后恢复协助人"},{"id":"A08-013","label":"残障生活支持伙伴"},{"id":"A08-014","label":"无偿照护志愿伙伴"},{"id":"A08-015","label":"互助陪诊伙伴"},{"id":"A08-016","label":"日常接送互助伙伴"},{"id":"A08-017","label":"远程安全确认伙伴"},{"id":"A08-018","label":"共同制定应急预案的伙伴"},{"id":"A07-027","label":"共同照护亲属的成年人"}],"wiki":{"id":"A08-010","summary":"为某人的日常生活提供约定的帮助，并保留他的决定空间。","definition":"日常生活照料伙伴以非专业的日常协助为关系内容。帮助可能包括买菜、取物、外出陪同或固定联络，且已有反复执行或持续协调的约定。被支持者可以参与决定帮什么、什么时候帮，以及什么时候需要改找别人。"},"xy":[0.309,0.631],"refine":{"title":"需要哪种照应？","groups":[["",["陪诊","接送","术后照顾","临时照看孩子","照护老人或亲属","日常照料","健康管理","远程报平安","应急预案"]]]}},{"key":"co-parent","name":"非恋爱的共同养育伙伴","domains":["care","home"],"ranges":[[2,3],[0,1],[0,0],[4,4],[0,1],[3,4],[2,4],[3,4],[4,4],[3,4]],"gist":"不是恋人，但一起长期抚养孩子，权利义务受法律约束。","status":"learn","adult":false,"note":"涉及监护、抚养等法律关系，需专门审查后才能撮合。","members":[{"id":"A08-001","label":"非恋爱共同育儿伙伴"},{"id":"A08-002","label":"共同抚养人（Co-parent）"},{"id":"A08-003","label":"共同监护责任人"},{"id":"A08-004","label":"隔代育儿协作伙伴"},{"id":"A08-007","label":"亲子教育协作伙伴"}],"wiki":{"id":"A08-001","summary":"成年人没有维持彼此的恋爱联结，仍持续协调对儿童的照护。","definition":"非恋爱共同育儿伙伴指成年人持续配合儿童的生活与照护，同时不以彼此的恋爱关系组织这份合作。参与者可以曾经是伴侣，也可以没有这一段经历。能照顾什么、与学校如何联络、重大变化由谁参与判断，要从已有安排逐项了解。"},"xy":[0.566,0.9],"refine":null},{"key":"neighbor","name":"邻里互助","domains":["community","home"],"ranges":[[1,2],[0,0],[0,0],[2,3],[0,0],[1,2],[1,2],[1,1],[1,2],[4,4]],"gist":"住得近，互相帮忙取快递、照看宠物、一起做饭。","status":"match","adult":false,"note":"","members":[{"id":"A13-001","label":"邻居"},{"id":"A13-002","label":"同楼居民"},{"id":"A13-003","label":"社区互助伙伴"},{"id":"A13-016","label":"互助社群搭子"},{"id":"A13-017","label":"消费者权益互助伙伴"},{"id":"A07-012","label":"共同做饭搭子"},{"id":"A07-016","label":"宠物共同照料人"},{"id":"A07-017","label":"宠物临时托管互助伙伴"},{"id":"A07-018","label":"家庭事务分工伙伴"}],"wiki":{"id":"A13-001","summary":"住得相近而形成的关系，可停留在照面，也可发展出往来。","definition":"邻居是因住宅相邻或日常所用的居住环境重叠而出现的社会角色。彼此也许没有正式介绍，却会受走道、楼板、门前道路等共享处所的使用方式影响。多次碰面之后，邻居可以发展成朋友或合作处理公共事务，原有居住联系并不要求它必然走到这一步。"},"xy":[0.237,0.61],"refine":null},{"key":"volunteer","name":"公益与社区搭子","domains":["community"],"ranges":[[1,1],[0,0],[0,0],[1,2],[0,0],[1,2],[0,0],[0,1],[1,2],[3,4]],"gist":"一起做志愿、办活动、推动一件公共的事。","status":"match","adult":false,"note":"","members":[{"id":"A13-004","label":"小区志愿者伙伴"},{"id":"A13-006","label":"志愿服务搭子"},{"id":"A13-007","label":"公益项目合作者"},{"id":"A13-011","label":"共同社区活动组织者"},{"id":"A13-014","label":"公共活动筹办搭子"},{"id":"A13-015","label":"公益募捐合作伙伴"},{"id":"A13-018","label":"救灾互助志愿者"},{"id":"A13-019","label":"共同倡议者"}],"wiki":{"id":"A13-006","summary":null,"definition":"通过自愿、非强制服务共同参与公益活动的伙伴关系。具体服务需遵循组织和情境要求。"},"xy":[0.166,0.44],"refine":null},{"key":"club","name":"社团与兴趣圈成员","domains":["community","fun","online"],"ranges":[[1,1],[0,0],[0,0],[2,3],[0,0],[1,2],[0,1],[1,1],[1,2],[0,4]],"gist":"同属一个社团、协会或群，在集体活动里相处。","status":"match","adult":false,"note":"","members":[{"id":"A13-005","label":"公共议题讨论伙伴"},{"id":"A13-008","label":"协会成员"},{"id":"A13-009","label":"社团成员"},{"id":"A13-010","label":"兴趣俱乐部成员"},{"id":"A13-012","label":"宗教团体同伴"},{"id":"A13-013","label":"校友会活动伙伴"},{"id":"A13-020","label":"社区沟通协调者"},{"id":"A14-015","label":"社群群友"},{"id":"A14-016","label":"论坛讨论伙伴"}],"wiki":null,"xy":[0.166,0.515],"refine":{"title":"想进什么样的圈子？","groups":[["",["兴趣俱乐部","社团协会","校友会","公共议题讨论","线上社群","论坛","信仰团体"]]]}},{"key":"online-friend","name":"网友 / 游戏队友","domains":["online","fun","friend"],"ranges":[[1,2],[0,0],[0,0],[1,3],[0,0],[1,3],[0,0],[0,1],[0,1],[0,1]],"gist":"在线上认识、一起玩或聊天，不一定线下见面。","status":"match","adult":false,"note":"","members":[{"id":"A14-001","label":"网友"},{"id":"A14-002","label":"网络朋友"},{"id":"A14-004","label":"游戏好友"},{"id":"A14-005","label":"游戏公会队友"},{"id":"A14-017","label":"虚拟世界共同探索伙伴"},{"id":"A14-018","label":"线上角色扮演搭子"},{"id":"A14-022","label":"网络互助伙伴"}],"wiki":{"id":"A14-002","summary":null,"definition":"主要通过网络建立或维持的朋友关系。媒介不能保证身份、亲密程度或线下接触意愿。"},"xy":[0.109,0.392],"refine":null}]};
+    </script>
+    <script>
+      {
+        const E = CompassEngine,
+          $ = (s) => document.querySelector(s);
+        const esc = (s) =>
+          String(s ?? "").replace(
+            /[&<>"']/g,
+            (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+          );
+        const ICON = {
+          yes: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.6 4.5c2.2 0 3.6 1.2 4.4 2.5.8-1.3 2.2-2.5 4.4-2.5 3.6 0 5.7 3.8 4.2 7.2C19.5 16.4 12 21 12 21Z"/></svg>',
+          no: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+          undo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>',
+          ok: '<svg class="ok" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 8.5 3 3 7-7"/></svg>',
+          off: '<svg class="no" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h8"/></svg>',
+        };
+        const fresh = () => ({
+          adult: false,
+          answers: {},
+          order: [],
+          rejected: [],
+          liked: [],
+          draft: [],
+          refine: {},
+          view: "quiz",
+          idx: 0,
+        });
+        let S = fresh();
+        try {
+          const saved = JSON.parse(localStorage.getItem("dwm-compass") || "null");
+          if (saved && saved.answers) S = { ...fresh(), ...saved };
+        } catch (e) {}
+        const hotData = window.claude?.hot?.data;
+        if (hotData && hotData.answers) S = { ...fresh(), ...hotData };
+        window.claude?.hot?.snapshot?.(() => S);
+        const save = () => {
+          try {
+            localStorage.setItem("dwm-compass", JSON.stringify(S));
+          } catch (e) {}
+        };
+        const cards = () => E.eligible(DATA.cards, S.adult);
+        const post = () => E.posterior(cards(), S.answers, new Set(S.rejected));
+        const DOM = DATA.domains;
+        let lastNext = null;
+
+        /* ---------- map ---------- */
+        const map = $("#map");
+        map.insertAdjacentHTML(
+          "beforeend",
+          DATA.cards
+            .map(
+              (c) =>
+                `<button class="dot" data-k="${esc(c.key)}" style="--x:${c.xy[0]};--y:${c.xy[1]};--s:0" aria-label="${esc(c.name)}"><i></i><span>${esc(c.name)}</span></button>`,
+            )
+            .join(""),
+        );
+        const dots = Object.fromEntries(
+          [...map.querySelectorAll(".dot")].map((d) => [d.dataset.k, d]),
+        );
+        map.addEventListener("click", (e) => {
+          const d = e.target.closest(".dot");
+          if (d) toast(cardByKey(d.dataset.k).gist);
+        });
+        const cardByKey = (k) => DATA.cards.find((c) => c.key === k);
+
+        function paint() {
+          const P = post(),
+            alive = E.plausible(P),
+            top = P[0]?.p || 1,
+            aliveSet = new Set(alive.map((x) => x.card.key)),
+            answered = S.order.length;
+          const eligibleSet = new Set(cards().map((c) => c.key));
+          const leads = new Set(alive.slice(0, 3).map((x) => x.card.key));
+          const crowd = alive.length > 9;
+          for (const c of DATA.cards) {
+            const d = dots[c.key],
+              x = P.find((y) => y.card.key === c.key);
+            const s = !answered ? 0.12 : x && aliveSet.has(c.key) ? Math.sqrt(x.p / top) : 0;
+            d.style.setProperty("--s", s.toFixed(3));
+            d.className =
+              "dot" +
+              (!eligibleSet.has(c.key) || !aliveSet.has(c.key)
+                ? " gone"
+                : leads.has(c.key) && answered
+                  ? " lead"
+                  : " alive");
+            d.hidden = !eligibleSet.has(c.key);
+          }
+          tween($("#left"), alive.length);
+          layoutLabels(alive, leads, crowd, answered, top);
+          const L = alive.slice(0, 5);
+          $("#leaders").innerHTML = !answered
+            ? `<h3>怎么读这张图</h3><p>每个点是一种关系，位置由它在 10 个维度上的取值决定：越往右越亲近，越往上越心动。每答一题，不像你的关系会暗下去，最像你的三种会亮起来。</p>`
+            : `<h3>目前最像你的</h3>` +
+              L.map(
+                (x) =>
+                  `<button class="lrow" data-k="${esc(x.card.key)}"><b>${esc(x.card.name)}</b><span class="bar"><i style="--w:${((x.p / top) * 100).toFixed(1)}%"></i></span><em>${Math.round(x.p * 100)}%</em></button>`,
+              ).join("");
+          $("#mlead").innerHTML = Object.keys(S.answers).length
+            ? `还剩 <b>${alive.length}</b> 种 · 最像：<b>${esc(alive[0]?.card.name || "")}</b>`
+            : `共 <b>${alive.length}</b> 种关系，答几题就会变少`;
+        }
+        // Greedy label placement: try below, above, right, left of each dot; skip if nothing fits.
+        function layoutLabels(alive, leads, crowd, answered, top) {
+          const W = map.clientWidth,
+            H = map.clientHeight,
+            placed = [];
+          for (const d of Object.values(dots)) d.classList.remove("lab");
+          if (!answered) return;
+          // Obstacles: every visible dot and the four axis captions.
+          const mr = map.getBoundingClientRect();
+          for (const a of map.querySelectorAll(".ax")) {
+            const r = a.getBoundingClientRect();
+            placed.push([r.left - mr.left, r.top - mr.top, r.right - mr.left, r.bottom - mr.top]);
+          }
+          for (const x of alive) {
+            const c = x.card,
+              r = (7 + Math.sqrt(x.p / top) * 24) / 2 + 2,
+              cx = (0.05 + c.xy[0] * 0.9) * W,
+              cy = (0.07 + c.xy[1] * 0.86) * H;
+            placed.push([cx - r, cy - r, cx + r, cy + r]);
+          }
+          const show = alive.filter((x) => leads.has(x.card.key) || !crowd);
+          for (const x of show) {
+            const c = x.card,
+              d = dots[c.key],
+              sp = d.querySelector("span");
+            const cx = (0.05 + c.xy[0] * 0.9) * W,
+              cy = (0.07 + c.xy[1] * 0.86) * H;
+            const r = (7 + Math.sqrt(x.p / top) * 24) / 2,
+              w = sp.offsetWidth,
+              h = sp.offsetHeight;
+            const cands = [
+              [cx - w / 2, cy + r + 4],
+              [cx - w / 2, cy - r - 4 - h],
+              [cx + r + 6, cy - h / 2],
+              [cx - r - 6 - w, cy - h / 2],
+              [cx + r + 4, cy + r],
+              [cx - r - 4 - w, cy + r],
+              [cx + r + 4, cy - r - h],
+              [cx - r - 4 - w, cy - r - h],
+            ];
+            const fit = cands.find(
+              ([l, t]) =>
+                l >= 4 &&
+                t >= 4 &&
+                l + w <= W - 4 &&
+                t + h <= H - 4 &&
+                !placed.some((p) => l < p[2] && l + w > p[0] && t < p[3] && t + h > p[1]),
+            );
+            if (!fit) continue;
+            placed.push([fit[0], fit[1], fit[0] + w, fit[1] + h]);
+            sp.style.setProperty("--lx", `${(fit[0] - cx).toFixed(1)}px`);
+            sp.style.setProperty("--ly", `${(fit[1] - cy).toFixed(1)}px`);
+            d.classList.add("lab");
+          }
+        }
+        const roMap = new ResizeObserver(() => paint());
+        roMap.observe(map);
+        function tween(el, to) {
+          const from = +el.textContent || 0;
+          if (from === to) return;
+          const t0 = performance.now(),
+            dur = matchMedia("(prefers-reduced-motion:reduce)").matches ? 0 : 500;
+          const step = (t) => {
+            const k = dur ? Math.min(1, (t - t0) / dur) : 1;
+            el.textContent = Math.round(from + (to - from) * (1 - (1 - k) ** 3));
+            if (k < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+        $("#leaders").addEventListener("click", (e) => {
+          const r = e.target.closest(".lrow");
+          if (r) toast(cardByKey(r.dataset.k).gist);
+        });
+
+        /* ---------- question deck ---------- */
+        const qEl = $("#q");
+        function renderQ(dir) {
+          const n = E.next(cards(), S.answers, S.adult, new Set(S.rejected));
+          if (S.force && !(S.force in S.answers) && E.byId[S.force]) {
+            n.question = E.byId[S.force];
+          }
+          S.force = null;
+          lastNext = n;
+          const q = n.question,
+            answered = S.order.length;
+          const settled = answered > 0 && q && E.settled(n.post, n.gain);
+          const est = Math.max(
+            answered + 1,
+            Math.min(10, answered + Math.ceil(Math.max(1, n.gain * 3))),
+          );
+          if (!q) {
+            qEl.innerHTML = `<div class="qmeta"><span>题目答完了</span>${answered ? '<button id="back">上一题</button>' : ""}</div><h2>你的关系画像已经很清楚了。</h2><p class="hint">去看看最像你的几种关系，右滑留下，左滑划掉。</p><button class="btn" id="go">看我的结果</button>`;
+          } else {
+            const multi = q.multi,
+              opts = q.options.map((o, i) => [o, i]).filter(([o]) => S.adult || o[2] !== "adult");
+            const pressed = (i) => multi && S.draft.includes(i);
+            qEl.innerHTML = `<div class="qmeta"><span>第 ${answered + 1} 题${answered ? ` · 大约还要 ${Math.max(1, est - answered - 1)} 题` : ""}</span>${answered ? '<button id="back">上一题</button>' : ""}</div>
+  <h2>${esc(q.title)}</h2>${q.hint ? `<p class="hint">${esc(q.hint)}</p>` : ""}
+  <div class="opts${multi ? " grid2" : ""}">${opts.map(([o, i], j) => `<button class="opt" data-i="${i}" aria-pressed="${pressed(i)}"><span class="k">${j + 1}</span>${esc(o[1])}</button>`).join("")}</div>
+  ${multi ? `<label class="adult"><input type="checkbox" id="adult" ${S.adult ? "checked" : ""}>我已满 18 岁（会多出与身体亲密有关的选项）</label>` : ""}
+  ${settled ? `<div class="ready"><span>已经很清楚了：最像你的是 <b>${esc(n.post[0].card.name)}</b></span><button class="ghost" id="go">先看结果</button></div>` : ""}
+  <div class="qfoot"><button class="skip" id="skip">说不清，跳过</button>${multi ? `<button class="btn" id="next" ${S.draft.length ? "" : "disabled"} style="${S.draft.length ? "" : "opacity:.45"}">下一步</button>` : ""}</div>`;
+          }
+          if (dir) {
+            qEl.classList.remove("out", "back");
+            qEl.classList.add("in");
+            void qEl.offsetWidth;
+            qEl.classList.remove("in");
+          }
+          trail();
+          paint();
+          save();
+        }
+        function trail() {
+          const t = $("#trail");
+          if (!S.order.length) {
+            t.innerHTML = "";
+            return;
+          }
+          t.innerHTML =
+            `<span>已答，点一下可以改：</span>` +
+            S.order
+              .map((id) => {
+                const q = E.byId[id],
+                  a = S.answers[id];
+                const txt =
+                  a === "skip"
+                    ? "跳过"
+                    : Array.isArray(a)
+                      ? a.map((i) => q.options[i][1]).join("、")
+                      : q.options[a][1];
+                return `<button data-edit="${esc(id)}" title="${esc(q.title)}">${esc(txt)}</button>`;
+              })
+              .join("");
+        }
+        function editAnswer(id) {
+          if (id === "domain") S.draft = S.answers.domain === "skip" ? [] : [...S.answers.domain];
+          delete S.answers[id];
+          S.order = S.order.filter((x) => x !== id);
+          S.force = id;
+          save();
+        }
+        $("#trail").addEventListener("click", (e) => {
+          const b = e.target.closest("[data-edit]");
+          if (b) {
+            editAnswer(b.dataset.edit);
+            qEl.classList.add("back");
+            setTimeout(() => renderQ(1), reduce() ? 0 : 260);
+          }
+        });
+        function commit(val) {
+          const q = lastNext.question;
+          if (!q) return;
+          S.answers[q.id] = val;
+          S.order.push(q.id);
+          if (q.multi) S.draft = [];
+          qEl.classList.add("out");
+          setTimeout(() => renderQ(1), reduce() ? 0 : 260);
+        }
+        const reduce = () => matchMedia("(prefers-reduced-motion:reduce)").matches;
+        function back() {
+          const id = S.order.pop();
+          if (!id) return;
+          if (id === "domain") S.draft = [...(S.answers.domain === "skip" ? [] : S.answers.domain)];
+          delete S.answers[id];
+          qEl.classList.add("back");
+          setTimeout(() => renderQ(1), reduce() ? 0 : 260);
+        }
+        qEl.addEventListener("click", (e) => {
+          const t = e.target;
+          if (t.closest("#back")) return back();
+          if (t.closest("#go")) return showResults();
+          if (t.closest("#skip")) return commit("skip");
+          if (t.closest("#next")) return S.draft.length && commit([...S.draft]);
+          const o = t.closest(".opt");
+          if (!o) return;
+          const i = +o.dataset.i,
+            q = lastNext.question;
+          if (q.multi) {
+            S.draft = S.draft.includes(i) ? S.draft.filter((x) => x !== i) : [...S.draft, i];
+            renderQ();
+          } else {
+            o.setAttribute("aria-pressed", "true");
+            commit(i);
+          }
+        });
+        qEl.addEventListener("change", (e) => {
+          if (e.target.id === "adult") {
+            S.adult = e.target.checked;
+            if (!S.adult) {
+              delete S.answers.P;
+              S.order = S.order.filter((x) => x !== "P");
+              const ix = lastNext.question.options.findIndex((o) => o[2] === "adult");
+              S.draft = S.draft.filter((i) => i !== ix);
+            }
+            renderQ();
+          }
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.target.closest("input,textarea")) return;
+          if (S.view === "quiz") {
+            const q = lastNext?.question;
+            if (!q) return;
+            const btns = [...qEl.querySelectorAll(".opt")];
+            if (/^[1-9]$/.test(e.key) && btns[+e.key - 1]) {
+              btns[+e.key - 1].click();
+            } else if (e.key === "Enter" && q.multi && S.draft.length) commit([...S.draft]);
+            else if (e.key === "Backspace" && S.order.length) {
+              e.preventDefault();
+              back();
+            }
+          } else {
+            if (e.key === "ArrowRight") decide("like");
+            else if (e.key === "ArrowLeft") decide("nope");
+            else if (e.key === "Backspace") {
+              e.preventDefault();
+              undo();
+            }
+          }
+        });
+
+        /* ---------- results ---------- */
+        let deck = [],
+          hist = [];
+        function showResults() {
+          S.view = "res";
+          $("#app").classList.add("res");
+          buildDeck();
+          renderRes();
+          save();
+          scrollTo(0, 0);
+        }
+        function backToQuiz() {
+          S.view = "quiz";
+          $("#app").classList.remove("res");
+          renderQ(1);
+        }
+        function buildDeck() {
+          const P = post();
+          deck = E.plausible(P).filter((x) => !S.liked.includes(x.card.key));
+          hist = [];
+        }
+        // Second-layer refinement (what exactly / which field): stored per card, becomes a
+        // condition on the intent rather than another relationship type.
+        const picks = (k) => (S.refine && S.refine[k]) || [];
+        const withPicks = (c) =>
+          c.name + (picks(c.key).length ? `（${picks(c.key).join("、")}）` : "");
+        function refineBlock(c) {
+          if (!c.refine) return "";
+          const sel = new Set(picks(c.key)),
+            known = new Set(c.refine.groups.flatMap((g) => g[1]));
+          const custom = [...sel].filter((v) => !known.has(v));
+          const chip = (v) =>
+            `<button class="rchip" data-r="${esc(c.key)}" data-v="${esc(v)}" aria-pressed="${sel.has(v)}">${esc(v)}</button>`;
+          return `<div class="refine"><h4>${esc(c.refine.title)}<span>可多选，结果会更具体</span></h4><div class="rbox">${c.refine.groups
+            .map(
+              (g) =>
+                (g[0] ? `<p class="rg">${esc(g[0])}</p>` : "") +
+                `<div class="rchips">${g[1].map(chip).join("")}</div>`,
+            )
+            .join(
+              "",
+            )}${custom.length ? `<div class="rchips">${custom.map(chip).join("")}</div>` : ""}</div>
+ <form class="rother" data-r="${esc(c.key)}"><input id="other-${esc(c.key)}" maxlength="20" placeholder="没有想要的？自己写" aria-label="自己写" /><button>添加</button></form></div>`;
+        }
+        function why(c) {
+          const ex = E.explain(c, S.answers);
+          const dom =
+            S.answers.domain && S.answers.domain !== "skip"
+              ? S.answers.domain.map((i) => E.byId.domain.options[i][0])
+              : [];
+          const items = ex
+            .slice(0, 4)
+            .map(
+              (x) =>
+                `<li>${x.dist === 0 ? ICON.ok : ICON.off}<span>${x.dist === 0 ? "你说" : "你说"}“${esc(x.answer)}”${x.dist === 0 ? "，正合适" : x.dist === 1 ? "，这类关系通常稍有不同" : "，这点不太一样"}</span></li>`,
+            );
+          if (dom.some((d) => c.domains.includes(d)))
+            items.unshift(
+              `<li>${ICON.ok}<span>围绕“${esc(
+                dom
+                  .filter((d) => c.domains.includes(d))
+                  .map((d) => DOM[d])
+                  .join("、"),
+              )}”</span></li>`,
+            );
+          return items.join("") || `<li>${ICON.off}<span>还没答题，这是按整体分布猜的</span></li>`;
+        }
+        function rcard(x, i, cls) {
+          const c = x.card,
+            al = c.members.map((m) => m.label).filter((l) => l !== c.name),
+            top = deck[0]?.p || 1;
+          const tags =
+            c.domains.map((d) => `<span class="tag">${esc(DOM[d])}</span>`).join("") +
+            (c.adult ? '<span class="tag warn">18+</span>' : "") +
+            (c.status === "learn" ? '<span class="tag warn">仅供了解</span>' : "");
+          return `<article class="rc ${cls}" data-k="${esc(c.key)}">
+ <div class="rtop"><div class="rmeta"><span>第 ${i + 1} 像你</span><span class="pct">${Math.round(x.p * 100)}%</span></div><span class="stamp y">是这个</span><span class="stamp n">不是</span><h2>${esc(c.name)}</h2><p>${esc(c.gist)}</p></div>
+ <div class="rbody"><div class="tags">${tags}</div><ul class="why">${why(c)}</ul>
+ ${refineBlock(c)}
+ ${c.note ? `<p class="alias">${esc(c.note)}</p>` : ""}
+ ${al.length ? `<p class="alias">也包括：${esc(al.slice(0, 8).join("、"))}${al.length > 8 ? ` 等 ${al.length} 种` : ""}</p>` : ""}
+ ${c.wiki?.definition ? `<p class="wiki">${esc(c.wiki.definition)}<small>来自 AllRelationships 百科词条「${esc(c.members.find((m) => m.id === c.wiki.id)?.label || "")}」· 工作草稿</small></p>` : ""}
+ </div></article>`;
+        }
+        function renderRes() {
+          const answered = S.order.length,
+            P = post(),
+            alive = E.plausible(P);
+          const likedCards = S.liked.map(cardByKey).filter(Boolean);
+          $("#results").innerHTML = `<div>
+  <div class="rhead"><h1>${deck.length ? `你想要的，可能是这<span style="white-space:nowrap"> ${alive.length} 种</span>关系里的一种或几种` : likedCards.length ? "这些就是你想要的关系" : "候选都看完了"}</h1>
+  <p>${answered ? `根据你答的 ${answered} 道题。` : "你还没答题，下面是全部关系。"}右滑或点心形留下，左滑划掉；划掉的不会再出现。${answered < 5 ? "多答几题，候选会更少、更准。" : ""}</p></div>
+  <div class="stack" id="stack">${
+    deck
+      .slice(0, 3)
+      .map((x, i) => rcard(x, hist.length + i, i === 0 ? "" : i === 1 ? "under" : "under2"))
+      .reverse()
+      .join("") ||
+    `<div class="panel"><h3>${likedCards.length ? "都选好了。" : "一个都没留下。"}</h3><p class="empty">${likedCards.length ? "想更确定，可以回去把剩下的题答完。" : "可以撤回刚才的选择，或者回去调整答案。"}</p></div>`
+  }</div>
+  <div class="acts">${hist.length ? `<button class="round small" id="undo" aria-label="撤回">${ICON.undo}</button>` : ""}${deck.length ? `<button class="round no" id="nope" aria-label="不是这个">${ICON.no}</button><button class="round yes" id="like" aria-label="是这个">${ICON.yes}</button>` : ""}</div>
+ </div>
+ <div class="mine">
+  <div class="panel"><h3>我想要的关系</h3>${likedCards.length ? `<div class="chips">${likedCards.map((c) => `<button class="chip on" data-un="${esc(c.key)}" aria-label="移除 ${esc(c.name)}">${esc(withPicks(c))} <small>✕</small></button>`).join("")}</div>` : '<p class="empty">右滑留下的关系会出现在这里。可以不止一种。</p>'}
+   <div class="rowbtns">${likedCards.length ? '<button class="btn" id="copy">复制我的结果</button>' : ""}<button class="ghost" id="more">${lastNext?.question ? "继续答题，让结果更准" : "修改答案"}</button><button class="ghost" id="reset">重新开始</button></div></div>
+  <div class="panel"><h3>你的回答</h3>${
+    S.order.length
+      ? `<ul class="ans">${S.order
+          .map((id) => {
+            const q = E.byId[id],
+              a = S.answers[id];
+            const txt =
+              a === "skip"
+                ? "说不清，跳过"
+                : Array.isArray(a)
+                  ? a.map((i) => q.options[i][1]).join("、")
+                  : q.options[a][1];
+            return `<li><div><span>${esc(q.title)}</span><b>${esc(txt)}</b></div><button data-edit="${esc(id)}">改</button></li>`;
+          })
+          .join("")}</ul>`
+      : '<p class="empty">还没有回答。</p>'
+  }</div>
+  <div class="panel"><h3>其他候选</h3>${
+    alive.filter((x) => !S.liked.includes(x.card.key)).slice(deck.length ? 3 : 0).length ||
+    !deck.length
+      ? `<div class="chips">${
+          alive
+            .filter(
+              (x) =>
+                !S.liked.includes(x.card.key) &&
+                !deck.slice(0, 3).some((d) => d.card.key === x.card.key),
+            )
+            .map(
+              (x) =>
+                `<span class="chip">${esc(x.card.name)} <small>${Math.round(x.p * 100)}%</small></span>`,
+            )
+            .join("") || '<p class="empty">没有了。</p>'
+        }</div>`
+      : '<p class="empty">没有了。</p>'
+  }
+   <p class="fine" style="margin-top:12px">百分比是在剩余候选里的相对可能性，不是测评分数。你的回答只保存在自己的浏览器里，不会上传。</p></div>
+ </div>`;
+          bindDrag();
+        }
+        function decide(kind) {
+          const top = $("#stack .rc:not(.under):not(.under2)");
+          if (!top || !deck.length) return;
+          const x = deck.shift();
+          hist.push({ x, kind });
+          if (kind === "like") S.liked.push(x.card.key);
+          else S.rejected.push(x.card.key);
+          top.classList.add(kind);
+          save();
+          setTimeout(renderRes, reduce() ? 0 : 300);
+        }
+        function undo() {
+          const h = hist.pop();
+          if (!h) return;
+          deck.unshift(h.x);
+          if (h.kind === "like") S.liked = S.liked.filter((k) => k !== h.x.card.key);
+          else S.rejected = S.rejected.filter((k) => k !== h.x.card.key);
+          save();
+          renderRes();
+        }
+        function bindDrag() {
+          const el = $("#stack .rc:not(.under):not(.under2)");
+          if (!el) return;
+          let x0 = null,
+            dx = 0;
+          const sy = el.querySelector(".stamp.y"),
+            sn = el.querySelector(".stamp.n");
+          el.addEventListener("pointerdown", (e) => {
+            if (e.button || e.target.closest(".refine")) return;
+            x0 = e.clientX;
+            dx = 0;
+            el.setPointerCapture(e.pointerId);
+            el.classList.add("drag");
+          });
+          el.addEventListener("pointermove", (e) => {
+            if (x0 == null) return;
+            dx = e.clientX - x0;
+            el.style.transform = `translateX(${dx}px) rotate(${dx / 18}deg)`;
+            sy.style.opacity = Math.max(0, dx / 110);
+            sn.style.opacity = Math.max(0, -dx / 110);
+          });
+          const end = () => {
+            if (x0 == null) return;
+            x0 = null;
+            el.classList.remove("drag");
+            el.style.transform = "";
+            sy.style.opacity = sn.style.opacity = "";
+            if (dx > 110) decide("like");
+            else if (dx < -110) decide("nope");
+          };
+          el.addEventListener("pointerup", end);
+          el.addEventListener("pointercancel", end);
+        }
+        $("#results").addEventListener("submit", (e) => {
+          const f = e.target.closest(".rother");
+          if (!f) return;
+          e.preventDefault();
+          const k = f.dataset.r,
+            inp = f.querySelector("input"),
+            v = inp.value.trim().slice(0, 20);
+          if (!v) return;
+          S.refine = { ...S.refine, [k]: [...new Set([...picks(k), v])] };
+          save();
+          const box = f.previousElementSibling,
+            have = [...box.querySelectorAll(".rchip")].find((b) => b.dataset.v === v);
+          if (have) have.setAttribute("aria-pressed", "true");
+          else
+            box.insertAdjacentHTML(
+              "beforeend",
+              `<div class="rchips"><button class="rchip" data-r="${esc(k)}" data-v="${esc(v)}" aria-pressed="true">${esc(v)}</button></div>`,
+            );
+          inp.value = "";
+        });
+        $("#results").addEventListener("click", async (e) => {
+          const t = e.target;
+          const rc = t.closest(".rchip");
+          if (rc) {
+            const k = rc.dataset.r,
+              v = rc.dataset.v,
+              on = rc.getAttribute("aria-pressed") !== "true";
+            S.refine = {
+              ...S.refine,
+              [k]: on ? [...picks(k), v] : picks(k).filter((x) => x !== v),
+            };
+            rc.setAttribute("aria-pressed", String(on));
+            save();
+            return;
+          }
+          if (t.closest("#like")) decide("like");
+          else if (t.closest("#nope")) decide("nope");
+          else if (t.closest("#undo")) undo();
+          else if (t.closest("#more")) backToQuiz();
+          else if (t.closest("[data-edit]")) {
+            editAnswer(t.closest("[data-edit]").dataset.edit);
+            backToQuiz();
+          } else if (t.closest("#reset")) {
+            S = fresh();
+            save();
+            backToQuiz();
+          } else if (t.closest("[data-un]")) {
+            const k = t.closest("[data-un]").dataset.un;
+            S.liked = S.liked.filter((x) => x !== k);
+            save();
+            buildDeck();
+            renderRes();
+          } else if (t.closest("#copy")) {
+            const txt =
+              "我想要的关系：" +
+              S.liked.map((k) => withPicks(cardByKey(k))).join("；") +
+              "。来自 Dearwithme 关系罗盘";
+            try {
+              await navigator.clipboard.writeText(txt);
+              toast("已复制");
+            } catch (err) {
+              toast(txt);
+            }
+          }
+        });
+        function toast(m) {
+          const t = $("#toast");
+          t.textContent = m;
+          t.classList.add("show");
+          clearTimeout(toast.t);
+          toast.t = setTimeout(() => t.classList.remove("show"), 2600);
+        }
+        $("#toRes").onclick = showResults;
+        $("#toRes2").onclick = showResults;
+        const start = () => {
+          if (S.view === "res") {
+            $("#app").classList.add("res");
+            renderQ();
+            buildDeck();
+            renderRes();
+          } else renderQ();
+        };
+        window.claude?.hot?.ready ? window.claude.hot.ready(() => start()) : start();
+      }
+    </script>
+  </body>
+</html>

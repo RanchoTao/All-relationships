@@ -2429,3 +2429,10 @@ h3,
 .pending-notice .badge {
   justify-self: start;
 }
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  align-items: center;
+}

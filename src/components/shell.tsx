@@ -7,7 +7,11 @@ import {
   BookOpen,
   GitCompareArrows,
   MoveUpRight,
+  Compass,
 } from "lucide-react";
+// The compass is a standalone static page in public/compass, so it is linked with a plain
+// <a> that carries the Pages base path rather than with next/link.
+export const compassHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? "/All-relationships"}/compass/`;
 export function Header() {
   const path = usePathname();
   return (
@@ -36,6 +40,10 @@ export function Header() {
             <span>{text}</span>
           </Link>
         ))}
+        <a href={compassHref}>
+          <Compass size={16} />
+          <span>关系罗盘</span>
+        </a>
       </nav>
       <Link className="header-about" href="/about">
         关于这座馆 <ArrowUpRight size={15} />
@@ -55,6 +63,7 @@ export function Footer() {
       <div className="footer-links">
         <Link href="/about">编辑原则与来源</Link>
         <Link href="/graph">浏览知识结构</Link>
+        <a href={compassHref}>关系罗盘：找到你想要的关系</a>
         <a
           href="https://github.com/RanchoTao/All-relationships"
           target="_blank"

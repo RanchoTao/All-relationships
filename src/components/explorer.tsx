@@ -21,6 +21,7 @@ import {
 } from "@/lib/index-model";
 import type { AttributeKey } from "@/lib/schema";
 import { EntryCard } from "./entry-card";
+import { compassHref } from "./shell";
 
 type Category = { id: string; name: string; count: number };
 type CoverageStats = {
@@ -126,9 +127,14 @@ export function Explorer({
             <br />
             一起探索关系的形状、边界与可能。
           </p>
-          <a className="text-link" href="#collection">
-            走进关系馆藏 <ArrowDown size={17} />
-          </a>
+          <div className="hero-links">
+            <a className="text-link" href="#collection">
+              走进关系馆藏 <ArrowDown size={17} />
+            </a>
+            <a className="text-link" href={compassHref}>
+              做几道题，找到你想要的关系 <ArrowUpRight size={17} />
+            </a>
+          </div>
         </div>
         <aside className="hero-note">
           <span className="eyebrow">A LIVING INDEX</span>
