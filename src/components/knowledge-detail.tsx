@@ -16,12 +16,12 @@ import type { LegacyCard, V04Card } from "@/lib/knowledge-schema";
 import { dimensions } from "@/lib/assessment";
 const sections = [
   ["scenarios", "典型情境 · 虚构例子"],
+  ["boundaries", "需要协商的边界"],
+  ["conflicts", "可讨论的冲突"],
   ["participants", "参与者及角色"],
   ["needs", "主要需求"],
   ["interactions", "互动方式"],
-  ["boundaries", "需要协商的边界"],
   ["misconceptions", "容易产生的误解 · 编辑提示"],
-  ["conflicts", "可讨论的冲突"],
   ["changes", "关系的可能变化"],
 ] as const;
 function LegacySections({ card }: { card: LegacyCard }) {
@@ -56,25 +56,6 @@ function V04Sections({ card }: { card: V04Card }) {
           </article>
         ))}
       </section>
-      {(
-        [
-          ["participants", "参与者及角色"],
-          ["needs", "主要需求"],
-          ["interactions", "互动方式"],
-          ["boundaries", "讨论边界"],
-          ["commonDealbreakers", "结构性的硬冲突"],
-          ["misconceptions", "容易产生的误解"],
-        ] as const
-      ).map(([key, title]) => (
-        <section className="detail-block" key={key}>
-          <h2>{title}</h2>
-          {card[key].map((text, i) => (
-            <p className="prose" key={i}>
-              {text}
-            </p>
-          ))}
-        </section>
-      ))}
       <section className="detail-block">
         <h2>通常需要说清的议题</h2>
         {card.negotiables.length ? (
@@ -97,6 +78,25 @@ function V04Sections({ card }: { card: V04Card }) {
           <p className="prose">本风险条目不提供关系安排选项。</p>
         )}
       </section>
+      {(
+        [
+          ["commonDealbreakers", "结构性的硬冲突"],
+          ["participants", "参与者及角色"],
+          ["needs", "主要需求"],
+          ["interactions", "互动方式"],
+          ["boundaries", "讨论边界"],
+          ["misconceptions", "容易产生的误解"],
+        ] as const
+      ).map(([key, title]) => (
+        <section className="detail-block" key={key}>
+          <h2>{title}</h2>
+          {card[key].map((text, i) => (
+            <p className="prose" key={i}>
+              {text}
+            </p>
+          ))}
+        </section>
+      ))}
       <section className="detail-block">
         <h2>关系如何变化</h2>
         {(

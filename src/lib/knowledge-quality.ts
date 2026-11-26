@@ -40,20 +40,86 @@ export function proseLeaves(value: unknown, path = ""): Leaf[] {
       : proseLeaves(child, path ? `${path}.${key}` : key),
   );
 }
-export function bodyCharacters(card: KnowledgeCard) {
-  return proseLeaves(card)
-    .filter(
-      ({ path }) =>
-        path !== "summary" &&
-        !path.startsWith("evidence.") &&
-        !path.startsWith("concept.") &&
-        !path.endsWith(".title"),
-    )
-    .reduce(
-      (count, leaf) => count + (leaf.text.match(/[\p{L}\p{N}]/gu)?.length ?? 0),
-      0,
-    );
+function bodyLeaves(card: KnowledgeCard) {
+  return proseLeaves(card).filter(
+    ({ path }) =>
+      path !== "summary" &&
+      !path.startsWith("evidence.") &&
+      !path.startsWith("concept.") &&
+      !path.endsWith(".title"),
+  );
 }
+
+export function bodyCharacters(card: KnowledgeCard) {
+  return bodyLeaves(card).reduce(
+    (count, leaf) => count + (leaf.text.match(/[\p{L}\p{N}]/gu)?.length ?? 0),
+    0,
+  );
+}
+
+export const NEAR_TEMPLATE_SHINGLE_SIZE = 8;
+export const NEAR_TEMPLATE_THRESHOLD = 0.30;
+
+function bodyShingles(card: KnowledgeCard) {
+  const shingles = new Set<string>();
+  for (const { text } of bodyLeaves(card)) {
+    const chars = text.normalize("NFC").match(/[\p{L}\p{N}]/gu) ?? [];
+    for (let i = 0; i <= chars.length - NEAR_TEMPLATE_SHINGLE_SIZE; i++) {
+      shingles.add(chars.slice(i, i + NEAR_TEMPLATE_SHINGLE_SIZE).join(""));
+    }
+  }
+  return shingles;
+}
+
+type SimilarityPair = {
+  cardIds: [string, string];
+  similarity: number;
+};
+
+/** Compare body-only sets; shingle windows never cross prose fields. */
+export function nearTemplateReport(cards: readonly KnowledgeCard[]) {
+  const bodies = cards
+    .filter((c) => c.schemaVersion === "0.4")
+    .map((c) => ({ id: c.id, shingles: bodyShingles(c) }))
+    .sort((a, b) => a.id.localeCompare(b.id));
+  let comparedPairs = 0;
+  let highestPair: SimilarityPair | null = null;
+  const matches: SimilarityPair[] = [];
+  for (let i = 0; i < bodies.length; i++) {
+    for (let j = i + 1; j < bodies.length; j++) {
+      const a = bodies[i];
+      const b = bodies[j];
+      const [small, large] =
+        a.shingles.size <= b.shingles.size
+          ? [a.shingles, b.shingles]
+          : [b.shingles, a.shingles];
+      let intersection = 0;
+      for (const shingle of small) if (large.has(shingle)) intersection++;
+      const union = small.size + large.size - intersection;
+      const similarity = union ? intersection / union : 0;
+      comparedPairs++;
+      const pair: SimilarityPair = { cardIds: [a.id, b.id], similarity };
+      if (!highestPair || similarity > highestPair.similarity)
+        highestPair = pair;
+      if (similarity > NEAR_TEMPLATE_THRESHOLD) matches.push(pair);
+    }
+  }
+  return {
+    shingleSize: NEAR_TEMPLATE_SHINGLE_SIZE,
+    threshold: NEAR_TEMPLATE_THRESHOLD,
+    comparedPairs,
+    highestPair,
+    warnings: matches
+      .sort((a, b) => b.similarity - a.similarity)
+      .map((pair) => ({
+        ...pair,
+        severity: "warning" as const,
+        code: "near_template",
+        message: "v0.4 body shingle similarity exceeds the warning threshold",
+      })),
+  };
+}
+
 export const minimumCharacters = {
   deep: 1500,
   standard: 600,
