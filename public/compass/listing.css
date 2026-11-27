@@ -1,0 +1,95 @@
+#compass-listing[hidden], #compass-listing [hidden] { display: none; }
+#compass-listing {
+  --cl-ink: #3d2340;
+  --cl-muted: #5d4460;
+  --cl-pink: #fff6f7;
+  --cl-line: #c8a7bd;
+  --cl-accent: #823869;
+  max-width: 62rem;
+  margin: 1rem auto 5rem;
+  padding: 1rem;
+  color: var(--cl-ink);
+}
+#compass-listing .cl-entry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: var(--cl-pink);
+  border: 1px solid var(--cl-line);
+}
+#compass-listing h2 { font-size: 1.25rem; margin: 0; color: var(--cl-ink); }
+#compass-listing p { line-height: 1.55; margin: .4rem 0; }
+#compass-listing .cl-primary, #compass-listing .cl-close {
+  font: inherit;
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+#compass-listing .cl-primary {
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  padding: .55rem 1rem;
+  color: white;
+  background: var(--cl-accent);
+  font-weight: 700;
+}
+#compass-listing :disabled { opacity: .6; cursor: not-allowed; }
+#compass-listing :focus-visible { outline: 2px solid var(--cl-accent); outline-offset: 3px; }
+#compass-listing .cl-dialog {
+  box-sizing: border-box;
+  width: min(34rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  overflow: auto;
+  color: var(--cl-ink);
+  background: #fffbfb;
+  border: 1px solid var(--cl-line);
+  border-radius: 1rem;
+  padding: clamp(1rem, 4vw, 1.55rem);
+}
+#compass-listing .cl-dialog::backdrop { background: rgb(48 24 47 / .6); }
+#compass-listing .cl-header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+#compass-listing .cl-close {
+  min-width: 2.75rem;
+  color: var(--cl-ink);
+  background: var(--cl-pink);
+  border: 1px solid var(--cl-line);
+  border-radius: .75rem;
+}
+#compass-listing .cl-fields { display: grid; gap: .75rem; padding: 0; margin: 1rem 0; border: 0; min-width: 0; }
+#compass-listing label { display: block; font-weight: 600; }
+#compass-listing label span, #compass-listing .cl-hint { color: var(--cl-muted); font-size: .9rem; font-weight: 400; }
+#compass-listing label span { display: inline; }
+#compass-listing input:not([type="checkbox"]), #compass-listing select, #compass-listing textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin-top: .3rem;
+  min-height: 2.75rem;
+  padding: .45rem .65rem;
+  color: var(--cl-ink);
+  background: white;
+  border: 1px solid var(--cl-line);
+  border-radius: .55rem;
+  font: inherit;
+  font-size: 1rem;
+}
+#compass-listing textarea { resize: vertical; }
+#compass-listing .cl-bottom { display: grid; gap: .45rem; }
+#compass-listing .cl-check { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: .5rem; }
+#compass-listing .cl-check input { width: 1rem; height: 1rem; margin: .25rem 0 0; accent-color: var(--cl-accent); }
+#compass-listing .cl-trap { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#compass-listing .cl-privacy {
+  padding: .65rem .85rem;
+  margin: .65rem 0;
+  background: var(--cl-pink);
+  border-radius: .6rem;
+  overflow-wrap: anywhere;
+}
+#compass-listing .cl-privacy summary { cursor: pointer; font-weight: 700; }
+#compass-listing .cl-privacy a { color: var(--cl-accent); text-decoration: underline; }
+#compass-listing .cl-message { color: #7e2647; }
+#compass-listing .cl-success { color: var(--cl-ink); }
